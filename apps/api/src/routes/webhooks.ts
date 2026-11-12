@@ -756,7 +756,7 @@ webhookRoutes.post(
 
     const eventType = data.event ?? 'webhook.test';
     const payload = data.payload ?? {
-      message: 'Test webhook from Breeze RMM',
+      message: 'Test webhook from Colonyn RMM',
       timestamp: new Date().toISOString(),
       webhookId: webhook.id
     };

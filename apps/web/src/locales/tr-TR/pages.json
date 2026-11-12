@@ -52,7 +52,7 @@
     "billingQuotesDetail": "Teklif",
     "c2c": "Bulut Yedekleme",
     "cisHardening": "CIS Benchmarks",
-    "configurationPoliciesDefaults": "Breeze Varsayılanları",
+    "configurationPoliciesDefaults": "Colonyn Varsayılanları",
     "configurationPoliciesDetail": "Yapılandırma Politikası",
     "configurationPolicies": "Yapılandırma Politikaları",
     "configurationPoliciesNew": "Yeni Yapılandırma Politikası",
@@ -178,8 +178,8 @@
     "billingAutopay": "Automatic payments"
   },
   "layout": {
-    "metaDescription": "Breeze RMM - Uzaktan İzleme ve Yönetim",
-    "metaDescriptionSetup": "Breeze RMM - İlk Kurulum"
+    "metaDescription": "Colonyn RMM - Uzaktan İzleme ve Yönetim",
+    "metaDescriptionSetup": "Colonyn RMM - İlk Kurulum"
   },
   "authShell": {
     "tagline": "Hız, netlik ve ölçek için tasarlanmış modern RMM platformu."
@@ -311,7 +311,7 @@
     "tagline": "Uzaktan İzleme ve Yönetim"
   },
   "authPage": {
-    "description": "Breeze RMM - Giriş yapın veya hesap oluşturun",
+    "description": "Colonyn RMM - Giriş yapın veya hesap oluşturun",
     "tagline": "Başlamak için giriş yapın veya hesabınızı oluşturun."
   }
 }

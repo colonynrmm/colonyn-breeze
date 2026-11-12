@@ -10,7 +10,7 @@ import {
 } from '@simplewebauthn/server';
 import { getRedis } from './redis';
 
-const DEFAULT_RP_NAME = 'Breeze RMM';
+const DEFAULT_RP_NAME = 'Colonyn RMM';
 const DEFAULT_DEV_ORIGIN = 'http://localhost:4321';
 const CHALLENGE_TTL_SECONDS = 5 * 60;
 

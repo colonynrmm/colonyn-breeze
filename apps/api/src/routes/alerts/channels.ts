@@ -477,7 +477,7 @@ channelsRoutes.post(
 
     // Send a real test notification through the selected channel type.
     const testMessage = {
-      title: 'Test Alert from Breeze RMM',
+      title: 'Test Alert from Colonyn RMM',
       message: `This is a test notification sent to channel "${channel.name}" at ${new Date().toISOString()}`,
       severity: 'info',
       source: 'manual_test'
@@ -507,7 +507,7 @@ channelsRoutes.post(
             severity: testMessage.severity as AlertSeverity,
             summary: testMessage.message,
             dashboardUrl,
-            orgName: 'Breeze'
+            orgName: 'Colonyn'
           });
 
           testResult = {
@@ -560,7 +560,7 @@ channelsRoutes.post(
               // Partner-wide channels (#2130) have no owning org; the test
               // payload's orgId is informational only.
               orgId: channel.orgId ?? channel.partnerId ?? 'partner-wide',
-              orgName: 'Breeze',
+              orgName: 'Colonyn',
               triggeredAt: new Date().toISOString(),
               context: { dashboardUrl: dashboardUrl ? ` ${dashboardUrl}` : '' }
             }
@@ -590,7 +590,7 @@ channelsRoutes.post(
               // Partner-wide channels (#2130) have no owning org; the test
               // payload's orgId is informational only.
               orgId: channel.orgId ?? channel.partnerId ?? 'partner-wide',
-              orgName: 'Breeze',
+              orgName: 'Colonyn',
               triggeredAt: new Date().toISOString(),
               dashboardUrl
             }
@@ -656,7 +656,7 @@ channelsRoutes.post(
             summary: testMessage.message,
             // Partner-wide channels (#2130) have no owning org; informational.
             orgId: channel.orgId ?? channel.partnerId ?? 'partner-wide',
-            orgName: 'Breeze',
+            orgName: 'Colonyn',
             triggeredAt: new Date().toISOString(),
             dashboardUrl
           });

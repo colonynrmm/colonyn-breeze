@@ -120,6 +120,9 @@ import { PROTECTED_ORG_ERROR } from '../services/unassignedPool/orgType';
 
 import { notHiddenOrgType, notInHiddenOrgCondition } from '../services/unassignedPool/visibility';
 import { notParkedDeviceCondition } from '../services/unassignedPool/selectorPredicate';
+import { hasFeature as colonynHasFeature } from '../colonyn/entitlements/store'; // COLONYN
+import { featureDenial as colonynFeatureDenial } from '../colonyn/entitlements/guard'; // COLONYN
+import { colonynPlanInfo } from '../colonyn/entitlements/planInfo'; // COLONYN
 /**
  * Fold the legacy `security.allowedMfaMethods` input alias into the canonical
  * `security.allowedMethods` and drop the alias key so it is never persisted.
@@ -1048,7 +1051,11 @@ orgRoutes.get('/partners/me', requireScope('partner'), requirePartner, requireOr
   }
 
   // #6111 — a session timeout stored above the 720-minute ceiling reads back clamped.
-  return c.json(withMaskedSettings({ ...partner, settings: clampSessionTimeoutInSettings(partner.settings) }));
+  return c.json(withMaskedSettings({
+    ...partner,
+    settings: clampSessionTimeoutInSettings(partner.settings),
+    colonyn: await colonynPlanInfo(auth.partnerId as string), // COLONYN: plan modules + seats for the web app
+  }));
 });
 
 // Candidates for the Inbound email card's default-assignee picker. Gated like
@@ -1288,6 +1295,13 @@ orgRoutes.patch(
   // `native`/`off` FORCE the connection id to null rather than leaving whatever
   // was there: partners_service_management_connection_chk is a biconditional, so
   // a retained id would abort the UPDATE with 23514 (a 500 to the caller).
+  // COLONYN: Service Desk & Billing follows the Colonyn plan; the tenant may turn it
+  // off but not back on without the PSA module.
+  if (body.serviceManagementMode !== undefined && body.serviceManagementMode !== 'off'
+    && !(await colonynHasFeature(auth.partnerId as string, 'psa'))) {
+    const denial = colonynFeatureDenial('psa');
+    return c.json(denial.body, denial.status);
+  }
   let nextMode: 'native' | 'external' | 'off' | undefined;
   if (body.serviceManagementMode !== undefined) {
     nextMode = body.serviceManagementMode;

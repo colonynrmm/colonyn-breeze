@@ -2496,13 +2496,13 @@
     "ai": {
       "column": "Utilizzo IA",
       "sectionTitle": "Utilizzo dell'IA",
-      "sectionHelp": "Come viene addebitato l'utilizzo dell'assistente IA da parte delle organizzazioni con questo profilo di fatturazione. Fatturi il costo di Breeze più un ricarico oppure imposti un prezzo per modello.",
+      "sectionHelp": "Come viene addebitato l'utilizzo dell'assistente IA da parte delle organizzazioni con questo profilo di fatturazione. Fatturi il costo di Colonyn più un ricarico oppure imposti un prezzo per modello.",
       "coverage": "Fatturazione dell'utilizzo IA",
       "coverageBillable": "Fatturabile",
       "coverageIncluded": "Incluso",
       "coverageNotBilled": "Non fatturato",
       "markup": "Ricarico sul costo (%)",
-      "markupHelp": "Aggiunto al costo in USD di Breeze per ogni richiesta. 25 fattura il costo più il 25%. Lasci vuoto per fatturare solo i modelli del listino.",
+      "markupHelp": "Aggiunto al costo in USD di Colonyn per ogni richiesta. 25 fattura il costo più il 25%. Lasci vuoto per fatturare solo i modelli del listino.",
       "markupInvalid": "Inserisca una percentuale da 0 a 1000 con al massimo due decimali.",
       "priceListTitle": "Listino prezzi",
       "priceListHelp": "I prezzi sono in {{currency}} per milione di token. Un modello nel listino usa il proprio prezzo invece del ricarico.",
@@ -2553,7 +2553,7 @@
     "source": {
       "org": "Organizzazione",
       "partner": "Valore predefinito del partner",
-      "default": "Valore predefinito di Breeze"
+      "default": "Valore predefinito di Colonyn"
     },
     "option": {
       "earlier": "La data precedente",
@@ -2684,7 +2684,7 @@
       "notified": "Ho informato il mio acquirer (Stripe) e i circuiti delle carte almeno 30 giorni fa",
       "cost": "Questa commissione non supera il mio costo di accettazione delle carte",
       "rules": "Solo carte di credito. Nessuna commissione sulle carte in CA, CT, ME o MA; in Colorado il limite è del 2%. Le commissioni si applicano solo ai pagamenti automatici statunitensi idonei in USD. I link di pagamento una tantum non prevedono commissioni.",
-      "legal": "Breeze non fornisce consulenza legale. Sei responsabile dell’ammissibilità dei supplementi, delle comunicazioni e del trattamento fiscale.",
+      "legal": "Colonyn non fornisce consulenza legale. Sei responsabile dell’ammissibilità dei supplementi, delle comunicazioni e del trattamento fiscale.",
       "lowerAuthorization": "Clienti con termini autorizzati inferiori: {{count}}. L’autorizzazione attuale resta valida fino all’accettazione dei nuovi termini.",
       "authorizedCard": "Autorizzati: {{accepted}} punti base; configurati: {{configured}}",
       "authorizedAch": "Autorizzato: USD {{accepted}}; configurato: USD {{configured}}",
@@ -2699,7 +2699,7 @@
       "authorizedCardNone": "Nessuna autorizzazione registrata; configurati: {{configured}} punti base",
       "authorizedAchNone": "Nessuna autorizzazione registrata; configurato: USD {{configured}}",
       "lowerAuthorizationOrg": "Questo cliente non ha autorizzato i termini configurati. Qualsiasi autorizzazione esistente resta valida fino all’accettazione dei nuovi termini.",
-      "blankPartner": "Se vuoto, si usa il valore predefinito di Breeze (nessuna commissione). Per esentare un cliente, imposta la sua commissione a 0 nella pagina Fatturazione del cliente.",
+      "blankPartner": "Se vuoto, si usa il valore predefinito di Colonyn (nessuna commissione). Per esentare un cliente, imposta la sua commissione a 0 nella pagina Fatturazione del cliente.",
       "blankOrg": "Se vuoto, si usa il valore predefinito del partner. Inserisci 0 per esentare questo cliente.",
       "inactiveOrg": "Le commissioni sulle carte restano inattive finché un amministratore del partner non conferma entrambe le dichiarazioni sulle commissioni nella scheda Payments delle impostazioni di fatturazione del partner.",
       "missingAuthorization": "Nessuna autorizzazione registrata: {{count}}. I pagamenti automatici non possono addebitare questi clienti finché non autorizzano il metodo di pagamento salvato.",
@@ -2780,7 +2780,7 @@
     "sources": {
       "org": "organizzazione",
       "partner": "valore predefinito del partner",
-      "default": "valore predefinito di Breeze"
+      "default": "valore predefinito di Colonyn"
     },
     "save": "Salva impostazioni di pagamento",
     "saving": "Salvataggio…",

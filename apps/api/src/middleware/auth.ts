@@ -20,6 +20,7 @@ import { getEffectiveMfaPolicy } from '../services/mfaPolicy';
 import { ipAllowlistGuard } from './ipAllowlistGuard';
 import { markPermissionGate } from './permissionGate';
 import { isSelfManagedDbContextRoute } from './selfManagedDbContextRoutes';
+import { entitlementDenial } from '../colonyn/entitlements/guard'; // COLONYN
 import { isReportHistoryReadRoute } from './reportHistoryRoutes';
 import {
   computeReportHistoryReach,
@@ -880,6 +881,15 @@ export async function authMiddleware(c: Context, next: Next): Promise<void | Res
     canAccessSite,
     ...(reportHistory ? { reportHistory } : {}),
   });
+
+  // COLONYN: plan modules (apps/api/src/colonyn/entitlements). Deny a route of a
+  // module the tenant's Colonyn plan does not include. Platform admins pass.
+  const colonynDenial = await entitlementDenial({
+    path: c.req.path,
+    partnerId: user.partnerId,
+    bypass: payload.scope === 'system' || user.isPlatformAdmin === true,
+  });
+  if (colonynDenial) return c.json(colonynDenial.body, colonynDenial.status);
 
   // The return value matters: ipAllowlistGuard returns its deny/error
   // Response as a value (it does not throw). Dropping it leaves the Hono

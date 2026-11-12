@@ -649,7 +649,7 @@
     },
     "record": {
       "title": "Record the customer's decision",
-      "intro": "Use this when the customer gave you their decision outside Breeze. It is logged under your name.",
+      "intro": "Use this when the customer gave you their decision outside Colonyn. It is logged under your name.",
       "target": "Revision {{revision}} · {{ask}}",
       "decision": "Decision",
       "approve": "Approved",

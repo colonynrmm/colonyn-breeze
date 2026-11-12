@@ -156,7 +156,7 @@
     },
     "trust": {
       "title": "Centro de confianza",
-      "subtitle": "Una página pública con la postura de seguridad de esta organización, generada a partir de la telemetría en vivo de Breeze.",
+      "subtitle": "Una página pública con la postura de seguridad de esta organización, generada a partir de la telemetría en vivo de Colonyn.",
       "loading": "Cargando el Centro de confianza…",
       "loadFailed": "No se pudo cargar la página del Centro de confianza.",
       "retry": "Intentar de nuevo",

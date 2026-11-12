@@ -20,13 +20,15 @@ describe('AuthPanelBranding', () => {
     vi.clearAllMocks();
   });
 
-  it('renders stock Breeze content when branding is null', async () => {
+  it('renders stock Colonyn content when branding is null', async () => {
     resolveWith({ branding: null, partnerSso: null });
 
     render(<AuthPanelBranding tagline="The modern RMM platform." />);
 
-    // Stock wordmark + marketing copy present.
-    expect(screen.getByText('Breeze')).toBeInTheDocument();
+    // Stock wordmark (colony + n, two-tone) + marketing copy present.
+    const wordmark = screen.getByLabelText('Colonyn', { selector: 'span' });
+    expect(wordmark.textContent).toBe('colonyn');
+    expect(wordmark.querySelector('span')?.textContent).toBe('n');
     expect(screen.getByText(/Effortless endpoint/i)).toBeInTheDocument();
     expect(screen.getByText('10,000+ endpoints')).toBeInTheDocument();
 
@@ -35,10 +37,11 @@ describe('AuthPanelBranding', () => {
     expect(screen.getByText('10,000+ endpoints')).toBeInTheDocument();
     expect(screen.queryByTestId('partner-logo')).not.toBeInTheDocument();
 
-    // The stock Breeze mark keeps its original size (only partner logos grew).
-    const stockMark = screen.getByText('Breeze').previousElementSibling as SVGElement;
-    expect(stockMark.tagName.toLowerCase()).toBe('svg');
-    expect(stockMark.getAttribute('class')).toBe('h-8 w-8');
+    // The stock Colonyn mark keeps its original size (only partner logos grew).
+    const stockMark = wordmark.previousElementSibling as HTMLImageElement;
+    expect(stockMark.tagName.toLowerCase()).toBe('img');
+    expect(stockMark.getAttribute('src')).toBe('/brand-logo-on-brand.svg');
+    expect(stockMark.getAttribute('class')).toBe('h-8 w-8 object-contain');
   });
 
   it('renders partner branding and drops marketing copy when branding is present', async () => {
@@ -53,7 +56,7 @@ describe('AuthPanelBranding', () => {
 
     // Marketing copy is gone.
     expect(screen.queryByText('10,000+ endpoints')).not.toBeInTheDocument();
-    expect(screen.queryByText('Breeze')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('Colonyn', { selector: 'span' })).not.toBeInTheDocument();
 
     // Partner logo present.
     const logo = screen.getByTestId('partner-logo') as HTMLImageElement;

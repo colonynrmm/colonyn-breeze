@@ -15,7 +15,7 @@
     "title": "Onay Gerekli",
     "pendingApproverTitle": "Onaylayıcı Bekleniyor",
     "selfApproveTitle": "Onayınız Gerekli",
-    "pendingApproverDescription": "Bu işlemin Onaylar alanında veya Breeze mobil uygulamasında onaylanması gerekiyor.",
+    "pendingApproverDescription": "Bu işlemin Onaylar alanında veya Colonyn mobil uygulamasında onaylanması gerekiyor.",
     "timeRemaining": "{{minutes}} dakika {{seconds}} saniye kaldı",
     "urgentWarning": "30 saniyeden az kaldı. Bu istek otomatik olarak reddedilecek.",
     "progressLabel": "Otomatik reddetmeden önce kalan süre",
@@ -55,7 +55,7 @@
     "sendShortcut": "Göndermek için Cmd+Enter"
   },
   "aiChatMessages": {
-    "title": "Breeze Yapay Zeka Asistanı",
+    "title": "Colonyn Yapay Zeka Asistanı",
     "description": "Cihazlarınız, uyarılarınız, ölçümleriniz hakkında bilgi alın veya sorunları giderin.",
     "unknownTool": "Bilinmeyen araç",
     "toolResult": "Araç sonucu",
@@ -91,7 +91,7 @@
   },
   "aiChatSidebar": {
     "history": "Geçmiş",
-    "title": "Breeze AI",
+    "title": "Colonyn AI",
     "conversationHistory": "Konuşma geçmişi",
     "newConversation": "Yeni görüşme",
     "unflagConversation": "Konuşmanın işaretini kaldır",
@@ -170,7 +170,7 @@
       "aiEnabled": "Office için AI {{orgName}} için etkinleştirildi"
     },
     "notEnabled": {
-      "title": "Breeze AI for Office bu örnekte etkin değil.",
+      "title": "Colonyn AI for Office bu örnekte etkin değil.",
       "description": "<code>CLIENT_AI_ENTRA_CLIENT_ID</code> (Entra eklenti uygulaması kaydı) API üzerinde ayarlayın ve yeniden yükleyin."
     },
     "title": "Müşteri kuruluşları",
@@ -204,11 +204,11 @@
       "entraTenantId": "Entra kiracı kimliği",
       "guidError": "Bir GUID olmalıdır (Entra yönetim merkezi → Genel Bakış → Kiracı Kimliği).",
       "saveContinue": "Kaydet ve devam et",
-      "consentDescription": "Müşteri kiracısının Microsoft 365 yöneticisinin, Breeze AI for Office uygulaması için yönetici izni vermesi gerekir. Onlara bu bağlantıyı gönderin (veya istemci kiracısında Global Admin'e sahipseniz bağlantıyı kendiniz açın):",
+      "consentDescription": "Müşteri kiracısının Microsoft 365 yöneticisinin, Colonyn AI for Office uygulaması için yönetici izni vermesi gerekir. Onlara bu bağlantıyı gönderin (veya istemci kiracısında Global Admin'e sahipseniz bağlantıyı kendiniz açın):",
       "loadingConsent": "İzin URL'si yükleniyor…",
       "copyUrl": "URL'yi kopyala",
       "openNewTab": "Yeni sekmede aç",
-      "afterConsent": "Verdikten sonra Microsoft, Breeze onay sayfasına yönlendirir. Onay, ilk kullanıcı Excel'den oturum açtığında burada verildiği gibi görünür - Microsoft'a karşı canlı bir anket yoktur (Plan-4 karar 1).",
+      "afterConsent": "Verdikten sonra Microsoft, Colonyn onay sayfasına yönlendirir. Onay, ilk kullanıcı Excel'den oturum açtığında burada verildiği gibi görünür - Microsoft'a karşı canlı bir anket yoktur (Plan-4 karar 1).",
       "consentGranted": "İzin verdim",
       "enableDescription": "Bu kuruluş için asistanı etkinleştirin. Bu, güvenli varsayılanlarla (tüm kullanıcılar, son kullanıcı onayıyla okuma/yazma, finansal/kimlik bilgisi türleri için DLP düzenlemesi) kuruluş politikasına <code>enabled: true</code> yazar. Daha sonra politika düzenleyicide her şeyi ayarlayın.",
       "enabling": "Etkinleştiriliyor…",
@@ -217,7 +217,7 @@
       "deployTitle": "Excel eklentisini Microsoft 365 merkezi dağıtım yoluyla dağıtın",
       "deploySteps": {
         "signIn": "Müşteri kiracısının <strong>Microsoft 365 yönetici merkezinde</strong> → Ayarlar → Tümleşik uygulamalarda oturum açın.",
-        "upload": "<strong>Özel uygulamalar yükle</strong> → Office eklentisini seçin → Breeze örneğinizden Breeze AI for Office bildirim URL'sini sağlayın.",
+        "upload": "<strong>Özel uygulamalar yükle</strong> → Office eklentisini seçin → Colonyn örneğinizden Colonyn AI for Office bildirim URL'sini sağlayın.",
         "assign": "Eklentiyi herkese veya bu kuruluşun erişim politikası kapsamındaki kullanıcı gruplarına atayın.",
         "wait": "Dağıtımın kullanıcıların Excel şeridinde (Ana Sayfa → Eklentiler) görünmesi 24 saat kadar sürebilir.",
         "signInAutomatically": "Kullanıcılar Microsoft iş hesaplarıyla otomatik olarak oturum açar; ekstra kimlik bilgileri gerekmez."
@@ -275,7 +275,7 @@
     "displayName": "Görünen ad",
     "mspNamePlaceholder": "MSP adınız",
     "logoUrl": "Logo URL'si",
-    "dlpDescription": "Model için Breeze'den ayrılan her yük taranır (spec §6). Düzeltilmiş değerler, düzenlenmiş olarak saklanır; denetim takibi hiçbir zaman hassas formu saklamaz.",
+    "dlpDescription": "Model için Colonyn'den ayrılan her yük taranır (spec §6). Düzeltilmiş değerler, düzenlenmiş olarak saklanır; denetim takibi hiçbir zaman hassas formu saklamaz.",
     "builtins": {
       "creditCard": "Kredi kartı numaraları (Luhn onaylı)",
       "ssn": "SSN / ulusal kimlikler",
@@ -542,7 +542,7 @@
       "cross_connection": "{{model}} farklı bir yapay zekâ bağlantısı kullanıyor, bu nedenle bu sohbet ona geçemez.",
       "connection_changed": "Yapay zekâ bağlantısı son yanıttan beri değişti, bu nedenle bu sohbet model değiştiremez.",
       "transcript_too_large": "Bu konuşma {{model}} için çok uzun.",
-      "fit_unverifiable": "Breeze bu konuşmanın {{model}} modeline sığdığını doğrulayamadı."
+      "fit_unverifiable": "Colonyn bu konuşmanın {{model}} modeline sığdığını doğrulayamadı."
     },
     "messageKept": "Mesajınız saklandı. Bu sohbetin özetinden başlayan yeni bir sohbette devam edin veya mevcut modeli koruyun.",
     "continue": "{{model}} ile yeni bir sohbette devam et",

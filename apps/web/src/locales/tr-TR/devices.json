@@ -157,14 +157,14 @@
       },
       "policy_conflict_gpo": {
         "label": "Grup İlkesi saat ayarlarını denetliyor",
-        "hint": "W32Time, Grup İlkesi tarafından yönetiliyor; Breeze ayarları değiştirmiyor."
+        "hint": "W32Time, Grup İlkesi tarafından yönetiliyor; Colonyn ayarları değiştirmiyor."
       }
     },
     "management": {
       "title": "Saat eşitleme",
       "description": "Etki alanını dikkate alan Windows saat ilkesi ve saat dilimi ayarları",
       "domainRule": "Çalışma grupları, yalnızca Entra kullanan cihazlar ve orman kök etki alanının PDC’si yapılandırılmış NTP sunucularını kullanır. Etki alanı üyeleri, etki alanı denetleyicileri ve diğer PDC öykünücüleri etki alanı hiyerarşisini kullanır. Bilinmeyen roller atlanır.",
-      "gpoWins": "Grup İlkesi önceliklidir. Breeze, Grup İlkesi tarafından yönetilen W32Time ayarlarını değiştirmez.",
+      "gpoWins": "Grup İlkesi önceliklidir. Colonyn, Grup İlkesi tarafından yönetilen W32Time ayarlarını değiştirmez.",
       "enforceNtp": "Saat eşitlemesini zorunlu kıl",
       "ntpServers": "NTP sunucuları — her satıra bir ana bilgisayar adı veya IP adresi, en fazla 5",
       "pollInterval": "Sorgulama aralığı (dakika, 15–1440)",
@@ -311,7 +311,7 @@
     "installerDownloadedRunItOn": "Yükleyici indirildi. Çalıştır",
     "theTargetDevice": "hedef cihaz\nKayıt olmak için ",
     "toEnroll": ".",
-    "installTheBreezeAgentOnYour": "Komut satırını kullanarak Breeze aracısını cihazınıza yükleyin. Aşağıdaki yükleme belirtecini ve komutları kullanın.",
+    "installTheBreezeAgentOnYour": "Komut satırını kullanarak Colonyn aracısını cihazınıza yükleyin. Aşağıdaki yükleme belirtecini ve komutları kullanın.",
     "step1CopyYourInstallationToken": "Adım 1 — Kurulum belirtecinizi kopyalayın",
     "installationToken": "Kurulum Jetonu",
     "copied2": "Kopyalandı!",
@@ -360,7 +360,7 @@
     "moving": "Taşınıyor...",
     "toADifferentSite": "farklı bir siteye taşı.",
     "deviceMovedByOther": "Bu cihaz başka biri tarafından taşındı; geçerli sitesini görmek için sayfayı yenileyin",
-    "policyNote": "Taşıma, {{device}} cihazına uygulanan site yapılandırma ilkelerini, bakım pencerelerini, uyarı yönlendirmesini ve raporları değiştirir. Breeze onu otomatik olarak geri taşımaz."
+    "policyNote": "Taşıma, {{device}} cihazına uygulanan site yapılandırma ilkelerini, bakım pencerelerini, uyarı yönlendirmesini ve raporları değiştirir. Colonyn onu otomatik olarak geri taşımaz."
   },
   "createGroupModal": {
     "failedToCreateGroup": "Grup oluşturulamadı",
@@ -461,8 +461,8 @@
       "bodyOne": "Etkin filonuzdan çıkarılacak ve izlenmeyecek. Geçmiş korunur ve daha sonra geri yükleyebilirsiniz.",
       "bodyMany": "Etkin filonuzdan çıkarılacak ve izlenmeyecekler. Geçmiş korunur ve daha sonra geri yükleyebilirsiniz.",
       "summary": "{{online}} çevrimiçi, {{notOnline}} şu anda çevrimiçi değil.",
-      "legend": "Breeze aracısına ne olsun?",
-      "uninstall": "Breeze aracısını kaldır",
+      "legend": "Colonyn aracısına ne olsun?",
+      "uninstall": "Colonyn aracısını kaldır",
       "uninstallOnline": "Şimdi sıraya alındı — çevrimiçi bir aracı komutu birkaç saniye içinde alır.",
       "uninstallQueuedWithWindow": "Sıraya alındı — cihaz bir sonraki bağlantısında çalıştırır. {{hours}} saat içinde bağlanmazsa iptal edilir.",
       "uninstallQueued": "Sıraya alındı — cihaz bir sonraki bağlantısında çalıştırır.",
@@ -981,7 +981,7 @@
     "noConfigurationPolicies": "Yapılandırma Politikası Yok",
     "noConfigurationPoliciesAreCurrentlyAssigned": "Şu anda bu cihaza atanmış hiçbir yapılandırma ilkesi yok. Yapılandırma İlkeleri sayfası aracılığıyla ilkeleri atayın.",
     "goToConfigPolicies": "Yapılandırma Politikalarına gidin",
-    "viewBreezeDefaults": "Breeze Varsayılanlarını Görüntüle",
+    "viewBreezeDefaults": "Colonyn Varsayılanlarını Görüntüle",
     "effectiveConfiguration": "Etkili Yapılandırma",
     "resolvedConfigurationFrom": "Çözümlenen yapılandırma",
     "assigned": "atandı",
@@ -993,7 +993,7 @@
     "from": "Gönderen:",
     "linkedPolicy": "Bağlantılı politika:",
     "notEnforced": "Zorunlu değil",
-    "usingBreezeDefaults": "— Breeze Varsayılanlarını kullanarak",
+    "usingBreezeDefaults": "— Colonyn Varsayılanlarını kullanarak",
     "inheritanceChain": "Miras Zinciri",
     "policiesAreResolvedUsingClosestWins": "Politikalar, en yakın kazanç önceliği kullanılarak çözümlenir. Daha spesifik atamalar (cihaz düzeyi), daha geniş atamaları (organizasyon düzeyi) geçersiz kılar.",
     "priority": "Öncelik",
@@ -1362,9 +1362,9 @@
     "updateStuck": "{{target}} sürümüne ajan güncellemesi takılmış görünüyor: {{since}} tarihinden bu yana {{attempts}} deneme yapıldı ve cihaz hâlâ eski sürümünde. Güncelleyici her heartbeat'te yeniden deniyor; ajan günlüklerini veya hiç günlük göndermiyorsa cihazın kendisini kontrol edin.",
     "updateOfferWithheld": "Bu cihaz için güncelleme teklifleri durduruldu ({{since}} tarihinden beri): aracı sürümünün bu sunucunun sunduğu sürümü kabul ettiği doğrulanamıyor, bu nedenle mevcut sürümünde kalıyor. Sunulan sürümün yükleyicisiyle veya sürümünü bildiren bir aracı sürümüyle kurtarın.",
     "helperInstallIssue": {
-      "awaitingServerOffer": "Breeze Assist etkin ancak yüklü değil ({{since}} tarihinden beri): sunucu bu cihaza yüklenecek bir Breeze Assist sürümü sunmadı, bu nedenle yüklenmemiş olarak kalıyor. Bu cihazın platformu için yayımlanmış bir Breeze Assist derlemesi olup olmadığını kontrol edin.",
-      "installAbandoned": "Breeze Assist etkin ancak yüklü değil ({{since}} tarihinden beri): sunulan sürümün yüklenmesi tekrar tekrar başarısız oldu, bu nedenle ajan yeniden denemeleri duraklattı. Birkaç saat sonra veya daha yeni bir sürüm sunulduğunda yeniden deneyecek; yükleme hatası ajan günlüğünde yer alıyor.",
-      "unknown": "Breeze Assist etkin ancak yüklü değil ({{since}} tarihinden beri)."
+      "awaitingServerOffer": "Colonyn Assist etkin ancak yüklü değil ({{since}} tarihinden beri): sunucu bu cihaza yüklenecek bir Colonyn Assist sürümü sunmadı, bu nedenle yüklenmemiş olarak kalıyor. Bu cihazın platformu için yayımlanmış bir Colonyn Assist derlemesi olup olmadığını kontrol edin.",
+      "installAbandoned": "Colonyn Assist etkin ancak yüklü değil ({{since}} tarihinden beri): sunulan sürümün yüklenmesi tekrar tekrar başarısız oldu, bu nedenle ajan yeniden denemeleri duraklattı. Birkaç saat sonra veya daha yeni bir sürüm sunulduğunda yeniden deneyecek; yükleme hatası ajan günlüğünde yer alıyor.",
+      "unknown": "Colonyn Assist etkin ancak yüklü değil ({{since}} tarihinden beri)."
     },
     "watchdogInstall": {
       "gaveUp": "Watchdog otomatik olarak yüklenemedi ({{since}} tarihinden beri): {{reason}}. Yeniden denemek için ana makinede <code>breeze-agent service install --watchdog</code> komutunu çalıştırın.",
@@ -1554,7 +1554,7 @@
     "couldNotLoadLinkedProfiles": "Bağlantılı profiller yüklenemedi.",
     "retry": "Tekrar dene",
     "notPartOfALinkedGroup": "Bağlantılı bir grubun parçası değil",
-    "multiBootMachinesRunASeparate": "Çoklu önyüklemeli makineler işletim sistemi başına ayrı bir Breeze aracısı çalıştırır, dolayısıyla aynı donanım birden fazla aygıt olarak görünür. Cihaz listesinde bu cihazı ve diğer önyükleme profillerini seçin, ardından",
+    "multiBootMachinesRunASeparate": "Çoklu önyüklemeli makineler işletim sistemi başına ayrı bir Colonyn aracısı çalıştırır, dolayısıyla aynı donanım birden fazla aygıt olarak görünür. Cihaz listesinde bu cihazı ve diğer önyükleme profillerini seçin, ardından",
     "linkAsMultiBoot": "Çoklu önyükleme olarak bağlantı",
     "toGroupThemWhenOnlyOne": "gruplamak için. Yalnızca tek bir profil çevrimiçi olduğunda, beklenen çevrimdışı kardeşler, cihaz listesinde küçük şeritler halinde bu profilin altına yerleştirilir; her cihaz, kendi envanteri ve geçmişiyle tam olarak yönetilen bir uç nokta olarak kalır.",
     "profiles": "profilleri",
@@ -1758,9 +1758,9 @@
     "updateWithheldTooltip": "Sunucu, aracı sürümünün sunulan sürümü kabul ettiği doğrulanamadığı için bu cihaza güncelleme sunmuyor. Kurtarılana kadar mevcut sürümünde kalır.",
     "helperNotInstalled": "Yüklü değil",
     "helperInstallIssueTooltip": {
-      "awaitingServerOffer": "Breeze Assist etkin ancak yüklü değil: sunucu bu cihaza yüklenecek hiçbir Breeze Assist sürümü sunmadı.",
-      "installAbandoned": "Breeze Assist etkin ancak yüklü değil: sunulan sürümün yüklenmesi tekrar tekrar başarısız oldu ve yeniden denemeler duraklatıldı.",
-      "unknown": "Breeze Assist etkin ancak yüklü değil."
+      "awaitingServerOffer": "Colonyn Assist etkin ancak yüklü değil: sunucu bu cihaza yüklenecek hiçbir Colonyn Assist sürümü sunmadı.",
+      "installAbandoned": "Colonyn Assist etkin ancak yüklü değil: sunulan sürümün yüklenmesi tekrar tekrar başarısız oldu ve yeniden denemeler duraklatıldı.",
+      "unknown": "Colonyn Assist etkin ancak yüklü değil."
     },
     "agentVersionRelation": {
       "equalTooltip": "Etkin sürümle eşleşiyor: {{version}}",
@@ -1805,7 +1805,7 @@
     "mdmEnrollment": "MDM Kaydı:",
     "detectionSource": "Algılama kaynağı:",
     "identityDetectionUnsupported": "Katılım algılama desteklenmiyor",
-    "identityDetectionUnsupportedHint": "Breeze bu cihazın işletim sisteminde dizin veya Intune/Entra kaydını henüz denetlemiyor; bu nedenle katılım durumu bilinmiyor — katılmamış olduğu doğrulanmadı.",
+    "identityDetectionUnsupportedHint": "Colonyn bu cihazın işletim sisteminde dizin veya Intune/Entra kaydını henüz denetlemiyor; bu nedenle katılım durumu bilinmiyor — katılmamış olduğu doğrulanmadı.",
     "flagUnknown": "{{label}}: Bilinmiyor",
     "detectedManagementTools": "Algılanan Yönetim Araçları",
     "tool": "aracı",
@@ -2000,7 +2000,7 @@
       "ringLine": "Onaylar şu güncelleme halkasını izler: {{ring}}",
       "noRingLine": "Bu cihaz için geçerli bir güncelleme halkası yok. Yamalar yalnızca el ile onaydan sonra yüklenir.",
       "unavailable": "Güncelleme halkası onayları değerlendirilemedi. Rozetler yalnızca el ile onayları gösteriyor.",
-      "autoApprovedUserScopeTitle": "{{ring}} bu yamayı onaylıyor, ancak bu, Breeze'in henüz uygulayamadığı kullanıcı başına bir yükleme.",
+      "autoApprovedUserScopeTitle": "{{ring}} bu yamayı onaylıyor, ancak bu, Colonyn'in henüz uygulayamadığı kullanıcı başına bir yükleme.",
       "otherRingApprovalTitle": "Bu yamanın farklı bir güncelleme halkası için el ile onayı var ve bu onay {{ring}} için geçerli değil. Zamanlanmış çalıştırmalar burada onu atlar; Yükle düğmesi ise yine de kabul eder."
     },
     "installPatchRingManagedTitle": "{{name}}, {{ring}} güncelleme halkası tarafından yönetilir ve bir sonraki zamanlanmış yama çalıştırmasıyla yüklenir. Şimdi yüklemek için el ile onay gerekir."
@@ -2172,7 +2172,7 @@
       "bannerProvisional": "{{date}} tarihindeki {{reason}} işleminden ({{who}}) bu yana puanlama — geçici, {{required}} günün {{days}} günü raporlandı",
       "bannerMature_one": "{{date}} tarihindeki {{reason}} işleminden ({{who}}) bu yana puanlama ({{count}} gün)",
       "bannerMature_other": "{{date}} tarihindeki {{reason}} işleminden ({{who}}) bu yana puanlama ({{count}} gün)",
-      "system": "Breeze (otomatik)",
+      "system": "Colonyn (otomatik)",
       "someone": "bir teknisyen",
       "provisional": "Geçici",
       "beforeAfterTitle": "Önce → sonra",
@@ -3565,12 +3565,12 @@
     "securityBody": "Bu uzaktan erişim araçları, RMM'dan ayrı olarak kurulur ve kaldırıldığında hayatta kalır. Hiç kimsenin izlemediği, gözetimsiz bir uzaktan erişim aracısı sürekli bir risktir; bir geçişi kapatmadan önce her birini inceleyin.",
     "deviceCount_one": "{{count}} cihaz",
     "deviceCount_other": "{{count}} cihazlar",
-    "progressEnrolled_one": "{{count}}, Breeze'ye kaydoldu",
-    "progressEnrolled_other": "{{count}}, Breeze'ye kaydoldu",
+    "progressEnrolled_one": "{{count}}, Colonyn'ye kaydoldu",
+    "progressEnrolled_other": "{{count}}, Colonyn'ye kaydoldu",
     "progressBoth_one": "{{count}} her ikisini de çalıştırıyor (geçiş ortasında)",
     "progressBoth_other": "{{count}} her ikisini de çalıştırıyor (geçişin ortasında)",
-    "progressBreezeOnly_one": "{{count}} Breeze-yalnızca (temiz olduğu doğrulandı)",
-    "progressBreezeOnly_other": "{{count}} Breeze-yalnızca (temiz olduğu doğrulandı)",
+    "progressBreezeOnly_one": "{{count}} Colonyn-yalnızca (temiz olduğu doğrulandı)",
+    "progressBreezeOnly_other": "{{count}} Colonyn-yalnızca (temiz olduğu doğrulandı)",
     "progressUnknown_one": "{{count}} bilinmiyor (hiçbir zaman taranmadı veya eskimedi)",
     "progressUnknown_other": "{{count}} bilinmiyor (hiçbir zaman taranmadı veya eskimedi)",
     "noDetections": "Taranan cihazlarda {{category}} ürünü algılanmadı.",
@@ -4002,7 +4002,7 @@
     "exportHistory": "Günlük CSV’yi dışa aktar",
     "from": "Başlangıç (UTC)",
     "to": "Bitiş (UTC)",
-    "evidence": "Breeze aracısının bildirdiği gözlemlenen eşitleme; rapor bulunmayan günler veri boşlukları olarak listelenir. En fazla 400 UTC gününü dışa aktarabilirsiniz. Filtreler mevcut cihaz kümesini seçer.",
+    "evidence": "Colonyn aracısının bildirdiği gözlemlenen eşitleme; rapor bulunmayan günler veri boşlukları olarak listelenir. En fazla 400 UTC gününü dışa aktarabilirsiniz. Filtreler mevcut cihaz kümesini seçer.",
     "rangeError": "1 ile 400 UTC günü arasında bir aralık seçin.",
     "exportError": "Kanıtlar dışa aktarılamadı. Yeniden deneyin.",
     "siteError": "Konumlar yüklenemedi. Yeniden denemek için yenileyin.",

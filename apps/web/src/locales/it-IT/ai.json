@@ -14,7 +14,7 @@
     "ariaLabel": "Approvazione strumento richiesta: {{toolName}}",
     "title": "Approvazione richiesta",
     "pendingApproverTitle": "In attesa di un approvatore",
-    "pendingApproverDescription": "Questa azione richiede l'approvazione nell'area Approvazioni o nell'app mobile Breeze.",
+    "pendingApproverDescription": "Questa azione richiede l'approvazione nell'area Approvazioni o nell'app mobile Colonyn.",
     "timeRemaining": "{{minutes}} minuti e {{seconds}} secondi rimanenti",
     "urgentWarning": "Meno di 30 secondi rimanenti. Questa richiesta verrà rifiutata automaticamente.",
     "progressLabel": "Tempo rimanente prima del rifiuto automatico",
@@ -55,7 +55,7 @@
     "sendShortcut": "Cmd+Enter per inviare"
   },
   "aiChatMessages": {
-    "title": "Breeze AI Assistant",
+    "title": "Colonyn AI Assistant",
     "description": "Chiedi informazioni su dispositivi, avvisi, metriche o risoluzione dei problemi.",
     "unknownTool": "Strumento sconosciuto",
     "toolResult": "Risultato dello strumento",
@@ -91,7 +91,7 @@
   },
   "aiChatSidebar": {
     "history": "Cronologia",
-    "title": "Breeze AI",
+    "title": "Colonyn AI",
     "conversationHistory": "Cronologia conversazioni",
     "newConversation": "Nuova conversazione",
     "unflagConversation": "Rimuovi segnalazione conversazione",
@@ -170,7 +170,7 @@
       "aiEnabled": "AI per Office abilitato per {{orgName}}"
     },
     "notEnabled": {
-      "title": "Breeze AI for Office non è abilitato su questa istanza.",
+      "title": "Colonyn AI for Office non è abilitato su questa istanza.",
       "description": "Imposta <code>CLIENT_AI_ENTRA_CLIENT_ID</code> (la registrazione app Entra dell'add-in) sull'API e ricarica."
     },
     "title": "Organizzazioni clienti",
@@ -204,11 +204,11 @@
       "entraTenantId": "ID tenant Entra",
       "guidError": "Deve essere un GUID (Entra admin center → Overview → Tenant ID).",
       "saveContinue": "Salva e continua",
-      "consentDescription": "Un amministratore Microsoft 365 del tenant cliente deve concedere il consenso amministratore all'app Breeze AI for Office. Invia questo link al cliente (oppure aprilo tu se hai Global Admin nel tenant cliente):",
+      "consentDescription": "Un amministratore Microsoft 365 del tenant cliente deve concedere il consenso amministratore all'app Colonyn AI for Office. Invia questo link al cliente (oppure aprilo tu se hai Global Admin nel tenant cliente):",
       "loadingConsent": "Caricamento URL di consenso…",
       "copyUrl": "Copia URL",
       "openNewTab": "Apri in una nuova scheda",
-      "afterConsent": "Dopo la concessione, Microsoft reindirizza a una pagina di conferma Breeze. Il consenso risulta concesso qui dopo il primo accesso da Excel — non viene eseguito polling in tempo reale verso Microsoft (decisione Plan-4 1).",
+      "afterConsent": "Dopo la concessione, Microsoft reindirizza a una pagina di conferma Colonyn. Il consenso risulta concesso qui dopo il primo accesso da Excel — non viene eseguito polling in tempo reale verso Microsoft (decisione Plan-4 1).",
       "consentGranted": "Ho concesso il consenso",
       "enableDescription": "Abilita l'assistente per questa organizzazione. Questo scrive <code>enabled: true</code> nel criterio dell'organizzazione con impostazioni predefinite sicure (tutti gli utenti, read/write con approvazione dell'utente finale, redazione DLP per dati finanziari/credenziali). Potrai poi regolare tutto nell'editor criteri.",
       "enabling": "Abilitazione…",
@@ -217,7 +217,7 @@
       "deployTitle": "Distribuisci l'add-in Excel tramite distribuzione centralizzata Microsoft 365",
       "deploySteps": {
         "signIn": "Accedi al <strong>Microsoft 365 admin center</strong> del tenant cliente → Settings → Integrated apps.",
-        "upload": "Scegli <strong>Upload custom apps</strong> → Office add-in → fornisci l'URL del manifest Breeze AI for Office dalla tua istanza Breeze.",
+        "upload": "Scegli <strong>Upload custom apps</strong> → Office add-in → fornisci l'URL del manifest Colonyn AI for Office dalla tua istanza Colonyn.",
         "assign": "Assegna l'add-in a tutti o ai gruppi di utenti coperti dal criterio di accesso di questa organizzazione.",
         "wait": "La distribuzione può richiedere fino a 24 ore per comparire nella barra multifunzione di Excel degli utenti (Home → Add-ins).",
         "signInAutomatically": "Gli utenti accedono automaticamente con il loro account di lavoro Microsoft — nessuna credenziale aggiuntiva."
@@ -275,7 +275,7 @@
     "displayName": "Nome visualizzato",
     "mspNamePlaceholder": "Nome del tuo MSP",
     "logoUrl": "Logo URL",
-    "dlpDescription": "Ogni payload che lascia Breeze verso il modello viene analizzato (specifica §6). I valori oscurati vengono memorizzati già oscurati — il registro di controllo non conserva mai la forma sensibile.",
+    "dlpDescription": "Ogni payload che lascia Colonyn verso il modello viene analizzato (specifica §6). I valori oscurati vengono memorizzati già oscurati — il registro di controllo non conserva mai la forma sensibile.",
     "builtins": {
       "creditCard": "Numeri di carta di credito (validati con Luhn)",
       "ssn": "SSN / ID nazionali",
@@ -542,7 +542,7 @@
       "cross_connection": "{{model}} usa un'altra connessione IA, quindi questa chat non può passare a quel modello.",
       "connection_changed": "La connessione IA è cambiata dall'ultima risposta, quindi questa chat non può cambiare modello.",
       "transcript_too_large": "Questa conversazione è troppo lunga per {{model}}.",
-      "fit_unverifiable": "Breeze non ha potuto confermare che questa conversazione rientri in {{model}}."
+      "fit_unverifiable": "Colonyn non ha potuto confermare che questa conversazione rientri in {{model}}."
     },
     "messageKept": "Il tuo messaggio è conservato. Continua in una nuova chat che parte da un riepilogo di questa, oppure mantieni il modello attuale.",
     "continue": "Continua con {{model}} in una nuova chat",

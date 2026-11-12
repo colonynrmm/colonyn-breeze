@@ -28,6 +28,7 @@ import {
   type C2cQueuedAuthorizationDependencies,
   type C2cQueuedWorkData,
 } from '../services/c2cQueuedAuthorization';
+import { orgHasFeature as colonynOrgHasFeature } from '../colonyn/entitlements/store'; // COLONYN
 
 const { db } = dbModule;
 const runWithSystemDbAccess = async <T>(fn: () => Promise<T>): Promise<T> => {
@@ -96,6 +97,8 @@ async function processCheckSchedules(): Promise<{ enqueued: number }> {
   let enqueued = 0;
 
   for (const config of configs) {
+    // COLONYN: Backup & DR module not in the plan -> keep the config, skip the run.
+    if (!(await colonynOrgHasFeature(config.orgId, 'backup').catch(() => true))) continue;
     const schedule = config.schedule as C2cSchedule | null;
     if (!schedule?.frequency) continue;
 

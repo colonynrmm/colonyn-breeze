@@ -217,7 +217,7 @@
       "includeDevicesWithoutBackupHelp": "Se disattivato, il report elenca solo i dispositivi con qualche prova di backup, come l’email di riepilogo del provider.",
       "sources": "Origini dei backup",
       "sourcesHelp": "Scegli quali origini di backup includere nel report.",
-      "sourceBreeze": "Backup Breeze",
+      "sourceBreeze": "Backup Colonyn",
       "sourceProvider": "Provider di backup collegati"
     },
     "vulnerabilityManagementOptions": {
@@ -334,7 +334,7 @@
       },
       "threatDetection": {
         "agents": "Endpoint con agente di rilevamento",
-        "breezeDevices": "Dispositivi gestiti da Breeze",
+        "breezeDevices": "Dispositivi gestiti da Colonyn",
         "carriedIn": "Riportati, ancora aperti",
         "coverage": "Limiti di questo rapporto",
         "devicesWithoutAgent": "Dispositivi gestiti senza agente",
@@ -352,7 +352,7 @@
         "table": "Tabella"
       },
       "endpointManagement": {
-        "breezeWithoutIntune": "Dispositivi Breeze non registrati",
+        "breezeWithoutIntune": "Dispositivi Colonyn non registrati",
         "dataGaps": "Ciò che non è stato possibile misurare",
         "intuneDevices": "Registrati in Intune",
         "intuneWithoutBreezeLink": "Record Intune non collegati",
@@ -1053,11 +1053,11 @@
         },
         "ai_usage_by_client": {
           "name": "Utilizzo dell'IA per cliente",
-          "description": "Utilizzo dell'IA della piattaforma per cliente nel periodo: richieste, token, costo Breeze, importo da addebitare in base al profilo di fatturazione del cliente e quanto è già stato fatturato. L'utilizzo incluso e i modelli senza prezzo sono mostrati separatamente, mai sommati."
+          "description": "Utilizzo dell'IA della piattaforma per cliente nel periodo: richieste, token, costo Colonyn, importo da addebitare in base al profilo di fatturazione del cliente e quanto è già stato fatturato. L'utilizzo incluso e i modelli senza prezzo sono mostrati separatamente, mai sommati."
         },
         "backup_status": {
           "name": "Report sullo stato dei backup",
-          "description": "Stato di backup di ogni dispositivo su Breeze e sui provider di backup collegati, in un’unica istantanea: categorie di copertura, ultimo backup riuscito e cronologia di 28 giorni per dispositivo."
+          "description": "Stato di backup di ogni dispositivo su Colonyn e sui provider di backup collegati, in un’unica istantanea: categorie di copertura, ultimo backup riuscito e cronologia di 28 giorni per dispositivo."
         }
       },
       "title": "Template report",

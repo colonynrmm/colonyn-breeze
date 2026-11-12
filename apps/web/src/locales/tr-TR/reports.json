@@ -217,7 +217,7 @@
       "includeDevicesWithoutBackupHelp": "Kapalıyken rapor yalnızca sağlayıcının kendi özet e-postasında olduğu gibi bir miktar yedekleme kanıtı olan cihazları listeler.",
       "sources": "Yedekleme kaynakları",
       "sourcesHelp": "Rapora hangi yedekleme kaynaklarının dahil edileceğini seçin.",
-      "sourceBreeze": "Breeze yedeklemesi",
+      "sourceBreeze": "Colonyn yedeklemesi",
       "sourceProvider": "Bağlı yedekleme sağlayıcıları"
     },
     "vulnerabilityManagementOptions": {
@@ -334,7 +334,7 @@
       },
       "threatDetection": {
         "agents": "Tespit aracısı olan uç noktalar",
-        "breezeDevices": "Breeze'in yönettiği cihazlar",
+        "breezeDevices": "Colonyn'in yönettiği cihazlar",
         "carriedIn": "Devreden, hâlâ açık",
         "coverage": "Bu raporun sınırları",
         "devicesWithoutAgent": "Aracısı olmayan yönetilen cihazlar",
@@ -352,7 +352,7 @@
         "table": "Masa"
       },
       "endpointManagement": {
-        "breezeWithoutIntune": "Kaydı olmayan Breeze cihazları",
+        "breezeWithoutIntune": "Kaydı olmayan Colonyn cihazları",
         "dataGaps": "Ölçemediklerimiz",
         "intuneDevices": "Intune'a kayıtlı",
         "intuneWithoutBreezeLink": "Eşleşmemiş Intune kayıtları",
@@ -1053,11 +1053,11 @@
         },
         "ai_usage_by_client": {
           "name": "Müşteri Bazında Yapay Zekâ Kullanımı",
-          "description": "Dönem için müşteri başına platform yapay zekâ kullanımı: istek sayısı, token, Breeze maliyeti, müşterinin faturalandırma profiline göre tahsil edilecek tutar ve halihazırda faturalanan kısım. Kapsama dahil kullanım ve fiyatı olmayan modeller ayrı gösterilir, asla karıştırılmaz."
+          "description": "Dönem için müşteri başına platform yapay zekâ kullanımı: istek sayısı, token, Colonyn maliyeti, müşterinin faturalandırma profiline göre tahsil edilecek tutar ve halihazırda faturalanan kısım. Kapsama dahil kullanım ve fiyatı olmayan modeller ayrı gösterilir, asla karıştırılmaz."
         },
         "backup_status": {
           "name": "Yedekleme Durumu Raporu",
-          "description": "Breeze ve bağlı yedekleme sağlayıcıları genelinde her cihazın yedekleme durumu tek bir anlık görüntüde: kapsam kategorileri, son başarılı yedekleme ve cihaz başına 28 günlük geçmiş."
+          "description": "Colonyn ve bağlı yedekleme sağlayıcıları genelinde her cihazın yedekleme durumu tek bir anlık görüntüde: kapsam kategorileri, son başarılı yedekleme ve cihaz başına 28 günlük geçmiş."
         }
       },
       "title": "Rapor Şablonları",

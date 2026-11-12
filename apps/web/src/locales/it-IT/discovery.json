@@ -642,7 +642,7 @@
     "pickAgentHint": "Scegli un agente sulla stessa rete di {{ip}}.",
     "scheme": "Protocollo",
     "allowSelfSignedHint": "Salta la verifica del certificato solo per questa sessione.",
-    "throughAgentHelp": "Il traffico verso questo dispositivo viene inoltrato tramite l'agente Breeze selezionato, che deve trovarsi sulla stessa rete."
+    "throughAgentHelp": "Il traffico verso questo dispositivo viene inoltrato tramite l'agente Colonyn selezionato, che deve trovarsi sulla stessa rete."
   },
   "assetTypes": {
     "workstation": "Workstation",

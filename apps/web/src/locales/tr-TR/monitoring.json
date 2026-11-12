@@ -37,7 +37,7 @@
     },
     "deleteConfirm": "{{name}} monitörü silinsin mi? Uyarı kuralı ve yanıt otomasyonu da kaldırılır.",
     "builtIn": "Yerleşik",
-    "builtInHint": "Breeze tarafından sağlandı. Eşikleri düzenleyin, devre dışı bırakın veya silin; geri gelmez.",
+    "builtInHint": "Colonyn tarafından sağlandı. Eşikleri düzenleyin, devre dışı bırakın veya silin; geri gelmez.",
     "recommended": {
       "title": "Önerilenler",
       "description": "Yerleşik monitörleri bir ilkeye ekleyin."
@@ -374,7 +374,7 @@
     "convert": "Monitöre dönüştür",
     "converted": "Dönüştürüldü",
     "notConvertible": "Bu kuralın koşulları tek bir monitör olarak ifade edilemez.",
-    "systemManaged": "Sistem tarafından yönetilen kural. Breeze bu uyarıyı kendisi oluşturur, bu nedenle dönüştürülecek bir şey yoktur.",
+    "systemManaged": "Sistem tarafından yönetilen kural. Colonyn bu uyarıyı kendisi oluşturur, bu nedenle dönüştürülecek bir şey yoktur.",
     "errors": {
       "fetch": "Uyarı kuralları yüklenemedi",
       "convert": "Kural dönüştürülemedi"
@@ -382,7 +382,7 @@
   },
   "builtInRules": {
     "title": "Yerleşik uyarılar",
-    "description": "Breeze'in kendisinin oluşturduğu uyarılar. Bir uyarıyı kendi kuruluşu için durdurmak üzere kapatın; zaten açık olan uyarılar siz çözene kadar açık kalır.",
+    "description": "Colonyn'in kendisinin oluşturduğu uyarılar. Bir uyarıyı kendi kuruluşu için durdurmak üzere kapatın; zaten açık olan uyarılar siz çözene kadar açık kalır.",
     "columns": {
       "name": "Ad",
       "organization": "Kuruluş",

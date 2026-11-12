@@ -1,0 +1,88 @@
+# Colonyn overlay for the Breeze v0.123.0 stack.
+#
+# Copy to /opt/breeze/ and run every compose command with BOTH files:
+#
+#   cd /opt/breeze
+#   docker compose -f docker-compose.yml -f docker-compose.colonyn.yml up -d
+#
+# What it changes:
+#   web             -> Colonyn-branded build of the web app (same code, new name/logo)
+#   colonyn-bridge  -> provisioning API for Odoo (new service, same image family as api)
+#   api, worker     -> Colonyn build of the API (authenticator label, account emails,
+#                      plan modules and technician limit); api also knows the bridge's
+#                      hook secret (PARTNER_HOOKS_URL is set in .env)
+#   caddy           -> also serves COLONYN_BRIDGE_DOMAIN, only for COLONYN_BRIDGE_ALLOWED_IPS
+#
+# Images are built on this server from the Colonyn source tree (COLONYN_SRC,
+# default /opt/colonyn-breeze): see colonyn/build.sh.
+
+services:
+  web:
+    image: colonyn/breeze-web:${COLONYN_IMAGE_TAG:-0.123.0-colonyn.1}
+    build:
+      context: ${COLONYN_SRC:-/opt/colonyn-breeze}
+      dockerfile: docker/Dockerfile.web
+      args:
+        PUBLIC_API_URL: ""
+        PUBLIC_APP_VERSION: "0.123.0"
+
+  colonyn-bridge:
+    extends:
+      file: docker-compose.yml
+      service: api
+    image: colonyn/breeze-api:${COLONYN_IMAGE_TAG:-0.123.0-colonyn.1}
+    build:
+      context: ${COLONYN_SRC:-/opt/colonyn-breeze}
+      dockerfile: docker/Dockerfile.api
+      args:
+        APP_VERSION: "0.123.0"
+    container_name: colonyn-bridge
+    command: ["node", "dist/colonyn-bridge.cjs"]
+    # Odoo on the same LAN: reach it directly instead of through the router's
+    # public IP (hairpin NAT). Example: COLONYN_ODOO_LAN_HOST=www.example.com:10.0.0.5
+    extra_hosts:
+      - "${COLONYN_ODOO_LAN_HOST:-colonyn-odoo.invalid:127.0.0.1}"
+    environment:
+      # BREEZE_ROLE is inherited from api; the bridge entry point ignores it.
+      COLONYN_BRIDGE_PORT: "3010"
+      COLONYN_BRIDGE_TOKEN: ${COLONYN_BRIDGE_TOKEN:?Set COLONYN_BRIDGE_TOKEN in .env}
+      COLONYN_BRIDGE_HMAC_SECRET: ${COLONYN_BRIDGE_HMAC_SECRET:?Set COLONYN_BRIDGE_HMAC_SECRET in .env}
+      COLONYN_ODOO_WEBHOOK_URL: ${COLONYN_ODOO_WEBHOOK_URL:-}
+      COLONYN_ODOO_WEBHOOK_SECRET: ${COLONYN_ODOO_WEBHOOK_SECRET:-}
+      COLONYN_TEMPLATE_PARTNER_ID: ${COLONYN_TEMPLATE_PARTNER_ID:-}
+      COLONYN_INVITER_NAME: ${COLONYN_INVITER_NAME:-Tim Colonyn}
+      COLONYN_UPGRADE_URL: ${COLONYN_UPGRADE_URL:-}
+      PARTNER_HOOKS_SECRET: ${PARTNER_HOOKS_SECRET:?Set PARTNER_HOOKS_SECRET in .env}
+    healthcheck:
+      test: ['CMD', 'wget', '--no-verbose', '--tries=1', '--spider', 'http://127.0.0.1:3010/health']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      api:
+        condition: service_healthy
+
+  api:
+    image: colonyn/breeze-api:${COLONYN_IMAGE_TAG:-0.123.0-colonyn.1}
+    environment:
+      PARTNER_HOOKS_SECRET: ${PARTNER_HOOKS_SECRET:?Set PARTNER_HOOKS_SECRET in .env}
+      COLONYN_UPGRADE_URL: ${COLONYN_UPGRADE_URL:-}
+      COLONYN_ENTITLEMENTS: ${COLONYN_ENTITLEMENTS:-on}
+
+  worker:
+    image: colonyn/breeze-api:${COLONYN_IMAGE_TAG:-0.123.0-colonyn.1}
+    environment:
+      COLONYN_ENTITLEMENTS: ${COLONYN_ENTITLEMENTS:-on}
+
+  caddy:
+    command: ["caddy", "run", "--config", "/etc/caddy/Caddyfile.colonyn", "--adapter", "caddyfile"]
+    environment:
+      COLONYN_BRIDGE_DOMAIN: ${COLONYN_BRIDGE_DOMAIN:?Set COLONYN_BRIDGE_DOMAIN in .env}
+      COLONYN_BRIDGE_ALLOWED_IPS: ${COLONYN_BRIDGE_ALLOWED_IPS:?Set COLONYN_BRIDGE_ALLOWED_IPS in .env}
+    volumes:
+      - ./colonyn/Caddyfile.colonyn:/etc/caddy/Caddyfile.colonyn:ro

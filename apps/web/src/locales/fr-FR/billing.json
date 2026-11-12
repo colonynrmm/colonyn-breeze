@@ -2496,13 +2496,13 @@
     "ai": {
       "column": "Usage IA",
       "sectionTitle": "Usage de l'IA",
-      "sectionHelp": "Comment l'usage de l'assistant IA par les organisations utilisant ce profil de facturation est facturé. Facturez le coût Breeze majoré d'une marge, ou fixez un prix par modèle.",
+      "sectionHelp": "Comment l'usage de l'assistant IA par les organisations utilisant ce profil de facturation est facturé. Facturez le coût Colonyn majoré d'une marge, ou fixez un prix par modèle.",
       "coverage": "Facturation de l'usage IA",
       "coverageBillable": "Facturable",
       "coverageIncluded": "Inclus",
       "coverageNotBilled": "Non facturé",
       "markup": "Marge sur le coût (%)",
-      "markupHelp": "Ajoutée au coût Breeze en USD de chaque requête. 25 facture le coût plus 25 %. Laissez vide pour ne facturer que les modèles de la liste de prix.",
+      "markupHelp": "Ajoutée au coût Colonyn en USD de chaque requête. 25 facture le coût plus 25 %. Laissez vide pour ne facturer que les modèles de la liste de prix.",
       "markupInvalid": "Saisissez un pourcentage de 0 à 1000 avec au plus deux décimales.",
       "priceListTitle": "Liste de prix",
       "priceListHelp": "Les prix sont en {{currency}} par million de jetons. Un modèle de la liste utilise son prix à la place de la marge.",
@@ -2553,7 +2553,7 @@
     "source": {
       "org": "Organisation cliente",
       "partner": "Valeur par défaut du partenaire",
-      "default": "Valeur par défaut de Breeze"
+      "default": "Valeur par défaut de Colonyn"
     },
     "option": {
       "earlier": "La date la plus proche",
@@ -2684,7 +2684,7 @@
       "notified": "J’ai informé mon acquéreur (Stripe) et les réseaux de cartes il y a au moins 30 jours",
       "cost": "Ces frais ne dépassent pas mon coût d’acceptation des cartes",
       "rules": "Cartes de crédit uniquement. Aucun frais de carte en CA, CT, ME ou MA ; plafond de 2 % au Colorado. Les frais s’appliquent uniquement aux paiements automatiques américains éligibles en USD. Les liens de paiement ponctuel sont sans frais.",
-      "legal": "Breeze ne fournit pas de conseils juridiques. Vous êtes responsable de l’éligibilité des majorations, des avis et du traitement fiscal.",
+      "legal": "Colonyn ne fournit pas de conseils juridiques. Vous êtes responsable de l’éligibilité des majorations, des avis et du traitement fiscal.",
       "lowerAuthorization": "Clients ayant autorisé des conditions inférieures : {{count}}. Leur autorisation actuelle reste en vigueur jusqu’à l’acceptation des nouvelles conditions.",
       "authorizedCard": "Autorisé : {{accepted}} points de base ; configuré : {{configured}}",
       "authorizedAch": "Autorisé : USD {{accepted}} ; configuré : USD {{configured}}",
@@ -2699,7 +2699,7 @@
       "authorizedCardNone": "Aucune autorisation enregistrée ; configuré : {{configured}} points de base",
       "authorizedAchNone": "Aucune autorisation enregistrée ; configuré : USD {{configured}}",
       "lowerAuthorizationOrg": "Ce client n’a pas autorisé les conditions configurées. Toute autorisation existante reste en vigueur jusqu’à l’acceptation des nouvelles conditions.",
-      "blankPartner": "Un champ vide applique la valeur par défaut de Breeze (sans frais). Pour exonérer un client, saisissez 0 comme frais sur sa page Facturation.",
+      "blankPartner": "Un champ vide applique la valeur par défaut de Colonyn (sans frais). Pour exonérer un client, saisissez 0 comme frais sur sa page Facturation.",
       "blankOrg": "Un champ vide reprend la valeur par défaut du partenaire. Saisissez 0 pour exonérer ce client.",
       "inactiveOrg": "Les frais de carte restent inactifs tant qu’un administrateur partenaire n’a pas confirmé les deux déclarations sur les frais dans l’onglet Payments des paramètres de facturation du partenaire.",
       "missingAuthorization": "Aucune autorisation enregistrée : {{count}}. Les paiements automatiques ne peuvent pas prélever ces clients tant qu’ils n’ont pas autorisé leur moyen de paiement enregistré.",
@@ -2780,7 +2780,7 @@
     "sources": {
       "org": "organisation",
       "partner": "valeur par défaut du partenaire",
-      "default": "valeur par défaut de Breeze"
+      "default": "valeur par défaut de Colonyn"
     },
     "save": "Enregistrer les paramètres de paiement",
     "saving": "Enregistrement…",

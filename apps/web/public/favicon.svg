@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#0A0A0B"/>
-  <path d="M6 11C6 11 10 11 14 11C18 11 20 8 24 8C26 8 27 9 27 10C27 11 26 12 24 12C22 12 21 11 21 11" stroke="#0ED4C5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M4 17C4 17 9 17 15 17C21 17 23 14 26 14C27.5 14 28.5 15 28.5 16C28.5 17 27.5 18 26 18C24 18 23 17 23 17" stroke="#0ED4C5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M7 23C7 23 11 23 16 23C20 23 22 20 25 20C26.5 20 27.5 21 27.5 22C27.5 23 26.5 24 25 24C23 24 22 23 22 23" stroke="#0ED4C5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3 10 80 80" role="img" aria-label="Colonyn"><title>Colonyn</title><polygon points="63.86,59.40 76.50,66.70 76.50,81.30 63.86,88.60 51.21,81.30 51.21,66.70" fill="#8EA6F2"/><polygon points="36.14,59.40 48.79,66.70 48.79,81.30 36.14,88.60 23.50,81.30 23.50,66.70" fill="#2F55C8"/><polygon points="22.29,35.40 34.93,42.70 34.93,57.30 22.29,64.60 9.64,57.30 9.64,42.70" fill="#2F55C8"/><polygon points="36.14,11.40 48.79,18.70 48.79,33.30 36.14,40.60 23.50,33.30 23.50,18.70" fill="#2F55C8"/><polygon points="63.86,11.40 76.50,18.70 76.50,33.30 63.86,40.60 51.21,33.30 51.21,18.70" fill="#8EA6F2"/><polygon points="50.00,35.40 62.64,42.70 62.64,57.30 50.00,64.60 37.36,57.30 37.36,42.70" fill="#0E1A33"/></svg>

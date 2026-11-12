@@ -642,7 +642,7 @@
     "pickAgentHint": "Pick an agent on the same network as {{ip}}.",
     "scheme": "Protocol",
     "allowSelfSignedHint": "Skips certificate verification for this session only.",
-    "throughAgentHelp": "Traffic to this device is relayed through the selected Breeze agent, which must be on the same network."
+    "throughAgentHelp": "Traffic to this device is relayed through the selected Colonyn agent, which must be on the same network."
   },
   "assetTypes": {
     "workstation": "Workstation",

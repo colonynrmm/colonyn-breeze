@@ -68,7 +68,7 @@ export function syncDocumentLocaleMetadata(
   const normalizedPath = pathname !== '/' ? pathname.replace(/\/$/, '') : pathname;
   const titleKey = localizedDocumentTitleKeys[normalizedPath];
   if (titleKey) {
-    targetDocument.title = `${i18next.t(titleKey, { ns: 'common' })} | Breeze RMM`;
+    targetDocument.title = `${i18next.t(titleKey, { ns: 'common' })} | Colonyn RMM`;
   }
 }
 

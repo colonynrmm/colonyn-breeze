@@ -117,6 +117,7 @@ import {
 
 import { isHoldingOrg } from '../services/unassignedPool/protectedOrg';
 import { PROTECTED_ORG_ERROR } from '../services/unassignedPool/orgType';
+import { technicianLimitDenial as colonynTechnicianLimitDenial } from '../colonyn/entitlements/guard'; // COLONYN
 export const ssoRoutes = new Hono();
 
 // ============================================
@@ -3589,6 +3590,10 @@ ssoRoutes.get('/callback', async (c) => {
       // NOT NULL `organizations.partner_id` column guarantees a real row is never
       // null), so it fails closed exactly like the old re-query's `!providerOrg` did.
       const provisionOrgPartnerId: string | null = jitRole.orgPartnerId;
+      // COLONYN: a just-in-time SSO user takes a technician seat of the Colonyn plan.
+      if (provisionOrgPartnerId !== null && await colonynTechnicianLimitDenial({ partnerId: provisionOrgPartnerId, email: attrs.email })) {
+        throw new SsoLoginFinalizationError('/login?error=technician_limit');
+      }
       const newUser = provisionOrgPartnerId === null ? null : await (async () => {
         const [created] = await tx
           .insert(users)

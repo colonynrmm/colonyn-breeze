@@ -157,14 +157,14 @@
       },
       "policy_conflict_gpo": {
         "label": "Une stratégie de groupe contrôle les paramètres horaires",
-        "hint": "W32Time est géré par une stratégie de groupe ; Breeze ne modifie pas ses paramètres."
+        "hint": "W32Time est géré par une stratégie de groupe ; Colonyn ne modifie pas ses paramètres."
       }
     },
     "management": {
       "title": "Synchronisation de l’heure",
       "description": "Stratégie d’heure Windows tenant compte du domaine et paramètres de fuseau horaire",
       "domainRule": "Les groupes de travail, les appareils utilisant uniquement Entra et le PDC du domaine racine de la forêt utilisent les serveurs NTP configurés. Les membres du domaine, les contrôleurs de domaine et les autres émulateurs PDC utilisent la hiérarchie du domaine. Les rôles inconnus sont ignorés.",
-      "gpoWins": "La stratégie de groupe est prioritaire. Breeze ne modifie pas les paramètres W32Time gérés par la stratégie de groupe.",
+      "gpoWins": "La stratégie de groupe est prioritaire. Colonyn ne modifie pas les paramètres W32Time gérés par la stratégie de groupe.",
       "enforceNtp": "Imposer la synchronisation de l’heure",
       "ntpServers": "Serveurs NTP — un nom d’hôte ou une adresse IP par ligne, jusqu’à 5",
       "pollInterval": "Intervalle d’interrogation (minutes, 15–1440)",
@@ -311,7 +311,7 @@
     "installerDownloadedRunItOn": "Programme d’installation téléchargé. Exécutez-le sur",
     "theTargetDevice": "Le dispositif cible",
     "toEnroll": "pour s’inscrire.",
-    "installTheBreezeAgentOnYour": "Installez l’agent Breeze sur votre appareil via la ligne de commande. Utilisez le jeton d’installation et les commandes ci-dessous.",
+    "installTheBreezeAgentOnYour": "Installez l’agent Colonyn sur votre appareil via la ligne de commande. Utilisez le jeton d’installation et les commandes ci-dessous.",
     "step1CopyYourInstallationToken": "Étape 1 — Copiez votre jeton d’installation",
     "installationToken": "Jeton d’installation",
     "copied2": "Copié !",
@@ -360,7 +360,7 @@
     "moving": "En mouvement...",
     "toADifferentSite": "vers un autre site.",
     "deviceMovedByOther": "Cet appareil a été déplacé par quelqu'un d'autre : rechargez pour voir son site actuel",
-    "policyNote": "Le déplacement modifie les politiques de configuration, les fenêtres de maintenance, le routage des alertes et les rapports du site qui s'appliquent à {{device}}. Breeze ne le remettra pas en place automatiquement."
+    "policyNote": "Le déplacement modifie les politiques de configuration, les fenêtres de maintenance, le routage des alertes et les rapports du site qui s'appliquent à {{device}}. Colonyn ne le remettra pas en place automatiquement."
   },
   "createGroupModal": {
     "failedToCreateGroup": "Impossible de créer un groupe",
@@ -461,8 +461,8 @@
       "bodyOne": "Il sera sorti de votre parc actif et ne sera plus surveillé. L’historique est conservé et vous pourrez le restaurer plus tard.",
       "bodyMany": "Ils seront sortis de votre parc actif et ne seront plus surveillés. L’historique est conservé et vous pourrez les restaurer plus tard.",
       "summary": "{{online}} en ligne, {{notOnline}} pas en ligne actuellement.",
-      "legend": "Que doit-il advenir de l’agent Breeze ?",
-      "uninstall": "Désinstaller l’agent Breeze",
+      "legend": "Que doit-il advenir de l’agent Colonyn ?",
+      "uninstall": "Désinstaller l’agent Colonyn",
       "uninstallOnline": "Mis en file d’attente — un agent en ligne le récupère dans quelques instants.",
       "uninstallQueuedWithWindow": "Mis en file d’attente — s’exécute à la prochaine communication de l’appareil. Annulé s’il ne se manifeste pas dans un délai de {{hours}} heures.",
       "uninstallQueued": "Mis en file d’attente — s’exécute à la prochaine communication de l’appareil.",
@@ -981,7 +981,7 @@
     "noConfigurationPolicies": "Aucune politique de configuration",
     "noConfigurationPoliciesAreCurrentlyAssigned": "Aucune politique de configuration n’est actuellement assignée à cet appareil. Attribuez des politiques via la page Politiques de configuration.",
     "goToConfigPolicies": "Aller dans Politiques de configuration",
-    "viewBreezeDefaults": "Afficher Breeze Defaults",
+    "viewBreezeDefaults": "Afficher Colonyn Defaults",
     "effectiveConfiguration": "Configuration effective",
     "resolvedConfigurationFrom": "Configuration résolue à partir de",
     "assigned": "Assigné",
@@ -993,7 +993,7 @@
     "from": "De :",
     "linkedPolicy": "Politique liée :",
     "notEnforced": "Non appliqué",
-    "usingBreezeDefaults": "— utilise Breeze Defaults",
+    "usingBreezeDefaults": "— utilise Colonyn Defaults",
     "inheritanceChain": "Chaîne d’héritage",
     "policiesAreResolvedUsingClosestWins": "Les politiques sont résolues en utilisant la priorité de victoire la plus proche. Les affectations plus spécifiques (niveau appareil) l’emportent sur les plus larges (niveau organisation).",
     "priority": "Priorité",
@@ -1362,9 +1362,9 @@
     "updateStuck": "La mise à jour de l'agent vers {{target}} semble bloquée : {{attempts}} tentatives depuis {{since}} et l'appareil est toujours sur son ancienne version. Le programme de mise à jour réessaie à chaque heartbeat ; vérifiez les journaux de l'agent, ou l'appareil lui-même s'il n'en envoie aucun.",
     "updateOfferWithheld": "Les offres de mise à jour sont retenues pour cet appareil (depuis {{since}}) : il n'est pas possible de confirmer que la version de son agent accepte l'édition proposée par ce serveur, il reste donc à sa version actuelle. Récupérez-le avec un programme d'installation de l'édition proposée ou une version de l'agent qui signale son édition.",
     "helperInstallIssue": {
-      "awaitingServerOffer": "Breeze Assist est activé mais non installé (depuis le {{since}}) : le serveur n’a proposé aucune version de Breeze Assist à installer sur cet appareil, qui reste donc sans installation. Vérifiez qu’une version de Breeze Assist est publiée pour la plateforme de cet appareil.",
-      "installAbandoned": "Breeze Assist est activé mais non installé (depuis le {{since}}) : l’installation de la version proposée a échoué à plusieurs reprises, l’agent a donc suspendu les tentatives. Il réessaiera dans quelques heures ou dès qu’une version plus récente sera proposée ; le journal de l’agent contient l’erreur d’installation.",
-      "unknown": "Breeze Assist est activé mais non installé (depuis le {{since}})."
+      "awaitingServerOffer": "Colonyn Assist est activé mais non installé (depuis le {{since}}) : le serveur n’a proposé aucune version de Colonyn Assist à installer sur cet appareil, qui reste donc sans installation. Vérifiez qu’une version de Colonyn Assist est publiée pour la plateforme de cet appareil.",
+      "installAbandoned": "Colonyn Assist est activé mais non installé (depuis le {{since}}) : l’installation de la version proposée a échoué à plusieurs reprises, l’agent a donc suspendu les tentatives. Il réessaiera dans quelques heures ou dès qu’une version plus récente sera proposée ; le journal de l’agent contient l’erreur d’installation.",
+      "unknown": "Colonyn Assist est activé mais non installé (depuis le {{since}})."
     },
     "watchdogInstall": {
       "gaveUp": "Le watchdog n’a pas pu être installé automatiquement (depuis le {{since}}) : {{reason}}. Exécutez <code>breeze-agent service install --watchdog</code> sur l’hôte pour réessayer.",
@@ -1554,7 +1554,7 @@
     "couldNotLoadLinkedProfiles": "Impossible de charger les profils liés.",
     "retry": "Réessayer",
     "notPartOfALinkedGroup": "Ne faisant pas partie d’un groupe lié",
-    "multiBootMachinesRunASeparate": "Les machines multi-démarrage exécutent un agent Breeze séparé par système d’exploitation, de sorte que le même matériel apparaît sous forme de plusieurs périphériques. Sélectionnez cet appareil et ses autres profils de démarrage dans la liste des périphériques, puis choisissez",
+    "multiBootMachinesRunASeparate": "Les machines multi-démarrage exécutent un agent Colonyn séparé par système d’exploitation, de sorte que le même matériel apparaît sous forme de plusieurs périphériques. Sélectionnez cet appareil et ses autres profils de démarrage dans la liste des périphériques, puis choisissez",
     "linkAsMultiBoot": "Liaison en tant que multi-boot",
     "toGroupThemWhenOnlyOne": "pour les regrouper. Lorsqu’un seul profil est en ligne, les profils associés qui doivent être hors ligne apparaissent sous celui-ci dans la liste des appareils. Chaque appareil reste un terminal entièrement géré avec son propre inventaire et son historique.",
     "profiles": "Profils",
@@ -1758,9 +1758,9 @@
     "updateWithheldTooltip": "Le serveur ne propose pas de mises à jour à cet appareil, car il n'est pas possible de confirmer que la version de son agent accepte l'édition proposée. Il reste à sa version actuelle jusqu'à sa récupération.",
     "helperNotInstalled": "Non installé",
     "helperInstallIssueTooltip": {
-      "awaitingServerOffer": "Breeze Assist est activé mais non installé : le serveur n’a proposé aucune version de Breeze Assist à installer sur cet appareil.",
-      "installAbandoned": "Breeze Assist est activé mais non installé : l’installation de la version proposée a échoué à plusieurs reprises et les tentatives sont suspendues.",
-      "unknown": "Breeze Assist est activé mais non installé."
+      "awaitingServerOffer": "Colonyn Assist est activé mais non installé : le serveur n’a proposé aucune version de Colonyn Assist à installer sur cet appareil.",
+      "installAbandoned": "Colonyn Assist est activé mais non installé : l’installation de la version proposée a échoué à plusieurs reprises et les tentatives sont suspendues.",
+      "unknown": "Colonyn Assist est activé mais non installé."
     },
     "agentVersionRelation": {
       "equalTooltip": "Correspond à la version effective {{version}}",
@@ -1805,7 +1805,7 @@
     "mdmEnrollment": "Inscription au MDM :",
     "detectionSource": "Source de détection :",
     "identityDetectionUnsupported": "Détection de jonction non prise en charge",
-    "identityDetectionUnsupportedHint": "Breeze ne vérifie pas encore l'annuaire ni l'inscription Intune/Entra sur le système d'exploitation de cet appareil. Son état de jonction est donc inconnu et n'a pas été confirmé comme non joint.",
+    "identityDetectionUnsupportedHint": "Colonyn ne vérifie pas encore l'annuaire ni l'inscription Intune/Entra sur le système d'exploitation de cet appareil. Son état de jonction est donc inconnu et n'a pas été confirmé comme non joint.",
     "flagUnknown": "{{label}} : Inconnu",
     "detectedManagementTools": "Outils de gestion détectés",
     "tool": "outil",
@@ -2000,7 +2000,7 @@
       "ringLine": "Les approbations suivent l'anneau de mise à jour : {{ring}}",
       "noRingLine": "Aucun anneau de mise à jour ne s'applique à cet appareil. Les correctifs ne s'installent qu'après une approbation manuelle.",
       "unavailable": "Impossible d'évaluer les approbations de l'anneau de mise à jour. Les badges n'indiquent que les approbations manuelles.",
-      "autoApprovedUserScopeTitle": "{{ring}} approuve ce correctif, mais il s'agit d'une installation par utilisateur que Breeze ne peut pas encore appliquer.",
+      "autoApprovedUserScopeTitle": "{{ring}} approuve ce correctif, mais il s'agit d'une installation par utilisateur que Colonyn ne peut pas encore appliquer.",
       "otherRingApprovalTitle": "Ce correctif a une approbation manuelle pour un autre anneau de mise à jour, qui ne s'applique pas à {{ring}}. Les exécutions planifiées l'ignorent ici ; le bouton Installer l'accepte quand même."
     },
     "installPatchRingManagedTitle": "{{name}} est géré par l'anneau de mise à jour {{ring}} et s'installe lors de la prochaine exécution planifiée des correctifs. L'installer maintenant nécessite une approbation manuelle."
@@ -2172,7 +2172,7 @@
       "bannerProvisional": "Évaluation depuis : {{reason}} le {{date}} par {{who}} — provisoire, {{days}} sur {{required}} jours remontés",
       "bannerMature_one": "Évaluation depuis : {{reason}} le {{date}} par {{who}} ({{count}} jour)",
       "bannerMature_other": "Évaluation depuis : {{reason}} le {{date}} par {{who}} ({{count}} jours)",
-      "system": "Breeze (automatique)",
+      "system": "Colonyn (automatique)",
       "someone": "un technicien",
       "provisional": "Provisoire",
       "beforeAfterTitle": "Avant → depuis",
@@ -3565,12 +3565,12 @@
     "securityBody": "Ces outils d'accès distant s'installent indépendamment du RMM et survivent à sa désinstallation. Un agent d'accès distant laissé sans surveillance constitue une exposition permanente — examinez chacun avant de clore une migration.",
     "deviceCount_one": "{{count}} appareil",
     "deviceCount_other": "{{count}} appareils",
-    "progressEnrolled_one": "{{count}} inscrit dans Breeze",
-    "progressEnrolled_other": "{{count}} inscrits dans Breeze",
+    "progressEnrolled_one": "{{count}} inscrit dans Colonyn",
+    "progressEnrolled_other": "{{count}} inscrits dans Colonyn",
     "progressBoth_one": "{{count}} avec les deux (migration en cours)",
     "progressBoth_other": "{{count}} avec les deux (migration en cours)",
-    "progressBreezeOnly_one": "{{count}} Breeze uniquement (vérifié propre)",
-    "progressBreezeOnly_other": "{{count}} Breeze uniquement (vérifiés propres)",
+    "progressBreezeOnly_one": "{{count}} Colonyn uniquement (vérifié propre)",
+    "progressBreezeOnly_other": "{{count}} Colonyn uniquement (vérifiés propres)",
     "progressUnknown_one": "{{count}} inconnu (jamais analysé ou obsolète)",
     "progressUnknown_other": "{{count}} inconnus (jamais analysés ou obsolètes)",
     "noDetections": "Aucun produit {{category}} détecté sur les appareils analysés.",
@@ -4002,7 +4002,7 @@
     "exportHistory": "Exporter le CSV quotidien",
     "from": "Du (UTC)",
     "to": "Au (UTC)",
-    "evidence": "Synchronisation observée et signalée par l’agent Breeze ; les jours sans rapport sont indiqués comme des périodes sans données. Exportez jusqu’à 400 jours UTC. Les filtres sélectionnent le parc actuel d’appareils.",
+    "evidence": "Synchronisation observée et signalée par l’agent Colonyn ; les jours sans rapport sont indiqués comme des périodes sans données. Exportez jusqu’à 400 jours UTC. Les filtres sélectionnent le parc actuel d’appareils.",
     "rangeError": "Choisissez une période de 1 à 400 jours UTC.",
     "exportError": "L’export des preuves a échoué. Réessayez.",
     "siteError": "Impossible de charger les sites. Actualisez pour réessayer.",

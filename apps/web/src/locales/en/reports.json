@@ -217,7 +217,7 @@
       "includeDevicesWithoutBackupHelp": "Off, the report only lists devices with some backup evidence, like the provider's own summary email.",
       "sources": "Backup sources",
       "sourcesHelp": "Choose which backup sources to include in the report.",
-      "sourceBreeze": "Breeze backup",
+      "sourceBreeze": "Colonyn backup",
       "sourceProvider": "Connected backup providers"
     },
     "vulnerabilityManagementOptions": {
@@ -334,7 +334,7 @@
       },
       "threatDetection": {
         "agents": "Endpoints with a detection agent",
-        "breezeDevices": "Devices Breeze manages",
+        "breezeDevices": "Devices Colonyn manages",
         "carriedIn": "Carried in, still open",
         "coverage": "Limits of this report",
         "devicesWithoutAgent": "Managed devices with no agent",
@@ -352,7 +352,7 @@
         "table": "Table"
       },
       "endpointManagement": {
-        "breezeWithoutIntune": "Breeze devices not enrolled",
+        "breezeWithoutIntune": "Colonyn devices not enrolled",
         "dataGaps": "What we could not measure",
         "intuneDevices": "Enrolled in Intune",
         "intuneWithoutBreezeLink": "Intune records not linked",
@@ -1053,11 +1053,11 @@
         },
         "ai_usage_by_client": {
           "name": "AI usage by client",
-          "description": "Platform AI usage per client for the period: requests, tokens, Breeze cost, the amount to charge from the client's billing profile, and what has already been invoiced. Included usage and unpriced models are shown separately, never blended in."
+          "description": "Platform AI usage per client for the period: requests, tokens, Colonyn cost, the amount to charge from the client's billing profile, and what has already been invoiced. Included usage and unpriced models are shown separately, never blended in."
         },
         "backup_status": {
           "name": "Backup Status Report",
-          "description": "Every device's backup status across Breeze and connected backup providers, in one snapshot: coverage buckets, last successful backup, and a 28-day history per device."
+          "description": "Every device's backup status across Colonyn and connected backup providers, in one snapshot: coverage buckets, last successful backup, and a 28-day history per device."
         }
       },
       "title": "Report Templates",

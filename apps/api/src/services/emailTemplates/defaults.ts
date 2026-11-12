@@ -13,7 +13,7 @@ const PREHEADER_BY_ID: Record<EmailTemplateId, string> = {
   invoice_send: 'An invoice is ready to view.',
   invoice_autopay: 'Your invoice and the date it will be paid automatically.',
   portal_invite: 'Set your password to access your support portal.',
-  staff_invite: 'Accept your invitation to Breeze.',
+  staff_invite: 'Accept your invitation to Colonyn.',
   autopay_request: 'Save a card or bank account once, and future invoices are paid on schedule.',
   autopay_enrolled: "Here's what happens next.",
   autopay_stopped: 'Future automatic payments have stopped.',
@@ -119,7 +119,7 @@ export function defaultHtml(id: EmailTemplateId, vars: Record<string, string> = 
     html = html.replace('the {{org_name}} support portal', 'your support portal');
   }
   if (id === 'staff_invite' && !vars.org_name?.trim()) {
-    html = html.replace(' to {{org_name}} on Breeze', ' on Breeze');
+    html = html.replace(' to {{org_name}} on Colonyn', ' on Colonyn');
   }
   return omitEmptySoloParagraphs(html, vars);
 }
@@ -143,7 +143,7 @@ export function defaultSubject(
   if (id === 'quote_send' && !vars.quote_title?.trim()) {
     subjectTemplate = 'Proposal {{quote_number}} from {{partner_name}}';
   } else if (id === 'staff_invite' && !vars.org_name?.trim()) {
-    subjectTemplate = '{{inviter_name}} invited you to Breeze';
+    subjectTemplate = '{{inviter_name}} invited you to Colonyn';
   }
   // Same newline strip as the custom-subject path: free-text vars (a quote
   // title) must not carry a line break into a header value.

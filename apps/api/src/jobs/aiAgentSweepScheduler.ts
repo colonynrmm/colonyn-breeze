@@ -114,6 +114,7 @@ import {
 } from '../services/aiAgents/scheduleService';
 import { createAndEnqueueAgentRun } from '../services/aiAgents/runService';
 import { notHoldingOrgCondition } from '../services/unassignedPool/selectorPredicate';
+import { hasFeature as colonynHasFeature } from '../colonyn/entitlements/store'; // COLONYN
 
 export const AI_AGENT_SWEEP_QUEUE = 'ai-agent-sweep';
 
@@ -281,6 +282,8 @@ export async function processSweepTick(now: Date = new Date()): Promise<{ scanne
     // faults; the tick is idempotent and re-runs in 5 minutes, so the right
     // response is to log this one loudly and keep scanning.
     try {
+      // COLONYN: AI module not in the plan -> no scheduled agent runs.
+      if (baseline.partnerId && !(await colonynHasFeature(baseline.partnerId, 'ai'))) continue;
       const occurrence = latestCronOccurrence(baseline.cron, baseline.timezone, now);
       if (!occurrence) continue;
       if (occurrence.key === baseline.lastOccurrenceKey) continue;

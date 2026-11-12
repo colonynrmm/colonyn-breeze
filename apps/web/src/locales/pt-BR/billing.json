@@ -2496,13 +2496,13 @@
     "ai": {
       "column": "Uso de IA",
       "sectionTitle": "Uso de IA",
-      "sectionHelp": "Como o uso do assistente de IA pelas organizações com este perfil de cobrança é faturado. Cobre o custo do Breeze mais uma margem ou defina um preço por modelo.",
+      "sectionHelp": "Como o uso do assistente de IA pelas organizações com este perfil de cobrança é faturado. Cobre o custo do Colonyn mais uma margem ou defina um preço por modelo.",
       "coverage": "Cobrança do uso de IA",
       "coverageBillable": "Faturável",
       "coverageIncluded": "Incluído",
       "coverageNotBilled": "Não faturado",
       "markup": "Margem sobre o custo (%)",
-      "markupHelp": "Somada ao custo em USD do Breeze por solicitação. 25 cobra o custo mais 25%. Deixe em branco para faturar apenas os modelos da lista de preços.",
+      "markupHelp": "Somada ao custo em USD do Colonyn por solicitação. 25 cobra o custo mais 25%. Deixe em branco para faturar apenas os modelos da lista de preços.",
       "markupInvalid": "Informe uma porcentagem de 0 a 1000 com no máximo duas casas decimais.",
       "priceListTitle": "Lista de preços",
       "priceListHelp": "Os preços estão em {{currency}} por milhão de tokens. Um modelo da lista usa o próprio preço em vez da margem.",
@@ -2553,7 +2553,7 @@
     "source": {
       "org": "Organização",
       "partner": "Padrão do parceiro",
-      "default": "Padrão do Breeze"
+      "default": "Padrão do Colonyn"
     },
     "option": {
       "earlier": "A data mais próxima",
@@ -2684,7 +2684,7 @@
       "notified": "Notifiquei meu adquirente (Stripe) e as bandeiras de cartão há pelo menos 30 dias",
       "cost": "Esta taxa não excede meu custo de aceitação de cartões",
       "rules": "Somente cartões de crédito. Sem taxa de cartão em CA, CT, ME ou MA; no Colorado, o limite é de 2%. As taxas se aplicam apenas a pagamentos automáticos elegíveis dos EUA em USD. Links de pagamento avulso não têm taxa.",
-      "legal": "O Breeze não oferece aconselhamento jurídico. Você é responsável pela elegibilidade das sobretaxas, pelos avisos e pelo tratamento tributário.",
+      "legal": "O Colonyn não oferece aconselhamento jurídico. Você é responsável pela elegibilidade das sobretaxas, pelos avisos e pelo tratamento tributário.",
       "lowerAuthorization": "Clientes com termos autorizados menores: {{count}}. A autorização atual permanece válida até que aceitem os novos termos.",
       "authorizedCard": "Autorizado: {{accepted}} pontos-base; configurado: {{configured}}",
       "authorizedAch": "Autorizado: USD {{accepted}}; configurado: USD {{configured}}",
@@ -2699,7 +2699,7 @@
       "authorizedCardNone": "Nenhuma autorização registrada; configurado: {{configured}} pontos-base",
       "authorizedAchNone": "Nenhuma autorização registrada; configurado: USD {{configured}}",
       "lowerAuthorizationOrg": "Este cliente não autorizou os termos configurados. Qualquer autorização existente permanece válida até que ele aceite os novos termos.",
-      "blankPartner": "Em branco usa o padrão do Breeze (sem taxa). Para isentar um cliente, defina a taxa dele como 0 na página de faturamento desse cliente.",
+      "blankPartner": "Em branco usa o padrão do Colonyn (sem taxa). Para isentar um cliente, defina a taxa dele como 0 na página de faturamento desse cliente.",
       "blankOrg": "Em branco usa o padrão do parceiro. Informe 0 para isentar este cliente.",
       "inactiveOrg": "As taxas de cartão ficam inativas até que um administrador do parceiro confirme as duas declarações sobre taxas na aba Payments das configurações de faturamento do parceiro.",
       "missingAuthorization": "Nenhuma autorização registrada: {{count}}. Os pagamentos automáticos não podem cobrar estes clientes até que autorizem a forma de pagamento salva.",
@@ -2780,7 +2780,7 @@
     "sources": {
       "org": "organização",
       "partner": "padrão do parceiro",
-      "default": "padrão do Breeze"
+      "default": "padrão do Colonyn"
     },
     "save": "Salvar configurações de pagamento",
     "saving": "Salvando…",

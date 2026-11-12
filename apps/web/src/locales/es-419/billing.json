@@ -2496,13 +2496,13 @@
     "ai": {
       "column": "Uso de IA",
       "sectionTitle": "Uso de IA",
-      "sectionHelp": "Cómo se cobra el uso del asistente de IA de las organizaciones con este perfil de facturación. Cobre el costo de Breeze más un margen o fije un precio por modelo.",
+      "sectionHelp": "Cómo se cobra el uso del asistente de IA de las organizaciones con este perfil de facturación. Cobre el costo de Colonyn más un margen o fije un precio por modelo.",
       "coverage": "Facturación del uso de IA",
       "coverageBillable": "Facturable",
       "coverageIncluded": "Incluido",
       "coverageNotBilled": "No facturado",
       "markup": "Margen sobre el costo (%)",
-      "markupHelp": "Se suma al costo en USD de Breeze por cada solicitud. 25 cobra el costo más 25 %. Déjelo vacío para facturar solo los modelos de la lista de precios.",
+      "markupHelp": "Se suma al costo en USD de Colonyn por cada solicitud. 25 cobra el costo más 25 %. Déjelo vacío para facturar solo los modelos de la lista de precios.",
       "markupInvalid": "Ingrese un porcentaje de 0 a 1000 con un máximo de dos decimales.",
       "priceListTitle": "Lista de precios",
       "priceListHelp": "Los precios están en {{currency}} por millón de tokens. Un modelo de la lista usa su precio en lugar del margen.",
@@ -2553,7 +2553,7 @@
     "source": {
       "org": "Organización",
       "partner": "Valor predeterminado del socio",
-      "default": "Valor predeterminado de Breeze"
+      "default": "Valor predeterminado de Colonyn"
     },
     "option": {
       "earlier": "La fecha más temprana",
@@ -2684,7 +2684,7 @@
       "notified": "Notifiqué a mi adquirente (Stripe) y a las redes de tarjetas hace al menos 30 días",
       "cost": "Esta comisión no supera mi costo de aceptación de tarjetas",
       "rules": "Solo tarjetas de crédito. No se cobra comisión por tarjeta en CA, CT, ME ni MA; en Colorado el límite es del 2 %. Las comisiones solo se aplican a pagos automáticos elegibles de EE. UU. en USD. Los enlaces de pago único no tienen comisión.",
-      "legal": "Breeze no brinda asesoramiento legal. Usted es responsable de la elegibilidad de los recargos, los avisos y el tratamiento fiscal.",
+      "legal": "Colonyn no brinda asesoramiento legal. Usted es responsable de la elegibilidad de los recargos, los avisos y el tratamiento fiscal.",
       "lowerAuthorization": "Clientes con términos autorizados más bajos: {{count}}. Su autorización actual sigue vigente hasta que acepten los nuevos términos.",
       "authorizedCard": "Autorizado: {{accepted}} puntos básicos; configurado: {{configured}}",
       "authorizedAch": "Autorizado: USD {{accepted}}; configurado: USD {{configured}}",
@@ -2699,7 +2699,7 @@
       "authorizedCardNone": "No hay autorización registrada; configurado: {{configured}} puntos básicos",
       "authorizedAchNone": "No hay autorización registrada; configurado: USD {{configured}}",
       "lowerAuthorizationOrg": "Este cliente no autorizó los términos configurados. Cualquier autorización existente sigue vigente hasta que acepte los nuevos términos.",
-      "blankPartner": "En blanco usa el valor predeterminado de Breeze (sin comisión). Para eximir a un cliente, establece su comisión en 0 en la página de facturación de ese cliente.",
+      "blankPartner": "En blanco usa el valor predeterminado de Colonyn (sin comisión). Para eximir a un cliente, establece su comisión en 0 en la página de facturación de ese cliente.",
       "blankOrg": "En blanco usa el valor predeterminado del socio. Ingresa 0 para eximir a este cliente.",
       "inactiveOrg": "Las comisiones por tarjeta no se activan hasta que un administrador del socio confirme ambas declaraciones de comisiones en la pestaña Payments de la configuración de facturación del socio.",
       "missingAuthorization": "Sin autorización registrada: {{count}}. Los pagos automáticos no pueden cobrar a estos clientes hasta que autoricen su método de pago guardado.",
@@ -2780,7 +2780,7 @@
     "sources": {
       "org": "organización",
       "partner": "valor predeterminado del socio",
-      "default": "valor predeterminado de Breeze"
+      "default": "valor predeterminado de Colonyn"
     },
     "save": "Guardar configuración de pagos",
     "saving": "Guardando…",

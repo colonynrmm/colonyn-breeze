@@ -37,7 +37,7 @@
     },
     "deleteConfirm": "Eliminare il monitor {{name}}? Verranno rimosse anche la relativa regola di avviso e l'automazione di risposta.",
     "builtIn": "Integrato",
-    "builtInHint": "Fornito da Breeze. Modifica le soglie, disattivalo o eliminalo: non tornerà.",
+    "builtInHint": "Fornito da Colonyn. Modifica le soglie, disattivalo o eliminalo: non tornerà.",
     "recommended": {
       "title": "Consigliati",
       "description": "Associa i monitor integrati a una policy."
@@ -374,7 +374,7 @@
     "convert": "Converti in monitor",
     "converted": "Convertita",
     "notConvertible": "Le condizioni di questa regola non possono essere espresse come un singolo monitor.",
-    "systemManaged": "Regola gestita dal sistema. Breeze genera questo avviso autonomamente, quindi non c'è nulla da convertire.",
+    "systemManaged": "Regola gestita dal sistema. Colonyn genera questo avviso autonomamente, quindi non c'è nulla da convertire.",
     "errors": {
       "fetch": "Impossibile caricare le regole di avviso",
       "convert": "Impossibile convertire la regola"
@@ -382,7 +382,7 @@
   },
   "builtInRules": {
     "title": "Avvisi integrati",
-    "description": "Avvisi che Breeze genera autonomamente. Disattivane uno per interrompere quell'avviso per la sua organizzazione; gli avvisi già aperti restano aperti finché non li risolvi.",
+    "description": "Avvisi che Colonyn genera autonomamente. Disattivane uno per interrompere quell'avviso per la sua organizzazione; gli avvisi già aperti restano aperti finché non li risolvi.",
     "columns": {
       "name": "Nome",
       "organization": "Organizzazione",

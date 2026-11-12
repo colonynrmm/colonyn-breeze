@@ -52,7 +52,7 @@
     "billingQuotesDetail": "Quote",
     "c2c": "Cloud Backup",
     "cisHardening": "CIS Benchmarks",
-    "configurationPoliciesDefaults": "Breeze Defaults",
+    "configurationPoliciesDefaults": "Colonyn Defaults",
     "configurationPoliciesDetail": "Configuration Policy",
     "configurationPolicies": "Configuration Policies",
     "configurationPoliciesNew": "New Configuration Policy",
@@ -178,8 +178,8 @@
     "billingAutopay": "Automatic payments"
   },
   "layout": {
-    "metaDescription": "Breeze RMM - Remote Monitoring and Management",
-    "metaDescriptionSetup": "Breeze RMM - Initial Setup"
+    "metaDescription": "Colonyn RMM - Remote Monitoring and Management",
+    "metaDescriptionSetup": "Colonyn RMM - Initial Setup"
   },
   "authShell": {
     "tagline": "The modern RMM platform built for speed, clarity, and scale."
@@ -311,7 +311,7 @@
     "tagline": "Remote Monitoring & Management"
   },
   "authPage": {
-    "description": "Breeze RMM - Sign in or create your account",
+    "description": "Colonyn RMM - Sign in or create your account",
     "tagline": "Sign in or create your account to get started."
   }
 }

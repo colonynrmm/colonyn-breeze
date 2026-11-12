@@ -34,6 +34,7 @@ import type { RateSnapshot } from './pricing';
 import type { PromptProfile } from './promptProfiles';
 import { defaultTransport, transportCarries, type DispatchTransport, type TransportCarriage } from './transport';
 import { buildWireParams, type WireParams } from './wireParams';
+import { hasFeature as hasColonynFeature } from '../../colonyn/entitlements/store'; // COLONYN
 
 export const PLATFORM_ONLY_SURFACES = ['patch_test'] as const satisfies readonly AiSurface[];
 export type RequestOrigin = 'user' | 'session' | 'policy';
@@ -388,6 +389,9 @@ export async function resolveModel(input: ResolveModelInput): Promise<ResolveMod
   }
   if (!input.partnerId) throw new Error(`${input.surface} requires a partner to resolve a model`);
   const partnerId = input.partnerId;
+  // COLONYN: the AI module is part of the tenant's Colonyn plan. Every AI surface
+  // (chat, agents, script builder, ticket drafts, triage, office) resolves here.
+  if (!(await hasColonynFeature(partnerId, 'ai').catch(() => true))) return unavailable('plan_required', null);
   // Task 6A: no registry-routed dispatch for a partner that has not been cut
   // over (projected from legacy config once, durably). Cuts it over on demand.
   if (!(await ensurePartnerCutover(partnerId))) return unavailable('registry_unavailable', null);

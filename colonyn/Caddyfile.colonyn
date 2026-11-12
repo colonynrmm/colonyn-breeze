@@ -1,0 +1,15 @@
+# Colonyn: the stock Breeze Caddyfile plus one extra site for the bridge.
+# Mounted by docker-compose.colonyn.yml; the stock file stays untouched so a
+# Breeze upgrade can replace it freely.
+import /etc/caddy/Caddyfile 
+
+{$COLONYN_BRIDGE_DOMAIN} {
+	# Only the Odoo server may reach the bridge (direct peer address, not headers).
+	@odoo remote_ip {$COLONYN_BRIDGE_ALLOWED_IPS}
+	handle @odoo {
+		reverse_proxy colonyn-bridge:3010
+	}
+	handle {
+		respond "Forbidden" 403
+	}
+}

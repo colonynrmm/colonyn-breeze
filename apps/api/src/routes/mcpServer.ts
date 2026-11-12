@@ -74,6 +74,7 @@ import { canonicalPrincipalRef, parseUnattendedPrincipals } from '../services/mc
 
 import { notHiddenOrgType } from '../services/unassignedPool/visibility';
 import { notParkedDeviceCondition } from '../services/unassignedPool/selectorPredicate';
+import { mcpEntitlementMiddleware } from '../colonyn/entitlements/guard'; // COLONYN
 export const mcpServerRoutes = new Hono();
 
 function parseCsvSet(raw: string | undefined): Set<string> {
@@ -333,6 +334,7 @@ async function mcpAuthMiddleware(c: Context, next: Next) {
 
 // All MCP routes require authentication.
 mcpServerRoutes.use('*', mcpAuthMiddleware);
+mcpServerRoutes.use('*', mcpEntitlementMiddleware); // COLONYN: AI module
 
 // ============================================
 // Types

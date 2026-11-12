@@ -79,7 +79,7 @@
     },
     "accountDeletionRequestsList": {
       "title": "Richieste di eliminazione account",
-      "description": "Utenti nel tuo tenant che hanno chiesto di eliminare il proprio account Breeze. Approva per accodarli all'elaborazione oppure rifiuta con una nota che spiega il motivo.",
+      "description": "Utenti nel tuo tenant che hanno chiesto di eliminare il proprio account Colonyn. Approva per accodarli all'elaborazione oppure rifiuta con una nota che spiega il motivo.",
       "filterLabel": "Filtra per stato",
       "refresh": "Aggiorna",
       "retry": "Riprova",
@@ -233,13 +233,13 @@
     },
     "thirdPartyCatalog": {
       "title": "Catalogo pacchetti di terze parti",
-      "description": "Metadati curati da Breeze per software di terze parti rilevato da winget sugli agent.",
+      "description": "Metadati curati da Colonyn per software di terze parti rilevato da winget sugli agent.",
       "totalEntries": "Voci totali:",
       "refresh": "Aggiorna",
       "addPackage": "Aggiungi pacchetto",
       "searchPlaceholder": "Cerca per nome, fornitore o winget ID…",
-      "breezeTestedOnly": "Solo testati da Breeze",
-      "breezeTested": "Testato da Breeze",
+      "breezeTestedOnly": "Solo testati da Colonyn",
+      "breezeTested": "Testato da Colonyn",
       "dismiss": "Ignora",
       "loading": "Caricamento catalogo…",
       "empty": "Nessuna voce del catalogo corrisponde ai filtri correnti.",
@@ -261,7 +261,7 @@
       },
       "platformAdmin": {
         "title": "Accesso amministratore piattaforma richiesto",
-        "prefix": "Il catalogo di terze parti è gestito dagli amministratori della piattaforma Breeze. Il tuo account",
+        "prefix": "Il catalogo di terze parti è gestito dagli amministratori della piattaforma Colonyn. Il tuo account",
         "role": "amministratore organizzazione/partner",
         "suffix": "può visualizzare il catalogo curato nei normali flussi di patch, ma non può modificarlo direttamente."
       },
@@ -310,7 +310,7 @@
         "vendor": "Fornitore",
         "friendlyName": "Nome descrittivo",
         "defaultSeverity": "Severità predefinita",
-        "breezeTested": "Testato da Breeze",
+        "breezeTested": "Testato da Colonyn",
         "homepageUrl": "Homepage URL",
         "notes": "Note"
       },
@@ -404,7 +404,7 @@
       "dismiss": "Ignora",
       "platformAdmin": {
         "title": "Accesso amministratore piattaforma richiesto",
-        "prefix": "Il catalogo dei fornitori LLM è gestito dagli amministratori della piattaforma Breeze. Il tuo account",
+        "prefix": "Il catalogo dei fornitori LLM è gestito dagli amministratori della piattaforma Colonyn. Il tuo account",
         "role": "un amministratore di organizzazione/partner",
         "suffix": "non può visualizzarlo né modificarlo direttamente."
       },
@@ -522,7 +522,7 @@
       "impactNote": "Attivare l'interruttore interrompe le azioni IA non supervisionate per tutti i partner entro circa 5 secondi. Le azioni già in corso non vengono interrotte.",
       "platformAdmin": {
         "title": "È richiesto l'accesso come amministratore di piattaforma",
-        "description": "L'interruttore di emergenza IA è un controllo a livello di piattaforma gestito dagli amministratori di piattaforma di Breeze. Il tuo account non può visualizzarlo né modificarlo."
+        "description": "L'interruttore di emergenza IA è un controllo a livello di piattaforma gestito dagli amministratori di piattaforma di Colonyn. Il tuo account non può visualizzarlo né modificarlo."
       },
       "status": {
         "active": "Azioni IA non supervisionate attive",
@@ -541,9 +541,9 @@
       },
       "confirm": {
         "killTitle": "Interrompere le azioni IA su tutta la piattaforma?",
-        "killDescription": "Questo interrompe immediatamente l'attività non supervisionata degli agenti IA per tutti i partner su Breeze. Usalo solo per un incidente attivo.",
+        "killDescription": "Questo interrompe immediatamente l'attività non supervisionata degli agenti IA per tutti i partner su Colonyn. Usalo solo per un incidente attivo.",
         "restoreTitle": "Ripristinare le azioni IA?",
-        "restoreDescription": "Questo riattiva l'attività non supervisionata degli agenti IA per tutti i partner su Breeze.",
+        "restoreDescription": "Questo riattiva l'attività non supervisionata degli agenti IA per tutti i partner su Colonyn.",
         "reasonLabel": "Motivo (obbligatorio, per il registro di controllo)",
         "reasonPlaceholder": "Descrivi l'incidente o il motivo di questa modifica…",
         "cancel": "Annulla",
@@ -570,7 +570,7 @@
         "deprecations": "Deprecazioni"
       },
       "connections": {
-        "enabledMeaning": "Abilitato significa configurato. Breeze non contatta il servizio per verificare che risponda.",
+        "enabledMeaning": "Abilitato significa configurato. Colonyn non contatta il servizio per verificare che risponda.",
         "footnote": "Mostra solo l'ambiente del container dell'API. I container web, portale e worker non sono inclusi.",
         "meta": "Versione in esecuzione {{version}} · {{mode}}",
         "versionMismatch": "Questa immagine API è {{running}}, ma BREEZE_VERSION è {{configured}}. Modificare BREEZE_VERSION non cambia un’immagine fissata tramite digest, e agli agenti viene offerta la release BREEZE_VERSION. Aggiorna con guided-setup.sh --upgrade oppure reimposta BREEZE_VERSION su {{running}}.",

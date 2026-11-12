@@ -73,7 +73,7 @@ export async function consumeMFAToken(secret: string, token: string, userId: str
 export function generateOTPAuthURL(secret: string, email: string): string {
   return generateURI({
     secret,
-    issuer: 'Breeze RMM',
+    issuer: 'Colonyn RMM',
     label: email,
     algorithm: 'sha1',
     digits: 6,

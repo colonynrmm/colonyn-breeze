@@ -298,7 +298,7 @@
       "cancelRun": "Cancel run",
       "partnerScopeTooltip": "This run applies to every organization under your partner account. Ask a full partner admin to cancel it, or stop individual executions on your own devices instead.",
       "confirmCancelRunTitle": "Cancel this run?",
-      "confirmCancelRunMessage": "Breeze will stop every execution this run is still waiting on. Actions already in progress may finish before they can be stopped.",
+      "confirmCancelRunMessage": "Colonyn will stop every execution this run is still waiting on. Actions already in progress may finish before they can be stopped.",
       "cancelRunSuccess_one": "Cancelled — {{count}} execution stopped.",
       "cancelRunSuccess_other": "Cancelled — {{count}} executions stopped.",
       "uncancellableActions_one": "{{count}} action could not be stopped and may still be running on its own.",
@@ -788,7 +788,7 @@
       "stop": "Stop",
       "forceStop": "Force stop",
       "confirmStopTitle": "Stop this execution?",
-      "confirmStopMessage": "Breeze will ask the device to stop {{script}}. This can take a few seconds — Force stop skips the grace period and kills the process immediately."
+      "confirmStopMessage": "Colonyn will ask the device to stop {{script}}. This can take a few seconds — Force stop skips the grace period and kills the process immediately."
     },
     "pagination": {
       "showing": "Showing {{start}} to {{end}} of {{total}}",

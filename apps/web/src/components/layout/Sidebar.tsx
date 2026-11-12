@@ -88,6 +88,7 @@ import '../../lib/i18n';
 import { URL_CHANGE_EVENT } from '../../lib/replaceUrl';
 import { claimSamePageHashClick } from '../../lib/samePageHashClick';
 import { ticketTypeFromHash, type TicketType } from '../tickets/ticketType';
+import { useColonynPlan, normalizePlan as normalizeColonynPlan, isPageAllowed as isColonynPageAllowed } from '../../colonyn/plan'; // COLONYN
 
 interface SidebarProps {
   currentPath?: string;
@@ -697,6 +698,7 @@ export default function Sidebar({ currentPath: initialPath = '/' }: SidebarProps
   // #5075 W04 — persisted, so the first paint after a reload already has the
   // right sections; the /orgs/partners/me effect below refreshes it.
   const serviceManagementMode = useOrgStore((state) => state.serviceManagementMode);
+  const colonynPlan = useColonynPlan((state) => state.plan); // COLONYN
 
   const [apiVersion, setApiVersion] = useState<string | null>(null);
   const [latestVersion, setLatestVersion] = useState<string | null>(null);
@@ -745,6 +747,7 @@ export default function Sidebar({ currentPath: initialPath = '/' }: SidebarProps
           aiForOfficeEnabled?: boolean;
           serviceManagementMode?: ServiceManagementMode;
           settings?: { branding?: { logoUrl?: string } };
+          colonyn?: unknown;
         }>;
       })
       .then((data) => {
@@ -752,6 +755,7 @@ export default function Sidebar({ currentPath: initialPath = '/' }: SidebarProps
         setBrandName(data.name ?? null);
         setBrandLogoUrl(data.settings?.branding?.logoUrl ?? null);
         setAiForOfficeEnabled(data.aiForOfficeEnabled === true);
+        useColonynPlan.getState().setPlan(normalizeColonynPlan(data.colonyn)); // COLONYN
         // Fail OPEN on anything unexpected: an older API that does not send the
         // field, or a value this build does not know, falls back to `native`
         // rather than withdrawing a module the partner is paying for. A failed
@@ -912,6 +916,7 @@ export default function Sidebar({ currentPath: initialPath = '/' }: SidebarProps
   // matches what actually renders — a section whose items are all filtered out
   // must not show an empty header that expands to nothing.
   const isNavItemVisible = (item: NavItem): boolean =>
+    isColonynPageAllowed(colonynPlan, item.href) && // COLONYN: plan modules
     isNavGateVisible(item, {
       isPlatformAdmin,
       permissions,

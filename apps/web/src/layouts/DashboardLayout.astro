@@ -16,6 +16,7 @@ import GlobalShortcuts from '../components/layout/GlobalShortcuts';
 import OnboardingTour from '../components/onboarding/OnboardingTour';
 import ToastContainer from '../components/shared/Toast';
 import WhatsNewSplash from '../components/whatsNew/WhatsNewSplash';
+import ColonynPlanGate from '../colonyn/ColonynPlanGate'; // COLONYN
 
 interface Props {
   title?: string;
@@ -65,6 +66,7 @@ const accentClass = getAccentClass(currentPath);
         {/* Persistent self-host agent-migration notice — mounted here so it
             shows on every authenticated page (see MigrationRequiredBanner). */}
         <MigrationRequiredBanner client:load />
+        <ColonynPlanGate client:load /> {/* COLONYN: plan modules */}
         <slot />
       </main>
     </div>

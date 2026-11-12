@@ -65,6 +65,7 @@ import {
 import { jobSchedule } from './scheduleRegistry';
 import { isParkedDevice, PARKED_DEVICE_CANCEL_REASON } from '../services/unassignedPool/deliveryEligibility';
 import { notHoldingOrgCondition } from '../services/unassignedPool/selectorPredicate';
+import { orgHasFeature as colonynOrgHasFeature } from '../colonyn/entitlements/store'; // COLONYN
 
 // Re-export enqueue functions for backward compatibility
 export const getBackupQueue = backupEnqueue.getBackupQueue;
@@ -353,6 +354,8 @@ async function processCheckSchedules(): Promise<{ enqueued: number }> {
   // 2. For each org, resolve all backup-assigned devices via config policy
   // hierarchy and create the due jobs, then enqueue them once committed.
   for (const orgId of orgIds) {
+    // COLONYN: Backup & DR module not in the plan -> keep the schedule, skip the run.
+    if (!(await colonynOrgHasFeature(orgId, 'backup').catch(() => true))) continue;
     let due: ScheduledBackupJobToDispatch[];
     try {
       due = await runWithSystemDbAccess(() => createDueScheduledBackupJobs(orgId, now));

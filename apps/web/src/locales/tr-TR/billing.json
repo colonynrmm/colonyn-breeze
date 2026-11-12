@@ -2496,13 +2496,13 @@
     "ai": {
       "column": "Yapay zeka kullanımı",
       "sectionTitle": "Yapay zeka kullanımı",
-      "sectionHelp": "Bu faturalandırma profilini kullanan kuruluşların yapay zeka asistanı kullanımının nasıl ücretlendirileceği. Breeze maliyetine bir marj ekleyin veya model başına fiyat belirleyin.",
+      "sectionHelp": "Bu faturalandırma profilini kullanan kuruluşların yapay zeka asistanı kullanımının nasıl ücretlendirileceği. Colonyn maliyetine bir marj ekleyin veya model başına fiyat belirleyin.",
       "coverage": "Yapay zeka kullanımı faturalandırması",
       "coverageBillable": "Faturalandırılabilir",
       "coverageIncluded": "Dahil",
       "coverageNotBilled": "Faturalandırılmaz",
       "markup": "Maliyete marj (%)",
-      "markupHelp": "Her istek için Breeze'in USD maliyetine eklenir. 25, maliyet artı %25 faturalandırır. Yalnızca fiyat listesindeki modelleri faturalandırmak için boş bırakın.",
+      "markupHelp": "Her istek için Colonyn'in USD maliyetine eklenir. 25, maliyet artı %25 faturalandırır. Yalnızca fiyat listesindeki modelleri faturalandırmak için boş bırakın.",
       "markupInvalid": "En fazla iki ondalık basamakla 0 ile 1000 arasında bir yüzde girin.",
       "priceListTitle": "Fiyat listesi",
       "priceListHelp": "Fiyatlar milyon jeton başına {{currency}} cinsindendir. Listedeki bir model, marj yerine kendi fiyatını kullanır.",
@@ -2553,7 +2553,7 @@
     "source": {
       "org": "Kuruluş",
       "partner": "İş ortağı varsayılanı",
-      "default": "Breeze varsayılanı"
+      "default": "Colonyn varsayılanı"
     },
     "option": {
       "earlier": "Daha erken olan tarih",
@@ -2684,7 +2684,7 @@
       "notified": "Üye işyeri hizmet sağlayıcımı (Stripe) ve kart ağlarını en az 30 gün önce bilgilendirdim",
       "cost": "Bu ücret, kart kabul maliyetimi aşmıyor",
       "rules": "Yalnızca kredi kartları. CA, CT, ME veya MA’da kart ücreti uygulanmaz; Colorado’da üst sınır %2’dir. Ücretler yalnızca USD cinsinden uygun ABD otomatik ödemelerine uygulanır. Tek seferlik ödeme bağlantılarında ücret yoktur.",
-      "legal": "Breeze hukuki danışmanlık sağlamaz. Ek ücret uygunluğu, bildirimler ve vergi uygulamalarından siz sorumlusunuz.",
+      "legal": "Colonyn hukuki danışmanlık sağlamaz. Ek ücret uygunluğu, bildirimler ve vergi uygulamalarından siz sorumlusunuz.",
       "lowerAuthorization": "Daha düşük koşullara yetki veren müşteriler: {{count}}. Yeni koşulları kabul edene kadar mevcut yetkilendirmeleri geçerli kalır.",
       "authorizedCard": "Yetkilendirilen: {{accepted}} baz puan; yapılandırılan: {{configured}}",
       "authorizedAch": "Yetkilendirilen: USD {{accepted}}; yapılandırılan: USD {{configured}}",
@@ -2699,7 +2699,7 @@
       "authorizedCardNone": "Kayıtlı yetkilendirme yok; yapılandırılan: {{configured}} baz puan",
       "authorizedAchNone": "Kayıtlı yetkilendirme yok; yapılandırılan: USD {{configured}}",
       "lowerAuthorizationOrg": "Bu müşteri yapılandırılan koşullara yetki vermedi. Mevcut yetkilendirmesi, yeni koşulları kabul edene kadar geçerli kalır.",
-      "blankPartner": "Boş bırakılırsa Breeze varsayılanı kullanılır (ücret yok). Tek bir müşteriyi muaf tutmak için o müşterinin Faturalandırma sayfasında ücretini 0 yapın.",
+      "blankPartner": "Boş bırakılırsa Colonyn varsayılanı kullanılır (ücret yok). Tek bir müşteriyi muaf tutmak için o müşterinin Faturalandırma sayfasında ücretini 0 yapın.",
       "blankOrg": "Boş bırakılırsa iş ortağı varsayılanı kullanılır. Bu müşteriyi muaf tutmak için 0 girin.",
       "inactiveOrg": "Bir iş ortağı yöneticisi, iş ortağı Faturalandırma ayarlarının Payments sekmesinde iki ücret beyanını da onaylayana kadar kart ücretleri uygulanmaz.",
       "missingAuthorization": "Kayıtlı yetkilendirme yok: {{count}}. Bu müşteriler kayıtlı ödeme yöntemlerini yetkilendirene kadar otomatik ödemeyle tahsilat yapılamaz.",
@@ -2780,7 +2780,7 @@
     "sources": {
       "org": "kuruluş",
       "partner": "iş ortağı varsayılanı",
-      "default": "Breeze varsayılanı"
+      "default": "Colonyn varsayılanı"
     },
     "save": "Ödeme ayarlarını kaydet",
     "saving": "Kaydediliyor…",

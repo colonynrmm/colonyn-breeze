@@ -217,7 +217,7 @@
       "includeDevicesWithoutBackupHelp": "Desativado, o relatório lista apenas dispositivos com alguma evidência de backup, como o próprio e-mail-resumo do provedor.",
       "sources": "Fontes de backup",
       "sourcesHelp": "Escolha quais fontes de backup incluir no relatório.",
-      "sourceBreeze": "Backup do Breeze",
+      "sourceBreeze": "Backup do Colonyn",
       "sourceProvider": "Provedores de backup conectados"
     },
     "vulnerabilityManagementOptions": {
@@ -334,7 +334,7 @@
       },
       "threatDetection": {
         "agents": "Endpoints com agente de detecção",
-        "breezeDevices": "Dispositivos gerenciados pelo Breeze",
+        "breezeDevices": "Dispositivos gerenciados pelo Colonyn",
         "carriedIn": "Herdadas, ainda abertas",
         "coverage": "Limites deste relatório",
         "devicesWithoutAgent": "Dispositivos gerenciados sem agente",
@@ -352,7 +352,7 @@
         "table": "Tabela"
       },
       "endpointManagement": {
-        "breezeWithoutIntune": "Dispositivos Breeze não inscritos",
+        "breezeWithoutIntune": "Dispositivos Colonyn não inscritos",
         "dataGaps": "O que não foi possível medir",
         "intuneDevices": "Inscritos no Intune",
         "intuneWithoutBreezeLink": "Registros do Intune sem vínculo",
@@ -1053,11 +1053,11 @@
         },
         "ai_usage_by_client": {
           "name": "Uso de IA por cliente",
-          "description": "Uso de IA da plataforma por cliente no período: solicitações, tokens, custo da Breeze, valor a cobrar conforme o perfil de faturamento do cliente e o que já foi faturado. O uso incluído e os modelos sem preço aparecem separados, nunca misturados."
+          "description": "Uso de IA da plataforma por cliente no período: solicitações, tokens, custo da Colonyn, valor a cobrar conforme o perfil de faturamento do cliente e o que já foi faturado. O uso incluído e os modelos sem preço aparecem separados, nunca misturados."
         },
         "backup_status": {
           "name": "Relatório de status de backup",
-          "description": "Status de backup de cada dispositivo no Breeze e nos provedores de backup conectados, em um único instantâneo: categorias de cobertura, último backup bem-sucedido e um histórico de 28 dias por dispositivo."
+          "description": "Status de backup de cada dispositivo no Colonyn e nos provedores de backup conectados, em um único instantâneo: categorias de cobertura, último backup bem-sucedido e um histórico de 28 dias por dispositivo."
         }
       },
       "title": "Modelos de Relatório",

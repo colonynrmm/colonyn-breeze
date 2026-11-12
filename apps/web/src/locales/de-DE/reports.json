@@ -217,7 +217,7 @@
       "includeDevicesWithoutBackupHelp": "Ausgeschaltet listet der Bericht nur Geräte mit vorhandenem Sicherungsnachweis auf, wie die eigene Übersichts-E-Mail des Anbieters.",
       "sources": "Sicherungsquellen",
       "sourcesHelp": "Wählen Sie, welche Sicherungsquellen im Bericht enthalten sein sollen.",
-      "sourceBreeze": "Breeze-Sicherung",
+      "sourceBreeze": "Colonyn-Sicherung",
       "sourceProvider": "Verbundene Backup-Anbieter"
     },
     "vulnerabilityManagementOptions": {
@@ -334,7 +334,7 @@
       },
       "threatDetection": {
         "agents": "Endgeräte mit Erkennungsagent",
-        "breezeDevices": "Von Breeze verwaltete Geräte",
+        "breezeDevices": "Von Colonyn verwaltete Geräte",
         "carriedIn": "Übernommen, noch offen",
         "coverage": "Grenzen dieses Berichts",
         "devicesWithoutAgent": "Verwaltete Geräte ohne Agent",
@@ -352,7 +352,7 @@
         "table": "Tisch"
       },
       "endpointManagement": {
-        "breezeWithoutIntune": "Breeze-Geräte ohne Registrierung",
+        "breezeWithoutIntune": "Colonyn-Geräte ohne Registrierung",
         "dataGaps": "Was wir nicht messen konnten",
         "intuneDevices": "In Intune registriert",
         "intuneWithoutBreezeLink": "Intune-Einträge ohne Zuordnung",
@@ -1053,11 +1053,11 @@
         },
         "ai_usage_by_client": {
           "name": "KI-Nutzung nach Kunde",
-          "description": "KI-Nutzung der Plattform pro Kunde im Zeitraum: Anfragen, Token, Breeze-Kosten, der laut Abrechnungsprofil des Kunden zu berechnende Betrag und was bereits in Rechnung gestellt wurde. Inkludierte Nutzung und Modelle ohne Preis werden getrennt ausgewiesen, nie eingerechnet."
+          "description": "KI-Nutzung der Plattform pro Kunde im Zeitraum: Anfragen, Token, Colonyn-Kosten, der laut Abrechnungsprofil des Kunden zu berechnende Betrag und was bereits in Rechnung gestellt wurde. Inkludierte Nutzung und Modelle ohne Preis werden getrennt ausgewiesen, nie eingerechnet."
         },
         "backup_status": {
           "name": "Sicherungsstatusbericht",
-          "description": "Sicherungsstatus jedes Geräts über Breeze und verbundene Backup-Anbieter hinweg in einer Momentaufnahme: Abdeckungsgruppen, letzte erfolgreiche Sicherung und eine 28-Tage-Historie pro Gerät."
+          "description": "Sicherungsstatus jedes Geräts über Colonyn und verbundene Backup-Anbieter hinweg in einer Momentaufnahme: Abdeckungsgruppen, letzte erfolgreiche Sicherung und eine 28-Tage-Historie pro Gerät."
         }
       },
       "title": "Berichtsvorlagen",

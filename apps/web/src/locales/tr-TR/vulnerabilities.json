@@ -233,7 +233,7 @@
     "consequence": {
       "remediate": "Her CVE için onaylanmış yamayı {{deviceText}} ({{findingText}}) üzerine yükler. Onaylanmış, geçerli bir düzeltme eki olmayan bulgular atlanır.",
       "accept": "Belirlediğiniz tarihe kadar {{deviceText}} üzerindeki {{findingText}}'yi açık kuyruktan gizler. Otomatik olarak yeniden açılmazlar; süresi dolan kabuller \"Kabul edildi, süresi yakında doluyor\" kartında görünür.",
-      "mitigate": "{{deviceText}} üzerindeki {{findingText}} işaretleri hafifletildi ve notunuz telafi edici kontrol olarak kaydedildi. Breeze cihazları değiştirmez."
+      "mitigate": "{{deviceText}} üzerindeki {{findingText}} işaretleri hafifletildi ve notunuz telafi edici kontrol olarak kaydedildi. Colonyn cihazları değiştirmez."
     },
     "fields": {
       "reason": "Sebep",
@@ -259,7 +259,7 @@
     },
     "unscanned": {
       "title": "Henüz güvenlik açığı bulgusu yok",
-      "description": "Breeze her cihazın yazılımını ve işletim sistemi envanterini bilinen CVE'lere göre kontrol eder ve yama, hafifletme veya risk kabulü gerektiren her şeyi burada sıraya koyar.",
+      "description": "Colonyn her cihazın yazılımını ve işletim sistemi envanterini bilinen CVE'lere göre kontrol eder ve yama, hafifletme veya risk kabulü gerektiren her şeyi burada sıraya koyar.",
       "setupHint": "Tarama varsayılan olarak kapalıdır; bunu bir yapılandırma ilkesinin Güvenlik Açığı sekmesinde etkinleştirin.",
       "setupAction": "Güvenlik açığı taramasını ayarlayın"
     },

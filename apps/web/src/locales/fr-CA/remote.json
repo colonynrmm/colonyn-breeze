@@ -489,7 +489,7 @@
     "title": "Titre"
   },
   "remoteToolsPage": {
-    "agentRestartingDescription": "L’agent Breeze redémarre. L’appareil se reconnectera automatiquement...",
+    "agentRestartingDescription": "L’agent Colonyn redémarre. L’appareil se reconnectera automatiquement...",
     "agentRestartingTitle": "Redémarrage de l’agent",
     "errors": {
       "createRegistryKey": "Impossible de créer la clé du registre",
@@ -800,7 +800,7 @@
     },
     "code": {
       "heading": "Transmettez ce code à la personne que vous dépannez",
-      "shownOnce": "Copiez ce code maintenant. Breeze n’en conserve qu’une empreinte; dès que vous quittez ou rechargez cette page, il est irrécupérable — vous devriez démarrer une nouvelle session.",
+      "shownOnce": "Copiez ce code maintenant. Colonyn n’en conserve qu’une empreinte; dès que vous quittez ou rechargez cette page, il est irrécupérable — vous devriez démarrer une nouvelle session.",
       "expires": "Expire à {{time}}",
       "instructions": "Envoyez-lui le lien, puis demandez-lui de lancer le client téléchargé et d'entrer le code.",
       "copyCode": "Copier le code",

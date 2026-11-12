@@ -489,7 +489,7 @@
     "title": "Title"
   },
   "remoteToolsPage": {
-    "agentRestartingDescription": "The Breeze agent is restarting. The device will reconnect automatically...",
+    "agentRestartingDescription": "The Colonyn agent is restarting. The device will reconnect automatically...",
     "agentRestartingTitle": "Agent Restarting",
     "errors": {
       "createRegistryKey": "Failed to create registry key",
@@ -800,7 +800,7 @@
     },
     "code": {
       "heading": "Read this code to the person you are helping",
-      "shownOnce": "Copy this code now. Breeze stores only a hash of it, so once you leave or reload this page it cannot be recovered — you would have to start a new session.",
+      "shownOnce": "Copy this code now. Colonyn stores only a hash of it, so once you leave or reload this page it cannot be recovered — you would have to start a new session.",
       "expires": "Expires at {{time}}",
       "instructions": "Send them the link, then have them run the downloaded client and type the code.",
       "copyCode": "Copy code",

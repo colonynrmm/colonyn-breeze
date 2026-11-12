@@ -18,7 +18,7 @@
   },
   "list": {
     "title": "Sistem Geri Yükleme",
-    "disclaimer": "Sistem Geri Yükleme bir yedekleme değildir. Bu liste, Breeze'in Windows'tan ne zaman geri yükleme noktası oluşturmasını istediğini ve cihazın ne bildirdiğini kaydeder; bir geri yükleme noktasının var olduğunu veya geri yüklenebileceğini garanti etmez.",
+    "disclaimer": "Sistem Geri Yükleme bir yedekleme değildir. Bu liste, Colonyn'in Windows'tan ne zaman geri yükleme noktası oluşturmasını istediğini ve cihazın ne bildirdiğini kaydeder; bir geri yükleme noktasının var olduğunu veya geri yüklenebileceğini garanti etmez.",
     "loading": "Sistem Geri Yükleme geçmişi yükleniyor…",
     "loadError": "Sistem Geri Yükleme geçmişi yüklenemedi.",
     "retry": "Yeniden dene",

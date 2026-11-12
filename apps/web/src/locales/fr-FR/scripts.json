@@ -295,7 +295,7 @@
       "cancelRun": "Annuler l'exécution",
       "partnerScopeTooltip": "Cette exécution s'applique à toutes les organisations de votre compte partenaire. Demandez à un administrateur partenaire complet de l'annuler, ou arrêtez plutôt des exécutions individuelles sur vos propres appareils.",
       "confirmCancelRunTitle": "Annuler cette exécution ?",
-      "confirmCancelRunMessage": "Breeze arrêtera chaque exécution de script que cette exécution attend encore. Les actions déjà en cours peuvent se terminer avant de pouvoir être arrêtées.",
+      "confirmCancelRunMessage": "Colonyn arrêtera chaque exécution de script que cette exécution attend encore. Les actions déjà en cours peuvent se terminer avant de pouvoir être arrêtées.",
       "uncancellableActions_one": "{{count}} action n'a pas pu être arrêtée et pourrait continuer à s'exécuter seule.",
       "uncancellableActions_other": "{{count}} actions n'ont pas pu être arrêtées et pourraient continuer à s'exécuter seules.",
       "cancelRunSuccess_one": "Annulé — {{count}} exécution arrêtée.",
@@ -784,7 +784,7 @@
       "stop": "Arrêter",
       "forceStop": "Arrêter immédiatement",
       "confirmStopTitle": "Arrêter cette exécution ?",
-      "confirmStopMessage": "Breeze demandera à l'appareil d'arrêter {{script}}. Cela peut prendre quelques secondes — « Arrêter immédiatement » ignore le délai de grâce et met fin au processus sur-le-champ."
+      "confirmStopMessage": "Colonyn demandera à l'appareil d'arrêter {{script}}. Cela peut prendre quelques secondes — « Arrêter immédiatement » ignore le délai de grâce et met fin au processus sur-le-champ."
     },
     "pagination": {
       "showing": "Affichage de {{start}} à {{end}} sur {{total}}",

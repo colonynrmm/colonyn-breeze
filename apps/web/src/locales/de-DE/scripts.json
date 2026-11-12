@@ -295,7 +295,7 @@
       "cancelRun": "Ausführung abbrechen",
       "partnerScopeTooltip": "Diese Ausführung gilt für alle Organisationen unter Ihrem Partnerkonto. Bitten Sie einen vollständigen Partneradministrator, sie abzubrechen, oder stoppen Sie stattdessen einzelne Ausführungen auf Ihren eigenen Geräten.",
       "confirmCancelRunTitle": "Diese Ausführung abbrechen?",
-      "confirmCancelRunMessage": "Breeze stoppt jede Skriptausführung, auf die diese Ausführung noch wartet. Bereits laufende Aktionen können abgeschlossen werden, bevor sie gestoppt werden können.",
+      "confirmCancelRunMessage": "Colonyn stoppt jede Skriptausführung, auf die diese Ausführung noch wartet. Bereits laufende Aktionen können abgeschlossen werden, bevor sie gestoppt werden können.",
       "uncancellableActions_one": "{{count}} Aktion konnte nicht gestoppt werden und läuft möglicherweise weiterhin eigenständig.",
       "uncancellableActions_other": "{{count}} Aktionen konnten nicht gestoppt werden und laufen möglicherweise weiterhin eigenständig.",
       "cancelRunSuccess_one": "Abgebrochen — {{count}} Ausführung gestoppt.",
@@ -784,7 +784,7 @@
       "stop": "Stoppen",
       "forceStop": "Sofort stoppen",
       "confirmStopTitle": "Diese Ausführung stoppen?",
-      "confirmStopMessage": "Breeze bittet das Gerät, {{script}} zu stoppen. Das kann einige Sekunden dauern — „Sofort stoppen“ überspringt die Karenzzeit und beendet den Prozess sofort."
+      "confirmStopMessage": "Colonyn bittet das Gerät, {{script}} zu stoppen. Das kann einige Sekunden dauern — „Sofort stoppen“ überspringt die Karenzzeit und beendet den Prozess sofort."
     },
     "pagination": {
       "showing": "Zeigt {{start}} bis {{end}} von {{total}}",

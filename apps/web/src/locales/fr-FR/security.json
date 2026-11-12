@@ -1042,7 +1042,7 @@
       "codeLabel": "Code de l’application d’authentification",
       "passwordLabel": "Mot de passe du compte",
       "codeHelp": "Le code à 6 chiffres de l’application d’authentification avec laquelle vous vous connectez. Les clés d’accès et les codes SMS ne sont pas encore acceptés pour cette étape.",
-      "passwordHelp": "Le mot de passe que vous utilisez pour vous connecter à Breeze.",
+      "passwordHelp": "Le mot de passe que vous utilisez pour vous connecter à Colonyn.",
       "useCode": "Utiliser plutôt un code de l’application d’authentification",
       "usePassword": "Utiliser plutôt mon mot de passe",
       "errors": {

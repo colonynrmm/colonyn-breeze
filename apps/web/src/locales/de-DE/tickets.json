@@ -649,7 +649,7 @@
     },
     "record": {
       "title": "Entscheidung des Kunden erfassen",
-      "intro": "Verwenden Sie dies, wenn der Kunde Ihnen seine Entscheidung außerhalb von Breeze mitgeteilt hat. Sie wird unter Ihrem Namen protokolliert.",
+      "intro": "Verwenden Sie dies, wenn der Kunde Ihnen seine Entscheidung außerhalb von Colonyn mitgeteilt hat. Sie wird unter Ihrem Namen protokolliert.",
       "target": "Version {{revision}} · {{ask}}",
       "decision": "Entscheidung",
       "approve": "Freigegeben",

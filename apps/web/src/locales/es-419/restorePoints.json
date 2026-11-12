@@ -18,7 +18,7 @@
   },
   "list": {
     "title": "Restaurar sistema",
-    "disclaimer": "Restaurar sistema no es una copia de seguridad. Esta lista registra cuándo Breeze pidió a Windows crear un punto de restauración y lo que informó el dispositivo; no garantiza que exista un punto de restauración ni que pueda restaurarse.",
+    "disclaimer": "Restaurar sistema no es una copia de seguridad. Esta lista registra cuándo Colonyn pidió a Windows crear un punto de restauración y lo que informó el dispositivo; no garantiza que exista un punto de restauración ni que pueda restaurarse.",
     "loading": "Cargando el historial de Restaurar sistema…",
     "loadError": "No se pudo cargar el historial de Restaurar sistema.",
     "retry": "Reintentar",

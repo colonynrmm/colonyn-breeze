@@ -18,7 +18,7 @@
   },
   "list": {
     "title": "Systemwiederherstellung",
-    "disclaimer": "Die Systemwiederherstellung ist keine Datensicherung. Diese Liste zeigt, wann Breeze Windows aufgefordert hat, einen Wiederherstellungspunkt zu erstellen, und was das Gerät gemeldet hat; sie garantiert nicht, dass ein Wiederherstellungspunkt existiert oder wiederhergestellt werden kann.",
+    "disclaimer": "Die Systemwiederherstellung ist keine Datensicherung. Diese Liste zeigt, wann Colonyn Windows aufgefordert hat, einen Wiederherstellungspunkt zu erstellen, und was das Gerät gemeldet hat; sie garantiert nicht, dass ein Wiederherstellungspunkt existiert oder wiederhergestellt werden kann.",
     "loading": "Verlauf der Systemwiederherstellung wird geladen…",
     "loadError": "Der Verlauf der Systemwiederherstellung konnte nicht geladen werden.",
     "retry": "Erneut versuchen",

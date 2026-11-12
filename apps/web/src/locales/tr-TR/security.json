@@ -1042,7 +1042,7 @@
       "codeLabel": "Kimlik doğrulayıcı uygulaması kodu",
       "passwordLabel": "Hesap parolası",
       "codeHelp": "Oturum açtığınız kimlik doğrulayıcı uygulamasından alınan 6 haneli kod. Geçiş anahtarları ve SMS kodları bu adım için henüz kabul edilmiyor.",
-      "passwordHelp": "Breeze'de oturum açmak için kullandığınız parola.",
+      "passwordHelp": "Colonyn'de oturum açmak için kullandığınız parola.",
       "useCode": "Bunun yerine bir kimlik doğrulayıcı uygulaması kodu kullan",
       "usePassword": "Bunun yerine parolamı kullan",
       "errors": {

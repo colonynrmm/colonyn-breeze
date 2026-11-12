@@ -649,7 +649,7 @@
     },
     "record": {
       "title": "Enregistrer la décision du client",
-      "intro": "À utiliser lorsque le client vous a communiqué sa décision en dehors de Breeze. Elle est consignée sous votre nom.",
+      "intro": "À utiliser lorsque le client vous a communiqué sa décision en dehors de Colonyn. Elle est consignée sous votre nom.",
       "target": "Révision {{revision}} · {{ask}}",
       "decision": "Décision",
       "approve": "Approuvée",

@@ -489,7 +489,7 @@
     "title": "Titolo"
   },
   "remoteToolsPage": {
-    "agentRestartingDescription": "L'agente Breeze si sta riavviando. Il dispositivo si riconnetterà automaticamente...",
+    "agentRestartingDescription": "L'agente Colonyn si sta riavviando. Il dispositivo si riconnetterà automaticamente...",
     "agentRestartingTitle": "Riavvio dell'agente",
     "errors": {
       "createRegistryKey": "Impossibile creare la chiave del registro",
@@ -800,7 +800,7 @@
     },
     "code": {
       "heading": "Comunica questo codice alla persona che stai assistendo",
-      "shownOnce": "Copia subito questo codice. Breeze ne memorizza solo un hash, quindi una volta che lasci o ricarichi questa pagina non è più recuperabile: dovresti avviare una nuova sessione.",
+      "shownOnce": "Copia subito questo codice. Colonyn ne memorizza solo un hash, quindi una volta che lasci o ricarichi questa pagina non è più recuperabile: dovresti avviare una nuova sessione.",
       "expires": "Scade alle {{time}}",
       "instructions": "Invia il link, poi chiedi di eseguire il client scaricato e di digitare il codice.",
       "copyCode": "Copia il codice",

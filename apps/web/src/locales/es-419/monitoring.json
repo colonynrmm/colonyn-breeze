@@ -37,7 +37,7 @@
     },
     "deleteConfirm": "¿Eliminar el monitor {{name}}? También se eliminarán su regla de alerta y la automatización de respuesta.",
     "builtIn": "Integrado",
-    "builtInHint": "Aprovisionado por Breeze. Edita los umbrales, desactívalo o elimínalo; no volverá a aparecer.",
+    "builtInHint": "Aprovisionado por Colonyn. Edita los umbrales, desactívalo o elimínalo; no volverá a aparecer.",
     "recommended": {
       "title": "Recomendados",
       "description": "Adjunte los monitores integrados a una política."
@@ -374,7 +374,7 @@
     "convert": "Convertir en monitor",
     "converted": "Convertida",
     "notConvertible": "Las condiciones de esta regla no se pueden expresar como un solo monitor.",
-    "systemManaged": "Regla administrada por el sistema. Breeze genera esta alerta por sí mismo, así que no hay nada que convertir.",
+    "systemManaged": "Regla administrada por el sistema. Colonyn genera esta alerta por sí mismo, así que no hay nada que convertir.",
     "errors": {
       "fetch": "No se pudieron cargar las reglas de alerta",
       "convert": "No se pudo convertir la regla"
@@ -382,7 +382,7 @@
   },
   "builtInRules": {
     "title": "Alertas integradas",
-    "description": "Alertas que Breeze genera por sí mismo. Desactiva una para detener esa alerta en su organización; las alertas ya abiertas siguen abiertas hasta que las resuelvas.",
+    "description": "Alertas que Colonyn genera por sí mismo. Desactiva una para detener esa alerta en su organización; las alertas ya abiertas siguen abiertas hasta que las resuelvas.",
     "columns": {
       "name": "Nombre",
       "organization": "Organización",

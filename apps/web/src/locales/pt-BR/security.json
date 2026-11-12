@@ -1042,7 +1042,7 @@
       "codeLabel": "Código do aplicativo autenticador",
       "passwordLabel": "Senha da conta",
       "codeHelp": "O código de 6 dígitos do aplicativo autenticador com o qual você entra. Chaves de acesso e códigos por SMS ainda não são aceitos nesta etapa.",
-      "passwordHelp": "A senha que você usa para entrar no Breeze.",
+      "passwordHelp": "A senha que você usa para entrar no Colonyn.",
       "useCode": "Usar um código do aplicativo autenticador em vez disso",
       "usePassword": "Usar minha senha em vez disso",
       "errors": {

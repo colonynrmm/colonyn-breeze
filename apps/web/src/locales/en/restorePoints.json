@@ -18,7 +18,7 @@
   },
   "list": {
     "title": "System Restore",
-    "disclaimer": "System Restore is not a backup. This list records when Breeze asked Windows to create a restore point and what the device reported; it does not guarantee that a restore point exists or can be restored.",
+    "disclaimer": "System Restore is not a backup. This list records when Colonyn asked Windows to create a restore point and what the device reported; it does not guarantee that a restore point exists or can be restored.",
     "loading": "Loading System Restore history…",
     "loadError": "Could not load System Restore history.",
     "retry": "Retry",

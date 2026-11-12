@@ -489,7 +489,7 @@
     "title": "Başlık"
   },
   "remoteToolsPage": {
-    "agentRestartingDescription": "Breeze aracısı yeniden başlatılıyor. Cihaz otomatik olarak yeniden bağlanacaktır...",
+    "agentRestartingDescription": "Colonyn aracısı yeniden başlatılıyor. Cihaz otomatik olarak yeniden bağlanacaktır...",
     "agentRestartingTitle": "Temsilci Yeniden Başlatılıyor",
     "errors": {
       "createRegistryKey": "Kayıt defteri anahtarı oluşturulamadı",
@@ -800,7 +800,7 @@
     },
     "code": {
       "heading": "Bu kodu yardım ettiğiniz kişiye okuyun",
-      "shownOnce": "Bu kodu şimdi kopyalayın. Breeze yalnızca kodun bir özetini (hash) saklar; bu sayfadan ayrıldığınızda veya sayfayı yenilediğinizde kod kurtarılamaz — yeni bir oturum başlatmanız gerekir.",
+      "shownOnce": "Bu kodu şimdi kopyalayın. Colonyn yalnızca kodun bir özetini (hash) saklar; bu sayfadan ayrıldığınızda veya sayfayı yenilediğinizde kod kurtarılamaz — yeni bir oturum başlatmanız gerekir.",
       "expires": "Süresi {{time}} tarihinde doluyor",
       "instructions": "Onlara bağlantıyı gönderin, ardından indirilen istemciyi çalıştırıp kodu yazmalarını sağlayın.",
       "copyCode": "Kodu kopyala",

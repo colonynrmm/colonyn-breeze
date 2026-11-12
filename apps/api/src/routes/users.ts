@@ -58,6 +58,8 @@ import {
 import { previewMfaEnrollmentGrace, resolveMfaGraceDays } from '../services/mfaEnrollmentGrace';
 import { requestPendingEmailChange } from '../services/pendingEmail';
 import { resolveDelegatedSiteIds } from '../services/organizationMembershipDelegation';
+import { technicianLimitDenial as colonynTechnicianLimitDenial } from '../colonyn/entitlements/guard'; // COLONYN
+import { partnerIdForOrg as colonynPartnerIdForOrg } from '../colonyn/entitlements/store'; // COLONYN
 
 export const userRoutes = new Hono();
 const supportedLocales = SUPPORTED_LOCALES;
@@ -1563,6 +1565,14 @@ userRoutes.post(
     }
 
     const normalizedEmail = data.email.toLowerCase();
+
+    // COLONYN: technician seats from the Colonyn plan (re-inviting an existing member is free).
+    const colonynSeat = await colonynTechnicianLimitDenial({
+      partnerId: scopeContext.scope === 'partner' ? scopeContext.partnerId : await colonynPartnerIdForOrg(scopeContext.orgId),
+      email: normalizedEmail,
+      bypass: auth.scope === 'system',
+    });
+    if (colonynSeat) return c.json(colonynSeat.body, colonynSeat.status);
 
     // RMM-QA-166 (D9): a neutralized tombstone (disabled + no password) may still
     // carry factor rows — user_passkeys left by pre-fix neutralization or by the

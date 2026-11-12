@@ -294,12 +294,12 @@ const FIELD_DEFAULTS_BY_ID: Record<EmailTemplateId, EmailTemplateFieldDefaults> 
 <p>This invite link expires in 7 days. If you didn't expect this, you can ignore this email.</p>`,
   },
   staff_invite: {
-    subject: '{{inviter_name}} invited you to {{org_name}} on Breeze',
+    subject: '{{inviter_name}} invited you to {{org_name}} on Colonyn',
     heading: 'Join {{org_name}}',
     buttonLabel: 'Accept invitation',
     html:
       `<p>Hi {{name}},</p>
-<p>{{inviter_name}} invited you to {{org_name}} on Breeze.</p>
+<p>{{inviter_name}} invited you to {{org_name}} on Colonyn.</p>
 <p>{{cta_button}}</p>
 <p>This invitation expires in {{expires_days}} days. If you weren't expecting it, you can ignore this email.</p>`,
   },

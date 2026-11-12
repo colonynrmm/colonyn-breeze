@@ -157,14 +157,14 @@
       },
       "policy_conflict_gpo": {
         "label": "Group Policy controls time settings",
-        "hint": "W32Time is managed by Group Policy; Breeze is not changing it."
+        "hint": "W32Time is managed by Group Policy; Colonyn is not changing it."
       }
     },
     "management": {
       "title": "Time sync",
       "description": "Domain-aware Windows time policy and timezone settings",
       "domainRule": "Workgroup, Entra-only devices and the forest-root PDC use the configured NTP servers. Domain members, domain controllers and other PDC emulators use the domain hierarchy. Unknown roles are skipped.",
-      "gpoWins": "Group Policy takes precedence. Breeze does not change W32Time settings managed by Group Policy.",
+      "gpoWins": "Group Policy takes precedence. Colonyn does not change W32Time settings managed by Group Policy.",
       "enforceNtp": "Enforce time synchronization",
       "ntpServers": "NTP servers — one hostname or IP address per line, up to 5",
       "pollInterval": "Poll interval (minutes, 15–1440)",
@@ -311,7 +311,7 @@
     "installerDownloadedRunItOn": "Installer downloaded. Run it on",
     "theTargetDevice": "the target device",
     "toEnroll": "to enroll.",
-    "installTheBreezeAgentOnYour": "Install the Breeze agent on your device using the command line. Use the installation token and commands below.",
+    "installTheBreezeAgentOnYour": "Install the Colonyn agent on your device using the command line. Use the installation token and commands below.",
     "step1CopyYourInstallationToken": "Step 1 — Copy your installation token",
     "installationToken": "Installation Token",
     "copied2": "Copied!",
@@ -360,7 +360,7 @@
     "moving": "Moving...",
     "toADifferentSite": "to a different site.",
     "deviceMovedByOther": "This device was moved by someone else — reload to see its current site",
-    "policyNote": "Moving changes which site's configuration policies, maintenance windows, alert routing and reports apply to {{device}}. Breeze will not move it back automatically."
+    "policyNote": "Moving changes which site's configuration policies, maintenance windows, alert routing and reports apply to {{device}}. Colonyn will not move it back automatically."
   },
   "createGroupModal": {
     "failedToCreateGroup": "Failed to create group",
@@ -461,8 +461,8 @@
       "bodyOne": "It will be taken out of your active fleet and stop being monitored. History is kept and you can restore it later.",
       "bodyMany": "They will be taken out of your active fleet and stop being monitored. History is kept and you can restore them later.",
       "summary": "{{online}} online, {{notOnline}} not currently online.",
-      "legend": "What should happen to the Breeze agent?",
-      "uninstall": "Uninstall the Breeze agent",
+      "legend": "What should happen to the Colonyn agent?",
+      "uninstall": "Uninstall the Colonyn agent",
       "uninstallOnline": "Queued now — an online agent collects it within moments.",
       "uninstallQueuedWithWindow": "Queued — runs the next time the device checks in. Cancelled if it hasn't after {{hours}} hours.",
       "uninstallQueued": "Queued — runs the next time the device checks in.",
@@ -981,7 +981,7 @@
     "noConfigurationPolicies": "No Configuration Policies",
     "noConfigurationPoliciesAreCurrentlyAssigned": "No configuration policies are currently assigned to this device. Assign policies through the Configuration Policies page.",
     "goToConfigPolicies": "Go to Config Policies",
-    "viewBreezeDefaults": "View Breeze Defaults",
+    "viewBreezeDefaults": "View Colonyn Defaults",
     "effectiveConfiguration": "Effective Configuration",
     "resolvedConfigurationFrom": "Resolved configuration from",
     "assigned": "assigned",
@@ -994,7 +994,7 @@
     "linkedPolicy": "Linked policy:",
     "inheritedFrom": "Inherited from {{name}}",
     "notEnforced": "Not enforced",
-    "usingBreezeDefaults": "— using Breeze Defaults",
+    "usingBreezeDefaults": "— using Colonyn Defaults",
     "inheritanceChain": "Inheritance Chain",
     "policiesAreResolvedUsingClosestWins": "Policies are resolved using closest-wins priority. More specific assignments (device level) override broader ones (organization level).",
     "priority": "Priority",
@@ -1362,9 +1362,9 @@
     "updateStuck": "Agent update to {{target}} appears stuck: {{attempts}} attempts since {{since}} and the device is still on its old version. The updater retries on every heartbeat; check the agent logs, or the device itself if it is shipping none.",
     "updateOfferWithheld": "Update offers are withheld from this device (since {{since}}): its agent build cannot be confirmed to accept the edition this server serves, so it stays on its current version. Recover it with an installer of the served edition or an agent release that reports its edition.",
     "helperInstallIssue": {
-      "awaitingServerOffer": "Breeze Assist is enabled but not installed (since {{since}}): the server has not offered a Breeze Assist version for this device to install, so it stays uninstalled. Check that a Breeze Assist build is published for this device's platform.",
-      "installAbandoned": "Breeze Assist is enabled but not installed (since {{since}}): installing the offered version failed repeatedly, so the agent paused retries. It tries again after a few hours or when a newer version is offered; the agent log has the install error.",
-      "unknown": "Breeze Assist is enabled but not installed (since {{since}})."
+      "awaitingServerOffer": "Colonyn Assist is enabled but not installed (since {{since}}): the server has not offered a Colonyn Assist version for this device to install, so it stays uninstalled. Check that a Colonyn Assist build is published for this device's platform.",
+      "installAbandoned": "Colonyn Assist is enabled but not installed (since {{since}}): installing the offered version failed repeatedly, so the agent paused retries. It tries again after a few hours or when a newer version is offered; the agent log has the install error.",
+      "unknown": "Colonyn Assist is enabled but not installed (since {{since}})."
     },
     "watchdogInstall": {
       "gaveUp": "The watchdog could not be installed automatically (since {{since}}): {{reason}}. Run <code>breeze-agent service install --watchdog</code> on the host to retry.",
@@ -1554,7 +1554,7 @@
     "couldNotLoadLinkedProfiles": "Could not load linked profiles.",
     "retry": "Retry",
     "notPartOfALinkedGroup": "Not part of a linked group",
-    "multiBootMachinesRunASeparate": "Multi-boot machines run a separate Breeze agent per OS, so the same hardware shows up as several devices. Select this device and its other boot profiles in the device list, then choose",
+    "multiBootMachinesRunASeparate": "Multi-boot machines run a separate Colonyn agent per OS, so the same hardware shows up as several devices. Select this device and its other boot profiles in the device list, then choose",
     "linkAsMultiBoot": "Link as multi-boot",
     "toGroupThemWhenOnlyOne": "to group them. When only one profile is online, the expected-offline siblings tuck beneath it in the device list as small strips — every device stays a fully managed endpoint with its own inventory and history.",
     "profiles": "profiles",
@@ -1758,9 +1758,9 @@
     "updateWithheldTooltip": "The server is not offering updates to this device because its agent build cannot be confirmed to accept the served edition. It stays on its current version until recovered.",
     "helperNotInstalled": "Not installed",
     "helperInstallIssueTooltip": {
-      "awaitingServerOffer": "Breeze Assist is enabled but not installed: the server has offered no Breeze Assist version for this device to install.",
-      "installAbandoned": "Breeze Assist is enabled but not installed: installing the offered version failed repeatedly and retries are paused.",
-      "unknown": "Breeze Assist is enabled but not installed."
+      "awaitingServerOffer": "Colonyn Assist is enabled but not installed: the server has offered no Colonyn Assist version for this device to install.",
+      "installAbandoned": "Colonyn Assist is enabled but not installed: installing the offered version failed repeatedly and retries are paused.",
+      "unknown": "Colonyn Assist is enabled but not installed."
     },
     "agentVersionRelation": {
       "equalTooltip": "Matches the effective version {{version}}",
@@ -1805,7 +1805,7 @@
     "mdmEnrollment": "MDM Enrollment:",
     "detectionSource": "Detection source:",
     "identityDetectionUnsupported": "Join Detection Not Supported",
-    "identityDetectionUnsupportedHint": "Breeze does not yet check directory or Intune/Entra enrollment on this device's operating system, so its join status is unknown — it has not been confirmed as unjoined.",
+    "identityDetectionUnsupportedHint": "Colonyn does not yet check directory or Intune/Entra enrollment on this device's operating system, so its join status is unknown — it has not been confirmed as unjoined.",
     "flagUnknown": "{{label}}: Unknown",
     "detectedManagementTools": "Detected Management Tools",
     "tool": "tool",
@@ -2000,7 +2000,7 @@
       "ringLine": "Approvals follow update ring: {{ring}}",
       "noRingLine": "No update ring applies to this device. Patches install only after a manual approval.",
       "unavailable": "Could not evaluate update ring approvals. Badges show manual approvals only.",
-      "autoApprovedUserScopeTitle": "{{ring}} approves this patch, but it is a per-user install that Breeze cannot apply yet.",
+      "autoApprovedUserScopeTitle": "{{ring}} approves this patch, but it is a per-user install that Colonyn cannot apply yet.",
       "otherRingApprovalTitle": "This patch has a manual approval for a different update ring, which does not apply to {{ring}}. Scheduled runs skip it here; the Install button still accepts it."
     },
     "installPatchRingManagedTitle": "{{name}} is handled by update ring {{ring}} and installs with the next scheduled patch run. Installing it now requires a manual approval."
@@ -2172,7 +2172,7 @@
       "bannerProvisional": "Scoring since {{reason}} on {{date}} by {{who}} — provisional, {{days}} of {{required}} days reported",
       "bannerMature_one": "Scoring since {{reason}} on {{date}} by {{who}} ({{count}} day)",
       "bannerMature_other": "Scoring since {{reason}} on {{date}} by {{who}} ({{count}} days)",
-      "system": "Breeze (automatic)",
+      "system": "Colonyn (automatic)",
       "someone": "a technician",
       "provisional": "Provisional",
       "beforeAfterTitle": "Before → since",
@@ -3585,12 +3585,12 @@
     "securityBody": "These remote-access tools install separately from an RMM and survive its uninstall. An unattended remote-access agent that nobody monitors is a standing exposure — review each one before closing out a migration.",
     "deviceCount_one": "{{count}} device",
     "deviceCount_other": "{{count}} devices",
-    "progressEnrolled_one": "{{count}} enrolled in Breeze",
-    "progressEnrolled_other": "{{count}} enrolled in Breeze",
+    "progressEnrolled_one": "{{count}} enrolled in Colonyn",
+    "progressEnrolled_other": "{{count}} enrolled in Colonyn",
     "progressBoth_one": "{{count}} running both (mid-migration)",
     "progressBoth_other": "{{count}} running both (mid-migration)",
-    "progressBreezeOnly_one": "{{count}} Breeze-only (verified clean)",
-    "progressBreezeOnly_other": "{{count}} Breeze-only (verified clean)",
+    "progressBreezeOnly_one": "{{count}} Colonyn-only (verified clean)",
+    "progressBreezeOnly_other": "{{count}} Colonyn-only (verified clean)",
     "progressUnknown_one": "{{count}} unknown (never scanned or stale)",
     "progressUnknown_other": "{{count}} unknown (never scanned or stale)",
     "noDetections": "No {{category}} products detected on scanned devices.",
@@ -4002,7 +4002,7 @@
     "exportHistory": "Export daily CSV",
     "from": "From (UTC)",
     "to": "To (UTC)",
-    "evidence": "Observed synchronization reported by the Breeze agent; days without a report are listed as gaps. Export up to 400 UTC days. Filters select the current device population.",
+    "evidence": "Observed synchronization reported by the Colonyn agent; days without a report are listed as gaps. Export up to 400 UTC days. Filters select the current device population.",
     "rangeError": "Choose between 1 and 400 UTC dates.",
     "exportError": "The evidence export failed. Try again.",
     "siteError": "Sites could not be loaded. Refresh to try again.",

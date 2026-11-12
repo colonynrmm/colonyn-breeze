@@ -18,7 +18,7 @@
   },
   "list": {
     "title": "Restauration du système",
-    "disclaimer": "La Restauration du système n’est pas une sauvegarde. Cette liste indique quand Breeze a demandé à Windows de créer un point de restauration et ce que l’appareil a signalé ; elle ne garantit pas qu’un point de restauration existe ni qu’il peut être restauré.",
+    "disclaimer": "La Restauration du système n’est pas une sauvegarde. Cette liste indique quand Colonyn a demandé à Windows de créer un point de restauration et ce que l’appareil a signalé ; elle ne garantit pas qu’un point de restauration existe ni qu’il peut être restauré.",
     "loading": "Chargement de l’historique de la Restauration du système…",
     "loadError": "Impossible de charger l’historique de la Restauration du système.",
     "retry": "Réessayer",

@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
 import { partnerApiAuthMiddleware } from '../../middleware/partnerApiAuth';
+import { partnerApiEntitlementMiddleware } from '../../colonyn/entitlements/guard'; // COLONYN
 import { partnerDeviceRoutes } from './devices';
 import { partnerOrganizationRoutes } from './organizations';
 import { partnerInventoryRoutes } from './inventory';
@@ -21,6 +22,7 @@ partnerApiRoutes.use('*', partnerExportAuditMiddleware);
 // All versioned partner-export endpoints added beneath this router inherit the
 // dedicated partner-service-principal authentication and partner RLS context.
 partnerApiRoutes.use('*', partnerApiAuthMiddleware);
+partnerApiRoutes.use('*', partnerApiEntitlementMiddleware); // COLONYN: Integrations module
 partnerApiRoutes.route('/', partnerOrganizationRoutes);
 partnerApiRoutes.route('/', partnerDeviceRoutes);
 partnerApiRoutes.route('/', partnerInventoryRoutes);

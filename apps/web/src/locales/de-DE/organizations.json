@@ -156,7 +156,7 @@
     },
     "trust": {
       "title": "Vertrauenszentrum",
-      "subtitle": "Eine öffentliche Seite mit dem Sicherheitsstatus dieser Organisation, erstellt aus der Live-Telemetrie von Breeze.",
+      "subtitle": "Eine öffentliche Seite mit dem Sicherheitsstatus dieser Organisation, erstellt aus der Live-Telemetrie von Colonyn.",
       "loading": "Vertrauenszentrum wird geladen…",
       "loadFailed": "Die Seite des Vertrauenszentrums konnte nicht geladen werden.",
       "retry": "Erneut versuchen",

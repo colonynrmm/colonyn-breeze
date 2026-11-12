@@ -169,14 +169,14 @@
   "emptyState": {
     "off": {
       "title": "Ağ topolojisi kapalı",
-      "body": "Breeze, agent ve SNMP verilerinden bu sitenin ağının canlı bir haritasını oluşturabilir.",
+      "body": "Colonyn, agent ve SNMP verilerinden bu sitenin ağının canlı bir haritasını oluşturabilir.",
       "partnerNextStep": "Bir partner yöneticisi bunu Ayarlar → Modüller altından açabilir.",
       "orgNextStep": "Etkinleştirmesi için MSP'nize başvurun.",
       "openModules": "Modül ayarlarını aç"
     },
     "preparing": {
       "title": "Topoloji haritası oluşturuluyor",
-      "body": "Breeze bu site için ağ verilerini topluyor. Bu işlem, özellik etkinleştirildikten sonra genellikle birkaç dakika içinde tamamlanır."
+      "body": "Colonyn bu site için ağ verilerini topluyor. Bu işlem, özellik etkinleştirildikten sonra genellikle birkaç dakika içinde tamamlanır."
     },
     "unavailable": {
       "title": "Topoloji kullanılamıyor",
@@ -285,7 +285,7 @@
       "credentials_missing": "Bir cihaz için kullanılabilir SNMP kimlik bilgisi yapılandırılmadı.",
       "credentials_rejected": "Bir cihaz yapılandırılan SNMP kimlik bilgilerini reddetti.",
       "interface_unresolved": "Bazı bağlantılar tanımlanamayan bağlantı noktalarında bildirildi.",
-      "controller_site_unmapped": "Bir UniFi denetleyici sitesi bir Breeze sitesiyle eşlenmedi.",
+      "controller_site_unmapped": "Bir UniFi denetleyici sitesi bir Colonyn sitesiyle eşlenmedi.",
       "controller_site_other_org": "Bir UniFi denetleyici sitesi başka bir kuruluşla eşlendi."
     },
     "scopeCount": "({{count}} etkilenen)"
@@ -712,7 +712,7 @@
       "agentsOnline_other": "{{count}} aracı çevrimiçi",
       "agentsOffline_one": "{{count}} çevrimdışı",
       "agentsOffline_other": "{{count}} çevrimdışı",
-      "noAgents": "Breeze aracısı yok",
+      "noAgents": "Colonyn aracısı yok",
       "zoomIn": "Cihazları görmek için yakınlaştırın"
     },
     "bundle_one": "{{count}} bağlantı",
@@ -736,7 +736,7 @@
     "rosterUnidentified": "Ağ tanımlanamadı",
     "notDeclared": "{{site}} için bildirilmemiş",
     "showOtherNetworks": "Diğer ağları haritada göster",
-    "declareHint": "{{site}} için bildirilmiş ağ yok. Cihazlar bildirdikleri ağlara göre gruplanır. Breeze'in ziyaretçileri ve yanlış atanmış cihazları ayırt edebilmesi için bu sitenin ağlarını bir keşif profilinde bildirin.",
+    "declareHint": "{{site}} için bildirilmiş ağ yok. Cihazlar bildirdikleri ağlara göre gruplanır. Colonyn'in ziyaretçileri ve yanlış atanmış cihazları ayırt edebilmesi için bu sitenin ağlarını bir keşif profilinde bildirin.",
     "declareHintLink": "Keşif profillerini aç",
     "siteIntro": "{{site}} sitesine atanan cihazlar, her birinin bildirdiği ağa göre gruplanmış",
     "thisSite": "bu site",
@@ -761,7 +761,7 @@
         "gatewayMismatch": "{{site}} sitesinin bildirilen aralığında, ancak farklı bir ağ geçidi üzerinden.",
         "ownGatewayMismatch": "{{site}} sitesinin bildirilen aralığında, ancak farklı bir ağ geçidi üzerinden ({{gateway}})."
       },
-      "ambiguousEntry": "{{sites}} için bildirilmiş. Breeze bunun hangi site olduğunu belirleyemiyor.",
+      "ambiguousEntry": "{{sites}} için bildirilmiş. Colonyn bunun hangi site olduğunu belirleyemiyor.",
       "lastReported": "Son bildirilen: {{gateway}} üzerinden {{prefix}}, {{when}}",
       "locationNotCurrent": "Konum güncel değil",
       "visitingBadge": "Ziyaretçi",
@@ -784,7 +784,7 @@
         "evidenceNoPrefix": "{{site}} sitesinin ağını {{from}} ile {{to}} arasında {{days}} günde bildirdi. Bu süre boyunca {{assigned}} ağında gözlem yok.",
         "move": "{{site}} sitesine taşı",
         "keep": "{{site}} sitesinde tut",
-        "confirmMove": "Taşıma, {{device}} için hangi sitenin yapılandırma ilkelerinin, bakım pencerelerinin, uyarı yönlendirmesinin ve raporlarının geçerli olduğunu değiştirir. Breeze onu otomatik olarak geri taşımaz.",
+        "confirmMove": "Taşıma, {{device}} için hangi sitenin yapılandırma ilkelerinin, bakım pencerelerinin, uyarı yönlendirmesinin ve raporlarının geçerli olduğunu değiştirir. Colonyn onu otomatik olarak geri taşımaz.",
         "cancel": "İptal",
         "moved": "{{device}} cihazı {{site}} sitesine taşındı.",
         "kept": "{{device}} cihazı {{site}} sitesinde kalıyor. Bu cihaz için öneriler kapalı.",

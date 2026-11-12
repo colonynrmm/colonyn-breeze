@@ -156,7 +156,7 @@
     },
     "trust": {
       "title": "Trust Center",
-      "subtitle": "A public page showing this organization's security posture, generated from live Breeze telemetry.",
+      "subtitle": "A public page showing this organization's security posture, generated from live Colonyn telemetry.",
       "loading": "Loading Trust Center…",
       "loadFailed": "Could not load the Trust Center page.",
       "retry": "Try again",

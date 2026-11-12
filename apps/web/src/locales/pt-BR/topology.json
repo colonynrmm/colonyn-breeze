@@ -169,14 +169,14 @@
   "emptyState": {
     "off": {
       "title": "A topologia de rede está desativada",
-      "body": "O Breeze pode criar um mapa ao vivo da rede deste site a partir de dados de agentes e SNMP.",
+      "body": "O Colonyn pode criar um mapa ao vivo da rede deste site a partir de dados de agentes e SNMP.",
       "partnerNextStep": "Um administrador do parceiro pode ativá-la em Configurações → Módulos.",
       "orgNextStep": "Peça ao seu MSP para ativá-la.",
       "openModules": "Abrir configurações de módulos"
     },
     "preparing": {
       "title": "Criando o mapa de topologia",
-      "body": "O Breeze está coletando dados de rede deste site. Isso normalmente leva poucos minutos após ativar o recurso."
+      "body": "O Colonyn está coletando dados de rede deste site. Isso normalmente leva poucos minutos após ativar o recurso."
     },
     "unavailable": {
       "title": "Topologia indisponível",
@@ -285,7 +285,7 @@
       "credentials_missing": "Não há credenciais SNMP utilizáveis configuradas para um dispositivo.",
       "credentials_rejected": "Um dispositivo recusou as credenciais SNMP configuradas.",
       "interface_unresolved": "Algumas conexões foram informadas em portas que não puderam ser identificadas.",
-      "controller_site_unmapped": "Um site do controlador UniFi não está mapeado para um site do Breeze.",
+      "controller_site_unmapped": "Um site do controlador UniFi não está mapeado para um site do Colonyn.",
       "controller_site_other_org": "Um site do controlador UniFi está mapeado para outra organização."
     },
     "scopeCount": "({{count}} afetados)"
@@ -712,7 +712,7 @@
       "agentsOnline_other": "{{count}} agentes online",
       "agentsOffline_one": "{{count}} agente offline",
       "agentsOffline_other": "{{count}} agentes offline",
-      "noAgents": "Nenhum agente Breeze",
+      "noAgents": "Nenhum agente Colonyn",
       "zoomIn": "Aproxime para ver os dispositivos"
     },
     "bundle_one": "{{count}} conexão",
@@ -736,7 +736,7 @@
     "rosterUnidentified": "Rede não identificada",
     "notDeclared": "Não declarada para {{site}}",
     "showOtherNetworks": "Mostrar outras redes no mapa",
-    "declareHint": "Nenhuma rede está declarada para {{site}}. Os dispositivos são agrupados pelas redes que informam. Declare as redes deste site em um perfil de descoberta para que o Breeze possa distinguir visitantes e dispositivos atribuídos incorretamente.",
+    "declareHint": "Nenhuma rede está declarada para {{site}}. Os dispositivos são agrupados pelas redes que informam. Declare as redes deste site em um perfil de descoberta para que o Colonyn possa distinguir visitantes e dispositivos atribuídos incorretamente.",
     "declareHintLink": "Abrir perfis de descoberta",
     "siteIntro": "Dispositivos atribuídos a {{site}}, agrupados pela rede que cada um informa",
     "thisSite": "este site",
@@ -761,7 +761,7 @@
         "gatewayMismatch": "Na faixa declarada de {{site}}, mas por outro gateway.",
         "ownGatewayMismatch": "Na faixa declarada de {{site}}, mas por outro gateway ({{gateway}})."
       },
-      "ambiguousEntry": "Declarada para {{sites}}. O Breeze não consegue dizer de qual site se trata.",
+      "ambiguousEntry": "Declarada para {{sites}}. O Colonyn não consegue dizer de qual site se trata.",
       "lastReported": "Último relato: {{prefix}} via {{gateway}}, {{when}}",
       "locationNotCurrent": "Localização desatualizada",
       "visitingBadge": "Visitante",
@@ -784,7 +784,7 @@
         "evidenceNoPrefix": "Relatou a rede de {{site}} em {{days}} dias entre {{from}} e {{to}}. Nenhuma observação da rede de {{assigned}} nesse período.",
         "move": "Mover para {{site}}",
         "keep": "Manter em {{site}}",
-        "confirmMove": "Mover altera quais políticas de configuração, janelas de manutenção, roteamento de alertas e relatórios do site se aplicam a {{device}}. O Breeze não o moverá de volta automaticamente.",
+        "confirmMove": "Mover altera quais políticas de configuração, janelas de manutenção, roteamento de alertas e relatórios do site se aplicam a {{device}}. O Colonyn não o moverá de volta automaticamente.",
         "cancel": "Cancelar",
         "moved": "{{device}} foi movido para {{site}}.",
         "kept": "{{device}} permanece em {{site}}. As sugestões estão desativadas para ele.",

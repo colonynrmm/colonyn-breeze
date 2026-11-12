@@ -217,7 +217,7 @@
       "includeDevicesWithoutBackupHelp": "Si está desactivado, el informe solo lista equipos con alguna evidencia de respaldo, como el correo resumen propio del proveedor.",
       "sources": "Fuentes de respaldo",
       "sourcesHelp": "Elija qué fuentes de respaldo incluir en el informe.",
-      "sourceBreeze": "Respaldo de Breeze",
+      "sourceBreeze": "Respaldo de Colonyn",
       "sourceProvider": "Proveedores de respaldo conectados"
     },
     "vulnerabilityManagementOptions": {
@@ -334,7 +334,7 @@
       },
       "threatDetection": {
         "agents": "Equipos con agente de detección",
-        "breezeDevices": "Dispositivos que Breeze gestiona",
+        "breezeDevices": "Dispositivos que Colonyn gestiona",
         "carriedIn": "Arrastradas, aún abiertas",
         "coverage": "Límites de este informe",
         "devicesWithoutAgent": "Dispositivos gestionados sin agente",
@@ -352,7 +352,7 @@
         "table": "Tabla"
       },
       "endpointManagement": {
-        "breezeWithoutIntune": "Dispositivos de Breeze sin inscribir",
+        "breezeWithoutIntune": "Dispositivos de Colonyn sin inscribir",
         "dataGaps": "Lo que no pudimos medir",
         "intuneDevices": "Inscritos en Intune",
         "intuneWithoutBreezeLink": "Registros de Intune sin vincular",
@@ -1053,11 +1053,11 @@
         },
         "ai_usage_by_client": {
           "name": "Uso de IA por cliente",
-          "description": "Uso de IA de la plataforma por cliente en el período: solicitudes, tokens, costo de Breeze, el monto a cobrar según el perfil de facturación del cliente y lo que ya se facturó. El uso incluido y los modelos sin precio se muestran por separado, nunca mezclados."
+          "description": "Uso de IA de la plataforma por cliente en el período: solicitudes, tokens, costo de Colonyn, el monto a cobrar según el perfil de facturación del cliente y lo que ya se facturó. El uso incluido y los modelos sin precio se muestran por separado, nunca mezclados."
         },
         "backup_status": {
           "name": "Informe de estado de respaldo",
-          "description": "Estado de respaldo de cada equipo en Breeze y los proveedores de respaldo conectados, en una sola instantánea: categorías de cobertura, último respaldo exitoso y un historial de 28 días por equipo."
+          "description": "Estado de respaldo de cada equipo en Colonyn y los proveedores de respaldo conectados, en una sola instantánea: categorías de cobertura, último respaldo exitoso y un historial de 28 días por equipo."
         }
       },
       "title": "Plantillas de informes",

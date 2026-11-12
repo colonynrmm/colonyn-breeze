@@ -583,7 +583,7 @@
     },
     "approval": {
       "title": "Onay akışını test edin",
-      "description": "Kendi Breeze Mobil cihazlarınıza bir korumalı alan onay mesajı gönderin. Basmaya dokunduğunuzda, telefonunuzu 60 saniye boyunca onay ekranıyla devralırsınız. Onaylamak veya reddetmek herhangi bir gerçek eylem gerçekleştirmez; yalnızca test amaçlıdır.",
+      "description": "Kendi Colonyn Mobil cihazlarınıza bir korumalı alan onay mesajı gönderin. Basmaya dokunduğunuzda, telefonunuzu 60 saniye boyunca onay ekranıyla devralırsınız. Onaylamak veya reddetmek herhangi bir gerçek eylem gerçekleştirmez; yalnızca test amaçlıdır.",
       "sendTitle": "Telefonunuza bir test onayı gönderin",
       "sendDescription": "Birkaç saniye içinde bir bildirim göndereceğiz. Herhangi bir işlem yapmazsanız onay 60 saniye sonra otomatik olarak sona erer.",
       "sending": "Gönderiliyor…",
@@ -592,7 +592,7 @@
       "delivered": "Push, {{count}} kayıtlı cihazdan {{sent}} cihazına teslim edildi. Onayın süresi 60 saniye içinde dolar.",
       "delivered_one": "Push, {{count}} kayıtlı cihazın {{sent}} adresine teslim edildi. Onayın süresi 60 saniye içinde dolar.",
       "delivered_other": "Push, {{count}} kayıtlı cihazdan {{sent}} cihazına teslim edildi. Onayın süresi 60 saniye içinde dolar.",
-      "noDevices": "Hesabınızda kayıtlı bir Breeze Mobil cihaz görmüyoruz. Uygulamada en az bir kez oturum açın ve ardından tekrar deneyin.",
+      "noDevices": "Hesabınızda kayıtlı bir Colonyn Mobil cihaz görmüyoruz. Uygulamada en az bir kez oturum açın ve ardından tekrar deneyin.",
       "tip": "İpucu: Bu sayfanın App Store incelemecileriyle paylaşılması güvenlidir. Sağlanan test hesabıyla oturum açabilir, düğmeye tıklayabilir ve onay devralma işlemini uçtan uca doğrulayabilirler.",
       "errors": {
         "send": "Test onayı gönderemedik. Lütfen tekrar deneyin."
@@ -625,9 +625,9 @@
     },
     "devices": {
       "title": "Güvenilir cihazlar",
-      "description": "Breeze mobil uygulamasıyla eşleştirdiğiniz telefonlar ve tabletler. Bu cihazlar sizin adınıza yüksek riskli MCP isteklerini onaylayabilir. Artık kullanmadığınız tüm cihazları iptal edin.",
+      "description": "Colonyn mobil uygulamasıyla eşleştirdiğiniz telefonlar ve tabletler. Bu cihazlar sizin adınıza yüksek riskli MCP isteklerini onaylayabilir. Artık kullanmadığınız tüm cihazları iptal edin.",
       "empty": "Eşleştirilmiş cihaz yok",
-      "emptyDescription": "Breeze mobil uygulamasını yükleyin ve bir cihazı eşleştirmek için oturum açın. Onaylar daha sonra telefonunuzda görünecektir.",
+      "emptyDescription": "Colonyn mobil uygulamasını yükleyin ve bir cihazı eşleştirmek için oturum açın. Onaylar daha sonra telefonunuzda görünecektir.",
       "thisDevice": "Bu cihaz",
       "blocked": "Engellendi",
       "platform": "Platform",
@@ -737,7 +737,7 @@
       }
     },
     "search": {
-      "prompt": "Ara Breeze",
+      "prompt": "Ara Colonyn",
       "placeholder": "Cihazları, komut dosyalarını, uyarıları, kullanıcıları, ayarları arayın…",
       "searching": "Aranıyor…",
       "startTyping": "Cihazlar, komut dosyaları, uyarılar, kullanıcılar ve ayarlar arasında arama yapmak için yazmaya başlayın.",
@@ -825,7 +825,7 @@
       "goTo": "Şuraya git",
       "goToHint": "g tuşuna basın, bırakın, sonra tuşa basın.",
       "then": "sonra",
-      "search": "Breeze'de ara",
+      "search": "Colonyn'de ara",
       "searchSlash": "Arama (bu tuşla da açılır)",
       "cycleSidebar": "Kenar çubuğu modunu değiştir",
       "help": "Yardım panelini aç",
@@ -1082,7 +1082,7 @@
           "username": "Kullanıcı adı veya e-posta"
         },
         "help": {
-          "defaultQueue": "İsteğe bağlı. Breeze uyarılarından bilet oluştururken kullanılır."
+          "defaultQueue": "İsteğe bağlı. Colonyn uyarılarından bilet oluştururken kullanılır."
         },
         "keepExisting": "(mevcut tutmak için boş bırakın)",
         "placeholders": {
@@ -1119,16 +1119,16 @@
         },
         "sync": {
           "autoClose": "PSA biletlerini otomatik kapatma",
-          "autoCloseHelp": "Breeze uyarıları çözümlendiğinde bağlantılı biletleri kapatın.",
+          "autoCloseHelp": "Colonyn uyarıları çözümlendiğinde bağlantılı biletleri kapatın.",
           "enable": "Senkronizasyonu etkinleştir",
           "enableHelp": "Biletleri ve uyarı bağlantılarını bir programa göre güncel tutun.",
           "notes": "Uyarı notlarını senkronize et",
-          "notesHelp": "Breeze yorumlarını ve güncellemelerini PSA destek zaman çizelgesine aktarın."
+          "notesHelp": "Colonyn yorumlarını ve güncellemelerini PSA destek zaman çizelgesine aktarın."
         },
         "syncDirections": {
           "bidirectional": "Çift Yönlü",
-          "inbound": "PSA → Breeze",
-          "outbound": "Breeze → PSA"
+          "inbound": "PSA → Colonyn",
+          "outbound": "Colonyn → PSA"
         },
         "syncIntervals": {
           "daily": "Günlük",
@@ -1565,7 +1565,7 @@
           "googleCloud": "Google Bulut"
         },
         "oneClickTitle": "Tek tıklamayla Microsoft 365 entegrasyonu",
-        "oneClickDescription": "Breeze örneğinizde önceden yapılandırılmış bir Microsoft 365 uygulaması var. M365 kiracınıza yedek erişim yetkisi vermek için \"Erişim Ver\" seçeneğini tıklayın. Bir Genel Yöneticinin izin istemini onaylaması gerekir.",
+        "oneClickDescription": "Colonyn örneğinizde önceden yapılandırılmış bir Microsoft 365 uygulaması var. M365 kiracınıza yedek erişim yetkisi vermek için \"Erişim Ver\" seçeneğini tıklayın. Bir Genel Yöneticinin izin istemini onaylaması gerekir.",
         "displayName": "Görünen Ad",
         "displayNamePlaceholder": "Microsoft 365",
         "manualDisplayNamePlaceholder": "M365 Bağlantım",
@@ -2300,7 +2300,7 @@
         },
         "loading": "Yetkilendirme isteği yükleniyor…",
         "signInTitle": "Devam etmek için oturum açın",
-        "signInDescription": "Bu bağlantıya izin vermeden önce Breeze hesabınızda oturum açmanız gerekir.",
+        "signInDescription": "Bu bağlantıya izin vermeden önce Colonyn hesabınızda oturum açmanız gerekir.",
         "signInAction": "Oturum aç",
         "redirectLoopTitle": "Oturumunuzu açamıyoruz",
         "redirectLoopDescription": "Tarayıcınız sizi oturum açma çerezi olmadan buraya geri gönderdi. Üçüncü taraf çerezleri veya site depolaması engellenmiş olabilir. Bu site için çerezlere izin verin ve tekrar deneyin veya MCP istemcinize dönüp baştan başlayın.",
@@ -2308,10 +2308,10 @@
         "expiredDescription": "Bu yetkilendirme bağlantısı artık geçerli değil. MCP istemcinize dönün ve bağlantıyı yeniden başlatın.",
         "noTenantsTitle": "Kiracı yok",
         "noTenantsDescription": "Hesabınız herhangi bir iş ortağı kiracısının üyesi olmadığından MCP bağlantısına yetki veremez. Devam etmeden önce bir yöneticiden sizi bir iş ortağına eklemesini isteyin.",
-        "consentTitle": "{{displayName}}, Breeze kiracınıza erişmek istiyor",
+        "consentTitle": "{{displayName}}, Colonyn kiracınıza erişmek istiyor",
         "clientId": "Müşteri Kimliği: {{clientId}}",
         "unverifiedLabel": "Doğrulanmamış entegrasyon",
-        "unverifiedDescription": "Breeze bu entegrasyonu doğrulamadı. Adı kendisi tarafından bildiriliyor ve güvenilir bir uygulamanın kimliğine bürünebiliyor. Yalnızca bu bağlantıyı başlattıysanız ve aşağıdaki geri arama hedefini tanıyorsanız onaylayın.",
+        "unverifiedDescription": "Colonyn bu entegrasyonu doğrulamadı. Adı kendisi tarafından bildiriliyor ve güvenilir bir uygulamanın kimliğine bürünebiliyor. Yalnızca bu bağlantıyı başlattıysanız ve aşağıdaki geri arama hedefini tanıyorsanız onaylayın.",
         "callbackLabel": "Yetki kodu şu adrese gönderilecek:",
         "missingRedirectTitle": "Geri arama hedefi doğrulanamıyor",
         "missingRedirectDescription": "Bu yetkilendirme isteği bir geri arama hedefi içermediğinden güvenli bir şekilde onaylanamaz. MCP istemcinize dönün ve bağlantıyı yeniden başlatın.",

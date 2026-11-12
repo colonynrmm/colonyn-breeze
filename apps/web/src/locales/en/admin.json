@@ -79,7 +79,7 @@
     },
     "accountDeletionRequestsList": {
       "title": "Account deletion requests",
-      "description": "Users in your tenant who've asked to delete their Breeze account. Approve to queue them for processing, or reject with a note explaining why.",
+      "description": "Users in your tenant who've asked to delete their Colonyn account. Approve to queue them for processing, or reject with a note explaining why.",
       "filterLabel": "Filter by status",
       "refresh": "Refresh",
       "retry": "Try again",
@@ -233,13 +233,13 @@
     },
     "thirdPartyCatalog": {
       "title": "Third-Party Package Catalog",
-      "description": "Breeze-curated metadata for third-party software detected by winget on agents.",
+      "description": "Colonyn-curated metadata for third-party software detected by winget on agents.",
       "totalEntries": "Total entries:",
       "refresh": "Refresh",
       "addPackage": "Add package",
       "searchPlaceholder": "Search by name, vendor, or winget ID…",
-      "breezeTestedOnly": "Breeze-tested only",
-      "breezeTested": "Breeze-tested",
+      "breezeTestedOnly": "Colonyn-tested only",
+      "breezeTested": "Colonyn-tested",
       "dismiss": "Dismiss",
       "loading": "Loading catalog…",
       "empty": "No catalog entries match the current filters.",
@@ -261,7 +261,7 @@
       },
       "platformAdmin": {
         "title": "Platform-admin access required",
-        "prefix": "The third-party catalog is managed by Breeze platform admins. Your account",
+        "prefix": "The third-party catalog is managed by Colonyn platform admins. Your account",
         "role": "an org/partner admin",
         "suffix": "can view the curated catalog through normal patch flows but cannot edit it directly."
       },
@@ -310,7 +310,7 @@
         "vendor": "Vendor",
         "friendlyName": "Friendly name",
         "defaultSeverity": "Default severity",
-        "breezeTested": "Breeze-tested",
+        "breezeTested": "Colonyn-tested",
         "homepageUrl": "Homepage URL",
         "notes": "Notes"
       },
@@ -404,7 +404,7 @@
       "dismiss": "Dismiss",
       "platformAdmin": {
         "title": "Platform-admin access required",
-        "prefix": "The LLM provider catalog is managed by Breeze platform admins. Your account",
+        "prefix": "The LLM provider catalog is managed by Colonyn platform admins. Your account",
         "role": "an org/partner admin",
         "suffix": "cannot view or edit it directly."
       },
@@ -522,7 +522,7 @@
       "impactNote": "Killing the switch stops unattended AI actions for every partner within about 5 seconds. Existing in-flight actions are not interrupted.",
       "platformAdmin": {
         "title": "Platform-admin access required",
-        "description": "The AI kill switch is a platform-wide control managed by Breeze platform admins. Your account cannot view or change it."
+        "description": "The AI kill switch is a platform-wide control managed by Colonyn platform admins. Your account cannot view or change it."
       },
       "status": {
         "active": "Unattended AI actions active",
@@ -541,9 +541,9 @@
       },
       "confirm": {
         "killTitle": "Kill AI actions platform-wide?",
-        "killDescription": "This immediately stops unattended AI agent activity for every partner on Breeze. Use this only for an active incident.",
+        "killDescription": "This immediately stops unattended AI agent activity for every partner on Colonyn. Use this only for an active incident.",
         "restoreTitle": "Restore AI actions?",
-        "restoreDescription": "This re-enables unattended AI agent activity for every partner on Breeze.",
+        "restoreDescription": "This re-enables unattended AI agent activity for every partner on Colonyn.",
         "reasonLabel": "Reason (required, for the audit log)",
         "reasonPlaceholder": "Describe the incident or reason for this change…",
         "cancel": "Cancel",
@@ -570,7 +570,7 @@
         "deprecations": "Deprecations"
       },
       "connections": {
-        "enabledMeaning": "Enabled means configured. Breeze does not contact the service to check that it responds.",
+        "enabledMeaning": "Enabled means configured. Colonyn does not contact the service to check that it responds.",
         "footnote": "Shows the API container's environment only. The web, portal and worker containers are not included.",
         "meta": "Running version {{version}} · {{mode}}",
         "versionMismatch": "This API image is {{running}}, but BREEZE_VERSION is {{configured}}. Changing BREEZE_VERSION does not change a digest-pinned image, and agents are offered the BREEZE_VERSION release. Upgrade with guided-setup.sh --upgrade, or set BREEZE_VERSION back to {{running}}.",

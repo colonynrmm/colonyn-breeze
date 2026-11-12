@@ -295,7 +295,7 @@
       "cancelRun": "Cancelar execução",
       "partnerScopeTooltip": "Esta execução se aplica a todas as organizações da sua conta de parceiro. Peça a um administrador de parceiro completo para cancelá-la, ou interrompa execuções individuais nos seus próprios dispositivos.",
       "confirmCancelRunTitle": "Cancelar esta execução?",
-      "confirmCancelRunMessage": "O Breeze interromperá cada execução de script que esta execução ainda estiver aguardando. Ações já em andamento podem terminar antes de poderem ser interrompidas.",
+      "confirmCancelRunMessage": "O Colonyn interromperá cada execução de script que esta execução ainda estiver aguardando. Ações já em andamento podem terminar antes de poderem ser interrompidas.",
       "uncancellableActions_one": "{{count}} ação não pôde ser interrompida e pode continuar em execução por conta própria.",
       "uncancellableActions_other": "{{count}} ações não puderam ser interrompidas e podem continuar em execução por conta própria.",
       "cancelRunSuccess_one": "Cancelado — {{count}} execução interrompida.",
@@ -784,7 +784,7 @@
       "stop": "Interromper",
       "forceStop": "Interromper imediatamente",
       "confirmStopTitle": "Interromper esta execução?",
-      "confirmStopMessage": "O Breeze pedirá ao dispositivo que interrompa {{script}}. Isso pode levar alguns segundos — “Interromper imediatamente” pula o período de tolerância e encerra o processo na hora."
+      "confirmStopMessage": "O Colonyn pedirá ao dispositivo que interrompa {{script}}. Isso pode levar alguns segundos — “Interromper imediatamente” pula o período de tolerância e encerra o processo na hora."
     },
     "pagination": {
       "showing": "Mostrando {{start}} a {{end}} de {{total}}",

@@ -295,7 +295,7 @@
       "cancelRun": "Cancelar ejecución",
       "partnerScopeTooltip": "Esta ejecución se aplica a todas las organizaciones de su cuenta de socio. Pídale a un administrador de socio completo que la cancele, o detenga ejecuciones individuales en sus propios dispositivos.",
       "confirmCancelRunTitle": "¿Cancelar esta ejecución?",
-      "confirmCancelRunMessage": "Breeze detendrá cada ejecución de script que esta ejecución aún esté esperando. Las acciones ya en curso pueden finalizar antes de poder detenerse.",
+      "confirmCancelRunMessage": "Colonyn detendrá cada ejecución de script que esta ejecución aún esté esperando. Las acciones ya en curso pueden finalizar antes de poder detenerse.",
       "uncancellableActions_one": "{{count}} acción no se pudo detener y puede seguir ejecutándose por su cuenta.",
       "uncancellableActions_other": "{{count}} acciones no se pudieron detener y pueden seguir ejecutándose por su cuenta.",
       "cancelRunSuccess_one": "Cancelado: {{count}} ejecución detenida.",
@@ -784,7 +784,7 @@
       "stop": "Detener",
       "forceStop": "Detener inmediatamente",
       "confirmStopTitle": "¿Detener esta ejecución?",
-      "confirmStopMessage": "Breeze le pedirá al dispositivo que detenga {{script}}. Esto puede tardar unos segundos. \"Detener inmediatamente\" omite el período de gracia y finaliza el proceso de inmediato."
+      "confirmStopMessage": "Colonyn le pedirá al dispositivo que detenga {{script}}. Esto puede tardar unos segundos. \"Detener inmediatamente\" omite el período de gracia y finaliza el proceso de inmediato."
     },
     "pagination": {
       "showing": "Mostrando {{start}} a {{end}} de {{total}}",

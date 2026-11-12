@@ -12,6 +12,8 @@ export default defineConfig({
     // pattern as scripts/recover-stuck-agents below, so worker.cjs lands at
     // dist/worker.cjs (the compose `worker` service's `command`).
     worker: 'src/worker.ts',
+    // Colonyn: provisioning bridge for the Odoo storefront (colonyn-bridge service).
+    'colonyn-bridge': 'src/colonyn/bridge/server.ts',
     'scripts/recover-stuck-agents': 'scripts/recover-stuck-agents.ts',
     // #6605: `node dist/scripts/upgrade-preflight.cjs [--strict]` — run the new
     // image against the current database before upgrading.

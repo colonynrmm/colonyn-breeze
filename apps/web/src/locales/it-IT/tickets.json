@@ -649,7 +649,7 @@
     },
     "record": {
       "title": "Registra la decisione del cliente",
-      "intro": "Usalo quando il cliente ti ha comunicato la sua decisione al di fuori di Breeze. Viene registrata a tuo nome.",
+      "intro": "Usalo quando il cliente ti ha comunicato la sua decisione al di fuori di Colonyn. Viene registrata a tuo nome.",
       "target": "Revisione {{revision}} · {{ask}}",
       "decision": "Decisione",
       "approve": "Approvata",

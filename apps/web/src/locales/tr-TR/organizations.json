@@ -156,7 +156,7 @@
     },
     "trust": {
       "title": "Güven Merkezi",
-      "subtitle": "Bu kuruluşun güvenlik duruşunu gösteren, Breeze'in canlı telemetrisinden oluşturulan herkese açık bir sayfa.",
+      "subtitle": "Bu kuruluşun güvenlik duruşunu gösteren, Colonyn'in canlı telemetrisinden oluşturulan herkese açık bir sayfa.",
       "loading": "Güven Merkezi yükleniyor…",
       "loadFailed": "Güven Merkezi sayfası yüklenemedi.",
       "retry": "Tekrar dene",

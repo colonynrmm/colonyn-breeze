@@ -18,7 +18,7 @@
   },
   "list": {
     "title": "Ripristino configurazione di sistema",
-    "disclaimer": "Il Ripristino configurazione di sistema non è un backup. Questo elenco registra quando Breeze ha chiesto a Windows di creare un punto di ripristino e cosa ha riferito il dispositivo; non garantisce che un punto di ripristino esista o possa essere ripristinato.",
+    "disclaimer": "Il Ripristino configurazione di sistema non è un backup. Questo elenco registra quando Colonyn ha chiesto a Windows di creare un punto di ripristino e cosa ha riferito il dispositivo; non garantisce che un punto di ripristino esista o possa essere ripristinato.",
     "loading": "Caricamento della cronologia del Ripristino configurazione di sistema…",
     "loadError": "Impossibile caricare la cronologia del Ripristino configurazione di sistema.",
     "retry": "Riprova",

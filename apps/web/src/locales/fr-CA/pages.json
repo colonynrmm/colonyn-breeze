@@ -52,7 +52,7 @@
     "billingQuotesDetail": "Devis",
     "c2c": "Sauvegarde infonuagique",
     "cisHardening": "CIS Benchmarks",
-    "configurationPoliciesDefaults": "Valeurs par défaut Breeze",
+    "configurationPoliciesDefaults": "Valeurs par défaut Colonyn",
     "configurationPoliciesDetail": "Politique de configuration",
     "configurationPolicies": "Politiques de configuration",
     "configurationPoliciesNew": "Nouvelle politique de configuration",
@@ -178,8 +178,8 @@
     "billingAutopay": "Automatic payments"
   },
   "layout": {
-    "metaDescription": "Breeze RMM - Supervision et gestion à distance",
-    "metaDescriptionSetup": "Breeze RMM - Configuration initiale"
+    "metaDescription": "Colonyn RMM - Supervision et gestion à distance",
+    "metaDescriptionSetup": "Colonyn RMM - Configuration initiale"
   },
   "authShell": {
     "tagline": "La plateforme RMM moderne conçue pour la rapidité, la clarté et l'échelle."
@@ -311,7 +311,7 @@
     "tagline": "Supervision et gestion à distance"
   },
   "authPage": {
-    "description": "Breeze RMM - Connectez-vous ou créez votre compte",
+    "description": "Colonyn RMM - Connectez-vous ou créez votre compte",
     "tagline": "Connectez-vous ou créez votre compte pour commencer."
   }
 }

@@ -79,7 +79,7 @@
     },
     "accountDeletionRequestsList": {
       "title": "Kontolöschanträge",
-      "description": "Benutzer in Ihrem Mandanten, die die Löschung ihres Breeze-Kontos beantragt haben. Genehmigen Sie Anträge, um sie zur Verarbeitung einzureihen, oder lehnen Sie sie mit einer Begründung ab.",
+      "description": "Benutzer in Ihrem Mandanten, die die Löschung ihres Colonyn-Kontos beantragt haben. Genehmigen Sie Anträge, um sie zur Verarbeitung einzureihen, oder lehnen Sie sie mit einer Begründung ab.",
       "filterLabel": "Nach Status filtern",
       "refresh": "Aktualisieren",
       "retry": "Erneut versuchen",
@@ -233,13 +233,13 @@
     },
     "thirdPartyCatalog": {
       "title": "Drittanbieter-Paketkatalog",
-      "description": "Von Breeze kuratierte Metadaten für Drittanbietersoftware, die von winget auf Agents erkannt wurde.",
+      "description": "Von Colonyn kuratierte Metadaten für Drittanbietersoftware, die von winget auf Agents erkannt wurde.",
       "totalEntries": "Einträge insgesamt:",
       "refresh": "Aktualisieren",
       "addPackage": "Paket hinzufügen",
       "searchPlaceholder": "Nach Name, Anbieter oder winget-ID suchen…",
-      "breezeTestedOnly": "Nur von Breeze getestet",
-      "breezeTested": "Von Breeze getestet",
+      "breezeTestedOnly": "Nur von Colonyn getestet",
+      "breezeTested": "Von Colonyn getestet",
       "dismiss": "Schließen",
       "loading": "Katalog wird geladen…",
       "empty": "Keine Katalogeinträge entsprechen den aktuellen Filtern.",
@@ -261,7 +261,7 @@
       },
       "platformAdmin": {
         "title": "Zugriff als Plattformadministrator erforderlich",
-        "prefix": "Der Drittanbieter-Katalog wird von Breeze-Plattformadministratoren verwaltet. Ihr Konto ",
+        "prefix": "Der Drittanbieter-Katalog wird von Colonyn-Plattformadministratoren verwaltet. Ihr Konto ",
         "role": "als Organisations-/Partneradministrator",
         "suffix": "kann den kuratierten Katalog über die regulären Patch-Abläufe anzeigen, aber nicht direkt bearbeiten."
       },
@@ -310,7 +310,7 @@
         "vendor": "Anbieter",
         "friendlyName": "Anzeigename",
         "defaultSeverity": "Standardschweregrad",
-        "breezeTested": "Von Breeze getestet",
+        "breezeTested": "Von Colonyn getestet",
         "homepageUrl": "Homepage-URL",
         "notes": "Anmerkungen"
       },
@@ -404,7 +404,7 @@
       "dismiss": "Verwerfen",
       "platformAdmin": {
         "title": "Plattform-Administratorzugriff erforderlich",
-        "prefix": "Der LLM-Anbieterkatalog wird von Breeze-Plattformadministratoren verwaltet. Ihr Konto",
+        "prefix": "Der LLM-Anbieterkatalog wird von Colonyn-Plattformadministratoren verwaltet. Ihr Konto",
         "role": "ein Organisations-/Partneradministrator",
         "suffix": "kann ihn nicht direkt anzeigen oder bearbeiten."
       },
@@ -522,7 +522,7 @@
       "impactNote": "Das Aktivieren des Schalters stoppt unbeaufsichtigte KI-Aktionen für alle Partner innerhalb von etwa 5 Sekunden. Bereits laufende Aktionen werden nicht unterbrochen.",
       "platformAdmin": {
         "title": "Plattform-Administratorzugriff erforderlich",
-        "description": "Der KI-Notausschalter ist eine plattformweite Kontrolle, die von Breeze-Plattformadministratoren verwaltet wird. Ihr Konto kann ihn nicht einsehen oder ändern."
+        "description": "Der KI-Notausschalter ist eine plattformweite Kontrolle, die von Colonyn-Plattformadministratoren verwaltet wird. Ihr Konto kann ihn nicht einsehen oder ändern."
       },
       "status": {
         "active": "Unbeaufsichtigte KI-Aktionen aktiv",
@@ -541,9 +541,9 @@
       },
       "confirm": {
         "killTitle": "KI-Aktionen plattformweit stoppen?",
-        "killDescription": "Dies stoppt sofort unbeaufsichtigte KI-Agentenaktivität für alle Partner auf Breeze. Verwenden Sie dies nur bei einem aktiven Vorfall.",
+        "killDescription": "Dies stoppt sofort unbeaufsichtigte KI-Agentenaktivität für alle Partner auf Colonyn. Verwenden Sie dies nur bei einem aktiven Vorfall.",
         "restoreTitle": "KI-Aktionen wiederherstellen?",
-        "restoreDescription": "Dies aktiviert unbeaufsichtigte KI-Agentenaktivität für alle Partner auf Breeze erneut.",
+        "restoreDescription": "Dies aktiviert unbeaufsichtigte KI-Agentenaktivität für alle Partner auf Colonyn erneut.",
         "reasonLabel": "Grund (erforderlich, für das Audit-Protokoll)",
         "reasonPlaceholder": "Beschreiben Sie den Vorfall oder den Grund für diese Änderung…",
         "cancel": "Abbrechen",
@@ -570,7 +570,7 @@
         "deprecations": "Abkündigungen"
       },
       "connections": {
-        "enabledMeaning": "Aktiviert bedeutet konfiguriert. Breeze kontaktiert den Dienst nicht, um zu prüfen, ob er antwortet.",
+        "enabledMeaning": "Aktiviert bedeutet konfiguriert. Colonyn kontaktiert den Dienst nicht, um zu prüfen, ob er antwortet.",
         "footnote": "Zeigt nur die Umgebung des API-Containers. Die Container für Web, Portal und Worker sind nicht enthalten.",
         "meta": "Laufende Version {{version}} · {{mode}}",
         "versionMismatch": "Dieses API-Image ist {{running}}, aber BREEZE_VERSION ist {{configured}}. Eine Änderung von BREEZE_VERSION ändert kein per Digest fixiertes Image, und Agents wird das BREEZE_VERSION-Release angeboten. Aktualisieren Sie mit guided-setup.sh --upgrade oder setzen Sie BREEZE_VERSION zurück auf {{running}}.",

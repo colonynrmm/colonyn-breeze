@@ -295,7 +295,7 @@
       "cancelRun": "Çalıştırmayı iptal et",
       "partnerScopeTooltip": "Bu çalıştırma, iş ortağı hesabınızdaki tüm kuruluşlar için geçerlidir. İptal etmesi için tam yetkili bir iş ortağı yöneticisinden isteyin veya bunun yerine kendi cihazlarınızdaki tek tek yürütmeleri durdurun.",
       "confirmCancelRunTitle": "Bu çalıştırma iptal edilsin mi?",
-      "confirmCancelRunMessage": "Breeze, bu çalıştırmanın hâlâ beklediği her komut dosyası yürütmesini durduracak. Zaten devam etmekte olan işlemler durdurulmadan önce tamamlanabilir.",
+      "confirmCancelRunMessage": "Colonyn, bu çalıştırmanın hâlâ beklediği her komut dosyası yürütmesini durduracak. Zaten devam etmekte olan işlemler durdurulmadan önce tamamlanabilir.",
       "uncancellableActions_one": "{{count}} eylem durdurulamadı ve kendi başına çalışmaya devam ediyor olabilir.",
       "uncancellableActions_other": "{{count}} eylem durdurulamadı ve kendi başına çalışmaya devam ediyor olabilir.",
       "cancelRunSuccess_one": "İptal edildi — {{count}} yürütme durduruldu.",
@@ -784,7 +784,7 @@
       "stop": "Durdur",
       "forceStop": "Hemen durdur",
       "confirmStopTitle": "Bu yürütme durdurulsun mu?",
-      "confirmStopMessage": "Breeze, cihazdan {{script}} işlemini durdurmasını isteyecek. Bu birkaç saniye sürebilir — “Hemen durdur” bekleme süresini atlar ve işlemi anında sonlandırır."
+      "confirmStopMessage": "Colonyn, cihazdan {{script}} işlemini durdurmasını isteyecek. Bu birkaç saniye sürebilir — “Hemen durdur” bekleme süresini atlar ve işlemi anında sonlandırır."
     },
     "pagination": {
       "showing": "{{start}} ila {{end}} / {{total}} gösteriliyor",

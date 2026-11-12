@@ -169,14 +169,14 @@
   "emptyState": {
     "off": {
       "title": "Netzwerktopologie ist deaktiviert",
-      "body": "Breeze kann aus Agent- und SNMP-Daten eine Live-Karte des Netzwerks dieses Standorts erstellen.",
+      "body": "Colonyn kann aus Agent- und SNMP-Daten eine Live-Karte des Netzwerks dieses Standorts erstellen.",
       "partnerNextStep": "Ein Partner-Administrator kann sie unter Einstellungen → Module aktivieren.",
       "orgNextStep": "Bitten Sie Ihren MSP, sie zu aktivieren.",
       "openModules": "Moduleinstellungen öffnen"
     },
     "preparing": {
       "title": "Topologiekarte wird erstellt",
-      "body": "Breeze sammelt Netzwerkdaten für diesen Standort. Das dauert nach dem Aktivieren der Funktion in der Regel nur wenige Minuten."
+      "body": "Colonyn sammelt Netzwerkdaten für diesen Standort. Das dauert nach dem Aktivieren der Funktion in der Regel nur wenige Minuten."
     },
     "unavailable": {
       "title": "Topologie nicht verfügbar",
@@ -285,7 +285,7 @@
       "credentials_missing": "Für ein Gerät sind keine verwendbaren SNMP-Zugangsdaten konfiguriert.",
       "credentials_rejected": "Ein Gerät hat die konfigurierten SNMP-Zugangsdaten abgelehnt.",
       "interface_unresolved": "Einige Verbindungen wurden an Ports gemeldet, die nicht erkannt werden konnten.",
-      "controller_site_unmapped": "Ein UniFi-Controller-Standort ist keinem Breeze-Standort zugeordnet.",
+      "controller_site_unmapped": "Ein UniFi-Controller-Standort ist keinem Colonyn-Standort zugeordnet.",
       "controller_site_other_org": "Ein UniFi-Controller-Standort ist einer anderen Organisation zugeordnet."
     },
     "scopeCount": "({{count}} betroffen)"
@@ -712,7 +712,7 @@
       "agentsOnline_other": "{{count}} Agents online",
       "agentsOffline_one": "{{count}} ist offline",
       "agentsOffline_other": "{{count}} sind offline",
-      "noAgents": "Keine Breeze-Agents",
+      "noAgents": "Keine Colonyn-Agents",
       "zoomIn": "Vergrößern, um die Geräte zu sehen"
     },
     "bundle_one": "{{count}} Verbindung",
@@ -736,7 +736,7 @@
     "rosterUnidentified": "Netzwerk nicht identifiziert",
     "notDeclared": "Nicht für {{site}} deklariert",
     "showOtherNetworks": "Andere Netzwerke auf der Karte anzeigen",
-    "declareHint": "Für {{site}} sind keine Netzwerke deklariert. Geräte werden nach den Netzwerken gruppiert, die sie melden. Deklarieren Sie die Netzwerke dieses Standorts in einem Discovery-Profil, damit Breeze Besucher und falsch zugeordnete Geräte unterscheiden kann.",
+    "declareHint": "Für {{site}} sind keine Netzwerke deklariert. Geräte werden nach den Netzwerken gruppiert, die sie melden. Deklarieren Sie die Netzwerke dieses Standorts in einem Discovery-Profil, damit Colonyn Besucher und falsch zugeordnete Geräte unterscheiden kann.",
     "declareHintLink": "Discovery-Profile öffnen",
     "siteIntro": "Geräte, die {{site}} zugewiesen sind, gruppiert nach dem Netzwerk, das jedes Gerät meldet",
     "thisSite": "dieser Standort",
@@ -761,7 +761,7 @@
         "gatewayMismatch": "Im deklarierten Bereich von {{site}}, aber über ein anderes Gateway.",
         "ownGatewayMismatch": "Im deklarierten Bereich von {{site}}, aber über ein anderes Gateway ({{gateway}})."
       },
-      "ambiguousEntry": "Für {{sites}} deklariert. Breeze kann nicht bestimmen, um welchen Standort es sich handelt.",
+      "ambiguousEntry": "Für {{sites}} deklariert. Colonyn kann nicht bestimmen, um welchen Standort es sich handelt.",
       "lastReported": "Zuletzt gemeldet: {{prefix}} über {{gateway}}, {{when}}",
       "locationNotCurrent": "Standort nicht aktuell",
       "visitingBadge": "Zu Besuch",
@@ -784,7 +784,7 @@
         "evidenceNoPrefix": "Hat das Netzwerk von {{site}} an {{days}} Tagen zwischen {{from}} und {{to}} gemeldet. In dieser Zeit keine Beobachtungen im Netzwerk von {{assigned}}.",
         "move": "Zu {{site}} verschieben",
         "keep": "Bei {{site}} belassen",
-        "confirmMove": "Durch das Verschieben ändert sich, welche Konfigurationsrichtlinien, Wartungsfenster, Alarm-Weiterleitungen und Berichte des Standorts für {{device}} gelten. Breeze verschiebt das Gerät nicht automatisch zurück.",
+        "confirmMove": "Durch das Verschieben ändert sich, welche Konfigurationsrichtlinien, Wartungsfenster, Alarm-Weiterleitungen und Berichte des Standorts für {{device}} gelten. Colonyn verschiebt das Gerät nicht automatisch zurück.",
         "cancel": "Abbrechen",
         "moved": "{{device}} wurde zu {{site}} verschoben.",
         "kept": "{{device}} bleibt bei {{site}}. Vorschläge sind dafür deaktiviert.",

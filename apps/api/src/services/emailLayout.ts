@@ -77,7 +77,7 @@ export function renderLayout(options: RenderLayoutOptions): string {
             </tr>
             ${footerBlock}
           </table>
-          <p style="margin: 16px 0 0; font-size: 12px; color: ${FAINT_COLOR}; font-family: ${FONT_STACK};">${escapeHtml(brandName ?? 'Breeze RMM')}</p>
+          <p style="margin: 16px 0 0; font-size: 12px; color: ${FAINT_COLOR}; font-family: ${FONT_STACK};">${escapeHtml(brandName ?? 'Colonyn RMM')}</p>
         </td>
       </tr>
     </table>

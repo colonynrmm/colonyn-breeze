@@ -28,6 +28,7 @@ import { portalDocumentRoutes } from './documents';
 import { portalNetworkRoutes } from './network';
 import { portalHourBlockRoutes } from './hourBlock';
 import { portalApprovalRoutes } from './approvals';
+import { portalEntitlementMiddleware } from '../../colonyn/entitlements/guard'; // COLONYN
 
 export const portalRoutes = new Hono();
 
@@ -138,6 +139,10 @@ portalRoutes.use('/tickets/*', async (c, next) => {
 // the bare `/approvals` list path (approvals.gate.test.ts pins both).
 portalRoutes.use('/approvals/*', portalAuthMiddleware);
 portalRoutes.use('/approvals/*', portalTicketsEnabledMiddleware);
+
+// COLONYN: plan modules — ticketing/billing need PSA, backups need Backup & DR.
+// After every portalAuthMiddleware above, before the routers.
+portalRoutes.use('*', portalEntitlementMiddleware);
 
 portalRoutes.route('/', deviceRoutes);
 portalRoutes.route('/', ticketRoutes);

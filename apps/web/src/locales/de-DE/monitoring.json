@@ -37,7 +37,7 @@
     },
     "deleteConfirm": "Monitor {{name}} löschen? Die zugehörige Alarmregel und die Reaktionsautomatisierung werden ebenfalls entfernt.",
     "builtIn": "Integriert",
-    "builtInHint": "Von Breeze bereitgestellt. Schwellenwerte bearbeiten, deaktivieren oder löschen – er kommt nicht zurück.",
+    "builtInHint": "Von Colonyn bereitgestellt. Schwellenwerte bearbeiten, deaktivieren oder löschen – er kommt nicht zurück.",
     "recommended": {
       "title": "Empfohlen",
       "description": "Integrierte Monitore einer Richtlinie zuordnen."
@@ -374,7 +374,7 @@
     "convert": "In Monitor umwandeln",
     "converted": "Umgewandelt",
     "notConvertible": "Die Bedingungen dieser Regel können nicht als einzelner Monitor ausgedrückt werden.",
-    "systemManaged": "Systemverwaltete Regel. Breeze löst diesen Alarm selbst aus, daher gibt es nichts zu konvertieren.",
+    "systemManaged": "Systemverwaltete Regel. Colonyn löst diesen Alarm selbst aus, daher gibt es nichts zu konvertieren.",
     "errors": {
       "fetch": "Alarmregeln konnten nicht geladen werden",
       "convert": "Regel konnte nicht umgewandelt werden"
@@ -382,7 +382,7 @@
   },
   "builtInRules": {
     "title": "Integrierte Alarme",
-    "description": "Alarme, die Breeze selbst auslöst. Schalten Sie eine Regel aus, um diesen Alarm für ihre Organisation zu beenden; bereits offene Alarme bleiben offen, bis Sie sie auflösen.",
+    "description": "Alarme, die Colonyn selbst auslöst. Schalten Sie eine Regel aus, um diesen Alarm für ihre Organisation zu beenden; bereits offene Alarme bleiben offen, bis Sie sie auflösen.",
     "columns": {
       "name": "Bezeichnung",
       "organization": "Organisation",

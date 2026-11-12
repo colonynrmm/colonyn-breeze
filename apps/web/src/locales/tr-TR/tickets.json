@@ -649,7 +649,7 @@
     },
     "record": {
       "title": "Müşterinin kararını kaydet",
-      "intro": "Müşteri kararını Breeze dışında size ilettiyse bunu kullanın. Kayıt sizin adınıza tutulur.",
+      "intro": "Müşteri kararını Colonyn dışında size ilettiyse bunu kullanın. Kayıt sizin adınıza tutulur.",
       "target": "Revizyon {{revision}} · {{ask}}",
       "decision": "Karar",
       "approve": "Onaylandı",
