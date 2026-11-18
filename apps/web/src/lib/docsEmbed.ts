@@ -1,9 +1,11 @@
 const ALLOWED_HTTPS_HOSTS = new Set([
+  'colonyn.com',
   'breezermm.com',
   '2breeze.app',
 ]);
 
 const ALLOWED_HTTPS_SUFFIXES = [
+  '.colonyn.com',
   '.breezermm.com',
   '.2breeze.app',
 ];

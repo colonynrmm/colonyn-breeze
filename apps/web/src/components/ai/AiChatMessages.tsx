@@ -268,7 +268,7 @@ export default function AiChatMessages({
                     components={{
                       a: ({ href, children }) => {
                         // Origin check (not a string prefix): a docs-lookalike host
-                        // (e.g. docs.breezermm.com.evil.com) is NOT treated as a
+                        // (e.g. docs.colonyn.com.evil.com) is NOT treated as a
                         // trusted in-app docs link and instead falls through to the
                         // safe external-link branch below.
                         if (isDocsUrl(href)) {

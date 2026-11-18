@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { configuredDocsOrigin } from '@/lib/docsEmbed';
 import { resolvedFormattingLocale } from '@/lib/i18n/format';
 import type { HardwareSourceReport } from '@breeze/shared';
-export const HARDWARE_DOCS_URL = `${configuredDocsOrigin() ?? 'https://docs.breezermm.com'}/features/hardware-monitoring/`;
+export const HARDWARE_DOCS_URL = `${configuredDocsOrigin() ?? 'https://docs.colonyn.com'}/features/hardware-monitoring/`;
 const timestamp = (value: string | null | undefined) => {
   if (!value || !Number.isFinite(Date.parse(value))) return '—';
   return new Intl.DateTimeFormat(resolvedFormattingLocale(), {

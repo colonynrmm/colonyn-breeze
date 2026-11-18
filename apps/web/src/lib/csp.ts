@@ -45,7 +45,7 @@ function addSentryOrigin(sources: Set<string>, rawDsn: string | undefined): void
 }
 
 /** Canonical hosted documentation origin embedded by the in-app help panel. */
-const DOCS_FRAME_ORIGIN = 'https://docs.breezermm.com';
+const DOCS_FRAME_ORIGIN = 'https://docs.colonyn.com';
 
 function addFrameOrigin(sources: Set<string>, rawUrl: string | undefined): void {
   if (!rawUrl) return;

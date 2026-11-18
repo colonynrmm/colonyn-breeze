@@ -46,7 +46,7 @@ const sentryIntegration = sentryDsn
 // This config is plain ESM evaluated before the TS pipeline, so we can't reuse
 // resolveFrameSrcDirective from ./src/lib/csp.ts — keep the semantics in sync.
 const frameSrcDirective = (() => {
-  const sources = new Set(["'self'", 'blob:', 'https://docs.breezermm.com']);
+  const sources = new Set(["'self'", 'blob:', 'https://docs.colonyn.com']);
   try {
     if (process.env.PUBLIC_DOCS_URL) {
       const { protocol, origin } = new URL(process.env.PUBLIC_DOCS_URL);

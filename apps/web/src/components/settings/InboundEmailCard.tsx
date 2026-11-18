@@ -45,7 +45,7 @@ interface InboundConfig {
 }
 
 // The self-hosted setup section added in #3586.
-const INBOUND_DOCS_URL = 'https://docs.breezermm.com/deploy/environment/#inbound-email-to-ticket-mailgun';
+const INBOUND_DOCS_URL = 'https://docs.colonyn.com/deploy/environment/#inbound-email-to-ticket-mailgun';
 
 interface OrgOption {
   id: string;

@@ -1,4 +1,4 @@
-# Colonyn: the stock Breeze Caddyfile plus one extra site for the bridge.
+# Colonyn: the stock Breeze Caddyfile plus two extra sites: the bridge and the docs.
 # Mounted by docker-compose.colonyn.yml; the stock file stays untouched so a
 # Breeze upgrade can replace it freely.
 import /etc/caddy/Caddyfile 
@@ -11,5 +11,26 @@ import /etc/caddy/Caddyfile
 	}
 	handle {
 		respond "Forbidden" 403
+	}
+}
+
+# Colonyn documentation (static site built by colonyn/docs/build-docs.mjs).
+# Framed by the in-app help panel at my.colonyn.com, so allow that origin.
+{$COLONYN_DOCS_DOMAIN:docs.colonyn.com} {
+	root * /srv/colonyn-docs
+	encode zstd gzip
+	header {
+		Content-Security-Policy "frame-ancestors 'self' https://{$COLONYN_APP_DOMAIN:my.colonyn.com}"
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
+	@assets path /_astro/* /pagefind/*
+	header @assets Cache-Control "public, max-age=31536000, immutable"
+	file_server
+	handle_errors {
+		@404 expression {err.status_code} == 404
+		rewrite @404 /404.html
+		file_server
 	}
 }

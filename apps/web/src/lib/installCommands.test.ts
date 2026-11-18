@@ -97,7 +97,7 @@ describe('buildInstallCommands', () => {
       expect(catchBlock).toContain('matches the server name and has not expired');
       expect(catchBlock).toContain('Cert:\\LocalMachine\\Root');
       expect(catchBlock).toContain('https://rmm.example.com');
-      expect(catchBlock).toContain('https://docs.breezermm.com/deploy/tls/#trusting-the-internal-ca-on-agents');
+      expect(catchBlock).toContain('https://docs.colonyn.com/deploy/tls/#trusting-the-internal-ca-on-agents');
       // Bare rethrow for non-certificate failures, before the MZ check runs.
       expect(catchBlock.indexOf('"}; throw}')).toBeGreaterThan(-1);
       expect(catchBlock.indexOf('"}; throw}')).toBeLessThan(catchBlock.indexOf('ReadAllBytes'));

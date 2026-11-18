@@ -14,26 +14,9 @@
       "Direct Binary + Manual Enroll",
       "`breeze-agent enroll` — flag reference",
       "`breeze-agent service install` — flag reference",
+      "Encrypted Client Hello (ECH)",
       "Pre-Staging Without Enrollment",
       "Programmatic Bundle Generation"
-    ],
-    "section": "agents"
-  },
-  {
-    "path": "/agents/building/",
-    "title": "Building from Source",
-    "description": "Compile the Breeze agent from source: prerequisites, cross-platform build commands, Windows MSI packaging, version embedding, and testing.",
-    "headings": [
-      "Prerequisites",
-      "Build Commands",
-      "Cross-Platform Builds",
-      "Other Agent Binaries",
-      "Windows MSI Installer",
-      "Version Embedding",
-      "Display Branding",
-      "Project Structure",
-      "Running in Development",
-      "Testing"
     ],
     "section": "agents"
   },
@@ -268,22 +251,11 @@
     "description": "Grant Full Disk Access, Accessibility, and Screen Recording to the Breeze agent using MDM PPPC profiles or System Settings.",
     "headings": [
       "Permissions Overview",
-      "Agent Path: /usr/local/bin or /Library/Breeze/bin",
+      "Agent Path: /usr/local/bin or /Library/Colonyn/bin",
       "Zero-Touch Grants with a PPPC Profile",
       "Manual Grants in System Settings",
       "After an agent relocation",
       "Troubleshooting"
-    ],
-    "section": "agents"
-  },
-  {
-    "path": "/agents/self-host-migration/",
-    "title": "Migrating to the Self-Host Agent Edition",
-    "description": "Move devices off hosted-edition agent builds and onto the self-host agent edition for self-hosted Breeze servers.",
-    "headings": [
-      "What the banner means",
-      "Migrate a device",
-      "Verify"
     ],
     "section": "agents"
   },
@@ -315,7 +287,7 @@
   {
     "path": "/backup/backup-providers/",
     "title": "Third-Party Backup Providers",
-    "description": "Connect N-able Cove Data Protection to Breeze so third-party backup status appears in backup health, device pages, attention items and alerts.",
+    "description": "Connect N-able Cove Data Protection to Colonyn so third-party backup status appears in backup health, device pages, attention items and alerts.",
     "headings": [
       "Before You Start",
       "Connecting Cove",
@@ -332,9 +304,9 @@
   {
     "path": "/backup/bare-metal-recovery/",
     "title": "Bare Metal Recovery",
-    "description": "Boot the Breeze recovery media, enter a one-time code, and rebuild a Linux machine from a whole-machine snapshot onto a blank disk — or, as the fallback, reinstall an OS yourself and recover files or OS state into it with a recovery token.",
+    "description": "Boot the Colonyn recovery media, enter a one-time code, and rebuild a Linux machine from a whole-machine snapshot onto a blank disk — or, as the fallback, reinstall an OS yourself and recover files or OS state into it with a recovery token.",
     "headings": [
-      "Recover from Breeze recovery media",
+      "Recover from Colonyn recovery media",
       "1. Get the media",
       "2. Create a recovery code",
       "3. Boot and follow the console",
@@ -509,7 +481,7 @@
   {
     "path": "/backup/restoring/",
     "title": "Restoring Data",
-    "description": "Restore individual files or full snapshots from Breeze backups. Covers browsing snapshots, full and selective (file-level) restores, cross-device restore, and bare metal recovery.",
+    "description": "Restore individual files or full snapshots from Colonyn backups. Covers browsing snapshots, full and selective (file-level) restores, cross-device restore, and bare metal recovery.",
     "headings": [
       "Browsing Snapshots",
       "Restore Types",
@@ -619,7 +591,7 @@
   {
     "path": "/backup/verification/",
     "title": "Verification & Recovery Readiness",
-    "description": "Verify backup integrity with checksum checks and test restores, review verification history, and track per-device recovery readiness scores in Breeze.",
+    "description": "Verify backup integrity with checksum checks and test restores, review verification history, and track per-device recovery readiness scores in Colonyn.",
     "headings": [
       "Verification Types",
       "Running a Verification",
@@ -665,355 +637,6 @@
       "Third-Party EDR (Linux)",
       "Verifying Exclusions",
       "Minimum Exclusion Summary"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/binaries/",
-    "title": "Binary Distribution",
-    "description": "How Breeze serves agent and viewer downloads. Covers GitHub Releases mode, local disk with optional S3 offload, and the release manifest trust root.",
-    "headings": [
-      "Binary Source Modes",
-      "GitHub Mode (Default)",
-      "Local Mode",
-      "Docker Compose Setup",
-      "S3 Offload (Optional)",
-      "Download Endpoints",
-      "Agent Binaries",
-      "Raw Agent MSI (Windows)",
-      "macOS Installer Package",
-      "Viewer Installers",
-      "Helper Binaries",
-      "Watchdog Binary",
-      "User-Helper Binary",
-      "Backup Binary",
-      "Install Script",
-      "Uninstall Script",
-      "Decision Guide"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/cloudflare-access-trust/",
-    "title": "Cloudflare Access JWT trust",
-    "description": "Skip the Breeze login form behind Cloudflare Access by trusting verified Cf-Access-Jwt-Assertion headers from the same identity provider.",
-    "headings": [
-      "How it works",
-      "Failure semantics",
-      "MFA",
-      "Redirect login flow",
-      "Sign-out and token lifecycle",
-      "Configuration",
-      "Recommended Cloudflare Access setup",
-      "Disabling"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/cloudflare-tunnel/",
-    "title": "Cloudflare Tunnel",
-    "description": "Run Breeze behind a Cloudflare Tunnel with no inbound ports, and optionally lock the dashboard behind Cloudflare Access.",
-    "headings": [
-      "Traffic Chain",
-      "TLS Termination: HTTP Origin Required",
-      "Option A — Caddy in HTTP mode (recommended)",
-      "Option B — Bypass Caddy",
-      "Prerequisites",
-      "Setup",
-      "Restricting the Dashboard with Cloudflare Access",
-      "Troubleshooting"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/code-signing/",
-    "title": "Code Signing",
-    "description": "Code signing for Breeze agent, viewer, and helper binaries: Windows Authenticode, macOS notarization, self-hosted signing, and signature verification.",
-    "headings": [
-      "Why Code Signing Matters",
-      "Signed Artifacts",
-      "Windows Code Signing",
-      "How it works (Viewer and Helper)",
-      "WiX MSI Packaging and Editions",
-      "macOS Code Signing & Notarization",
-      "How it works",
-      "Gatekeeper Verification",
-      "Signing Your Own Packages (Self-Hosted)",
-      "Verifying Signatures",
-      "Windows",
-      "macOS",
-      "Troubleshooting"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/custom-sender-addresses/",
-    "title": "Custom sender addresses",
-    "description": "Send Breeze RMM email from your own domain: one address via EMAIL_FROM, per-stream addresses on any relay, or the DNS wizard with a domain API.",
-    "headings": [
-      "Which setup you want",
-      "One address for everything",
-      "Per-stream addresses on any relay",
-      "The DNS wizard",
-      "Environment variables",
-      "Mapping the variables into your containers",
-      "What sharing one Resend account trades away",
-      "What your technicians will see",
-      "Related"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/environment/",
-    "title": "Environment Variables",
-    "description": "Reference for every Breeze RMM environment variable: database, Redis, auth, email, object storage, TURN, monitoring, Sentry, and feature flags.",
-    "headings": [
-      "Database",
-      "Database connection prologue and wedged-backend recovery",
-      "Redis",
-      "Authentication & Security",
-      "Server",
-      "Email",
-      "SMS (Twilio)",
-      "Mobile Push Notifications (iOS)",
-      "Mobile Push Notifications (Android)",
-      "Binary Distribution",
-      "Object Storage",
-      "WebRTC / TURN",
-      "Monitoring",
-      "Background retention sweeps",
-      "Metric history retention (`metric_rollups`)",
-      "Audit chain",
-      "Event-loop lag monitor",
-      "Agent admission control",
-      "Database pool-health watchdog",
-      "Redis memory watchdog",
-      "Readiness probe tuning",
-      "Sentry",
-      "Rate Limiting",
-      "Agent traffic and ingest budgets",
-      "Upgrade and rollout controls",
-      "Database",
-      "Remote Sessions & Storage",
-      "Rollout Modes",
-      "Security Enforcement (opt-in)",
-      "Feature Flags",
-      "Durable event dispatch",
-      "MCP Server",
-      "Cloudflare mTLS",
-      "Cloudflare Access JWT trust",
-      "Backup (Enterprise Agent Backup)",
-      "Cloud-to-Cloud Backup (M365)",
-      "Inbound email-to-ticket (Mailgun)",
-      "Mailgun setup",
-      "Ticket Mailbox (M365 email-to-ticket)",
-      "Customer Microsoft 365 Graph-read consent (optional)",
-      "API-side tenant sync",
-      "Executor-side tenant-sync tuning (v0.113.0+)",
-      "Customer Microsoft 365 Graph-actions (write) executor (optional)",
-      "Docker Deployment",
-      "Billing",
-      "AI",
-      "AI Operator (preview, off by default)",
-      "Self-hosted: alternative Anthropic-compatible backends",
-      "Warranty lookups",
-      "Breeze AI for Office (add-ins, optional)",
-      "Accounting (QuickBooks Online)",
-      "Accounting (Xero)",
-      "Vulnerability Management",
-      "Partner trust probation (hosted service only)"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/production/",
-    "title": "Production Deployment",
-    "description": "Deploy Breeze RMM to production with Docker Compose. Covers Caddy automatic TLS, API, dashboard, customer portal, PostgreSQL, Redis, and monitoring.",
-    "headings": [
-      "What Gets Deployed",
-      "Deploy Steps",
-      "Adding Monitoring",
-      "Pinning a Version",
-      "Signed, digest-pinned image references (v0.112.0 and later)",
-      "Resource Tuning",
-      "Redis Authentication",
-      "Updating"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/rollout-modes/",
-    "title": "Rollout Modes & Compatibility Switches",
-    "description": "Why Breeze asks you to set upgrade-mode variables explicitly, what each one does, and which ones you still need to close out after a release.",
-    "headings": [
-      "The problem they solve",
-      "Four kinds of switch",
-      "Required in production",
-      "`EVENT_PERMISSION_EPOCH_MODE` — transition",
-      "`REMOTE_WS_AUTH_MODE` — transition",
-      "`REMOTE_ACCESS_ADMISSION_MODE` — operational",
-      "`REMOTE_WS_REDIS_TOPOLOGY` — attestation",
-      "Opt-in, off by default",
-      "`AGENT_MTLS_BINDING_MODE`",
-      "`MANAGED_SOFTWARE_POLICY_MODE`",
-      "`AGENT_REQUIRE_MANIFEST_SIGNING_KEY_ID`",
-      "Retention",
-      "`DEVICE_METRICS_RETENTION_DAYS`",
-      "What you still owe after an upgrade"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/sign-your-own-packages/",
-    "title": "Sign Your Own Agent Packages",
-    "description": "Sign official Breeze agent releases with your own Windows and macOS certificates using the breeze-selfhost-signing template.",
-    "headings": [
-      "Part 0 — Overview",
-      "Why signing matters",
-      "What you'll have at the end",
-      "Cost and time expectations",
-      "Choosing a Windows signing path",
-      "Part 1 — Azure Artifact Signing from zero",
-      "1. Create the Artifact Signing account",
-      "2. Complete identity validation",
-      "3. Create a certificate profile",
-      "4. App registration + GitHub OIDC federated credential",
-      "Part 2 — Apple Developer ID",
-      "1. Enroll and create certificates",
-      "2. App-specific password for notarization",
-      "Part 3 — Create your signing repo",
-      "Part 4 — Run the workflow",
-      "Part 5 — Point your instance at your builds",
-      "T1 (recommended): repointed GitHub mode",
-      "T2: local mode",
-      "Migration flow for an existing fleet",
-      "Optional hardening",
-      "Key rotation",
-      "Troubleshooting",
-      "Appendix",
-      "Viewer and Helper apps",
-      "PFX mode details",
-      "MSI product identity",
-      "Relationship to the fork path"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/tls/",
-    "title": "TLS & Reverse Proxy",
-    "description": "Configure TLS and reverse proxying for Breeze RMM with Caddy or Nginx, including certificates, WebSocket proxying, and security headers.",
-    "headings": [
-      "Caddy (Default)",
-      "Production Caddyfile",
-      "How It Works",
-      "Internal CA for domains Let's Encrypt cannot reach",
-      "Trusting the internal CA on agents",
-      "WebSocket Proxying",
-      "Troubleshooting: remote tools time out / event socket returns 400 behind your own proxy",
-      "Nginx (Alternative)",
-      "Security Headers"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/turn-server/",
-    "title": "TURN Server",
-    "description": "Deploy a dedicated coturn TURN relay for WebRTC remote desktop: server provisioning, firewall rules, relay port sizing, and credential handling.",
-    "headings": [
-      "Architecture Options",
-      "External TURN Server Setup",
-      "Requirements",
-      "Provision the server",
-      "Install and configure coturn",
-      "Configure the firewall",
-      "Verify connectivity",
-      "Configure Breeze to Use External TURN",
-      "1. Update `.env`",
-      "2. Restart the stack",
-      "Using the Bundled TURN Server",
-      "TURN over TLS (`turns:`)",
-      "Relay Port Range Sizing",
-      "How Credentials Work",
-      "Troubleshooting"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/upgrades/",
-    "title": "Upgrade Guide",
-    "description": "Upgrade a self-hosted Breeze RMM deployment with Docker Compose, including automatic database migrations, expected downtime, and version-specific notes.",
-    "headings": [
-      "Docker Compose Upgrade",
-      "Check what an upgrade retires",
-      "In the web UI",
-      "Compose file changes",
-      "v0.122.1 — installer token default, 63 newly passed API settings, Partner API ticket settings",
-      "v0.121.0 — new optional AI and enrollment settings; production Compose catches up",
-      "v0.120.0 — start fence default and newly mapped API settings",
-      "v0.119.0 — `APP_VERSION` comes from the image",
-      "v0.119.0 — coturn relays again",
-      "v0.119.0 — coturn refuses IPv4-mapped and NAT64 peers",
-      "v0.118.0 — coturn peer restrictions and API stop grace",
-      "v0.95.0 — stable Caddy address and proxy trust",
-      "Version-specific notes",
-      "v0.122.1 — remote desktop clipboard v2, diagnostic file access, Partner API tickets, restore integrity",
-      "v0.121.0 — AI model registry, BYO OpenAI-compatible models, encrypted backup credentials",
-      "v0.119.0 — network topology, time sync, Xero, S3 restores through storage sessions",
-      "v0.120.0 — S3 backups through storage sessions, restore integrity, consent prompt protocol 2",
-      "v0.118.0 — legacy alerting retired, network checks become monitors",
-      "v0.117.0 — legacy labour-pricing columns dropped",
-      "v0.116.0 — retired labour-pricing fields are rejected",
-      "v0.115.0 — billing profiles replace per-organization labour rates",
-      "v0.114.0 — evidence reports, network device page, account board",
-      "v0.113.0 — remote desktop stability, AI-authored scripts, service deliverables",
-      "v0.112.0 — Windows MSI fix, security remediations, bare-metal recovery",
-      "v0.111.1 — hotfix for a v0.111.0 upgrade-blocking migration",
-      "v0.111.0 — offline work queue, script cancellation, organization record page",
-      "v0.110.0 — reboot deferral, device-set billing, QuickBooks payments, portal visibility",
-      "v0.109.0 — AI agents, ticket attachments and org archiving",
-      "v0.95.0 — authentication & tenancy hardening",
-      "Agent Updates",
-      "Linux Binary-In-Use Handling",
-      "Watchdog Recovery",
-      "Disabling Auto-Update on Specific Devices",
-      "Controlled agent fleet rollout",
-      "Pinning Agent and Watchdog Versions",
-      "Agent Update Scheduling",
-      "Setting a maintenance window",
-      "When no window is configured",
-      "Migration Failure Recovery",
-      "Remote-access lease cutover",
-      "Zero-Downtime Upgrades",
-      "Rolling Back",
-      "Checking Versions",
-      "Pre-Release Testing"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/verify-installer/",
-    "title": "Verify a Breeze Installer",
-    "description": "How an admin confirms a downloaded Breeze agent installer is genuine: SHA-256 against checksums.txt, the signed release manifest, and the Authenticode and notarization results to expect per platform.",
-    "headings": [
-      "1. Check the SHA-256 against `checksums.txt`",
-      "2. Verify the signed manifest (optional, stronger)",
-      "3. Signature expectations per platform"
-    ],
-    "section": "deploy"
-  },
-  {
-    "path": "/deploy/worker-split/",
-    "title": "Worker Split",
-    "description": "Run Breeze's background jobs in their own container so heavy scheduled work cannot slow down the API that serves your dashboard and agents.",
-    "headings": [
-      "What moves and what stays",
-      "Choosing the roles",
-      "Before you start",
-      "Enable the split",
-      "Rolling back",
-      "Monitoring the worker",
-      "Keeping the worker upgraded",
-      "Related"
     ],
     "section": "deploy"
   },
@@ -1239,7 +862,7 @@
   {
     "path": "/features/ai-usage-chargeback/",
     "title": "AI usage chargeback",
-    "description": "Bill your clients for the AI usage Breeze meters, using a price set on a billing profile.",
+    "description": "Bill your clients for the AI usage Colonyn meters, using a price set on a billing profile.",
     "headings": [
       "Turn it on",
       "What is billed",
@@ -1488,7 +1111,7 @@
   {
     "path": "/features/branding/",
     "title": "Branding & White-Label",
-    "description": "Customize the Breeze dashboard with your organization's logo, colors, and branding for a white-label experience.",
+    "description": "Customize the Colonyn dashboard with your organization's logo, colors, and branding for a white-label experience.",
     "headings": [
       "Overview",
       "Logo Customization",
@@ -1530,10 +1153,7 @@
       "AI Providers & Models",
       "Connections and residency",
       "Models",
-      "Defaults by feature (and org overrides)",
-      "Self-hosted: configure an instance-wide provider",
-      "Anthropic-compatible endpoint with tool calling",
-      "Instance-wide OpenAI-compatible endpoint"
+      "Defaults by feature (and org overrides)"
     ],
     "section": "features"
   },
@@ -1641,7 +1261,7 @@
   {
     "path": "/features/community-ecosystem/",
     "title": "Community Ecosystem",
-    "description": "Open-source projects that work with Breeze through its public APIs. Listed when they meet published criteria, maintained by their own authors, and not endorsed or supported by Breeze.",
+    "description": "Open-source projects that work with Colonyn through its public APIs. Listed when they meet published criteria, maintained by their own authors, and not endorsed or supported by Colonyn.",
     "headings": [
       "Projects",
       "Weavestream",
@@ -1678,7 +1298,7 @@
       "Partner library policy",
       "Organization policy",
       "Per-device compliance status",
-      "Breeze Defaults baseline",
+      "Colonyn Defaults baseline",
       "Defaults in the Effective Configuration tab",
       "Viewing effective configuration",
       "Patch jobs",
@@ -1868,7 +1488,7 @@
   {
     "path": "/features/diagnostic-file-access/",
     "title": "Diagnostic File Access",
-    "description": "Let the Breeze AI assistant read specific log folders on one device, read-only, after an administrator approves it — and what can never be granted.",
+    "description": "Let the Colonyn AI assistant read specific log folders on one device, read-only, after an administrator approves it — and what can never be granted.",
     "headings": [
       "How a request works",
       "Who can request and approve",
@@ -1990,9 +1610,9 @@
   {
     "path": "/features/edr-integrations/",
     "title": "EDR Integrations",
-    "description": "Connect Huntress, SentinelOne and (API only) Bitdefender GravityZone to sync agents and threats, auto-link EDR agents to Breeze devices, and run actions like device isolation.",
+    "description": "Connect Huntress, SentinelOne and (API only) Bitdefender GravityZone to sync agents and threats, auto-link EDR agents to Colonyn devices, and run actions like device isolation.",
     "headings": [
-      "Auto-Linking: How EDR Agents Map to Breeze Devices",
+      "Auto-Linking: How EDR Agents Map to Colonyn Devices",
       "Huntress",
       "Overview",
       "Setting Up Huntress",
@@ -2042,7 +1662,7 @@
   {
     "path": "/features/edr-provider-framework/",
     "title": "EDR Provider Framework",
-    "description": "Connect additional EDR products to Breeze through a common framework, map vendor tenants to organizations, link endpoints to devices, and review detections alongside your other security data.",
+    "description": "Connect additional EDR products to Colonyn through a common framework, map vendor tenants to organizations, link endpoints to devices, and review detections alongside your other security data.",
     "headings": [
       "Connecting a provider",
       "Mapping vendor tenants to organizations",
@@ -2066,18 +1686,6 @@
       "Fleet-Wide Log Search",
       "Additional Fleet Log Features",
       "Troubleshooting"
-    ],
-    "section": "features"
-  },
-  {
-    "path": "/features/extensions/",
-    "title": "Extensions",
-    "description": "First-party extension modules compiled into the API image, off by default and enabled per deployment via flags, currently the Workspace extension.",
-    "headings": [
-      "What an enabled extension contributes",
-      "What Breeze does not have",
-      "Enabling Workspace",
-      "Who can use Workspace"
     ],
     "section": "features"
   },
@@ -2149,7 +1757,7 @@
     "title": "Hardware & RAID Monitoring",
     "description": "See controller, array, physical disk and cache-battery health, and attach hardware monitors to configuration policies.",
     "headings": [
-      "What Breeze monitors",
+      "What Colonyn monitors",
       "Supported tools",
       "Install the tools",
       "Configure collection",
@@ -2181,7 +1789,7 @@
   {
     "path": "/features/identity-integrations/",
     "title": "Cloud Tenant Integrations — Google Workspace & Microsoft 365",
-    "description": "Connect Google Workspace and Microsoft 365 (Entra) tenants on the Integrations → Cloud tenants tab so Breeze and its AI assistant can administer users and groups.",
+    "description": "Connect Google Workspace and Microsoft 365 (Entra) tenants on the Integrations → Cloud tenants tab so Colonyn and its AI assistant can administer users and groups.",
     "headings": [
       "Connecting a tenant",
       "Credentials required",
@@ -2226,7 +1834,7 @@
   {
     "path": "/features/integrations/",
     "title": "Integrations",
-    "description": "Connect Breeze to PSA ticketing platforms, communication channels, and monitoring endpoints, with per-organization or partner-wide scoping.",
+    "description": "Connect Colonyn to PSA ticketing platforms, communication channels, and monitoring endpoints, with per-organization or partner-wide scoping.",
     "headings": [
       "Integration Types",
       "Communication Integrations",
@@ -2443,7 +2051,7 @@
   {
     "path": "/features/mcp-server/",
     "title": "MCP Server",
-    "description": "Connect Claude Desktop, Cursor, and other MCP-compatible AI clients to your Breeze fleet via the Model Context Protocol.",
+    "description": "Connect Claude Desktop, Cursor, and other MCP-compatible AI clients to your Colonyn fleet via the Model Context Protocol.",
     "headings": [
       "How MCP works",
       "Transport",
@@ -2596,7 +2204,7 @@
   {
     "path": "/features/monitoring-integrations/",
     "title": "Monitoring & Observability Integrations",
-    "description": "Publish Breeze metrics and route alerts to Prometheus, Grafana, PagerDuty, OpsGenie, and outbound webhooks from the Integrations → Monitoring tab.",
+    "description": "Publish Colonyn metrics and route alerts to Prometheus, Grafana, PagerDuty, OpsGenie, and outbound webhooks from the Integrations → Monitoring tab.",
     "headings": [
       "Prometheus scrape endpoint",
       "Grafana",
@@ -2769,7 +2377,7 @@
       "Wrong-site suggestions",
       "Act on a suggestion",
       "Physical discovery",
-      "What Breeze collects",
+      "What Colonyn collects",
       "How connections are classified",
       "Evidence panel",
       "Coverage panel",
@@ -2855,7 +2463,7 @@
   {
     "path": "/features/online-payments/",
     "title": "Online Payments",
-    "description": "Let your customers pay invoices by card online, settled directly into your own Stripe account -- Breeze takes no fee and never touches the funds.",
+    "description": "Let your customers pay invoices by card online, settled directly into your own Stripe account -- Colonyn takes no fee and never touches the funds.",
     "headings": [
       "How It Works",
       "Connecting Stripe",
@@ -3032,7 +2640,7 @@
   {
     "path": "/features/plugins/",
     "title": "Plugins",
-    "description": "Extend Breeze with installable plugins for integrations, automations, reporting, collectors, notifications, and UI customisation.",
+    "description": "Extend Colonyn with installable plugins for integrations, automations, reporting, collectors, notifications, and UI customisation.",
     "headings": [
       "Plugin Types",
       "Plugin Catalog",
@@ -3196,7 +2804,7 @@
   {
     "path": "/features/psa-integrations/",
     "title": "PSA Integrations",
-    "description": "Connect Breeze to your PSA platform to sync tickets, encrypt credentials, and keep alerts and devices tied to external work items.",
+    "description": "Connect Colonyn to your PSA platform to sync tickets, encrypt credentials, and keep alerts and devices tied to external work items.",
     "headings": [
       "Supported Providers",
       "Connection Ownership",
@@ -3214,7 +2822,7 @@
   {
     "path": "/features/quotes/",
     "title": "Quotes & Proposals",
-    "description": "Build priced quotes from your catalog, take a deposit on acceptance, and turn accepted quotes into invoices and recurring contracts in Breeze.",
+    "description": "Build priced quotes from your catalog, take a deposit on acceptance, and turn accepted quotes into invoices and recurring contracts in Colonyn.",
     "headings": [
       "The Quote Editor",
       "Reordering, Bulk Edit, and Undo",
@@ -3614,7 +3222,7 @@
   {
     "path": "/features/setup-wizard/",
     "title": "First-Login Setup Wizard",
-    "description": "Guided four-step setup wizard covering account security, organization setup, regional settings, and device enrollment for new administrators on their first Breeze login.",
+    "description": "Guided four-step setup wizard covering account security, organization setup, regional settings, and device enrollment for new administrators on their first Colonyn login.",
     "headings": [
       "When the Wizard Appears",
       "Setup Steps",
@@ -3931,7 +3539,7 @@
     "title": "Time synchronization",
     "description": "Inspect Windows time sources, synchronization health, timezone expectations, and recent time events.",
     "headings": [
-      "What Breeze checks",
+      "What Colonyn checks",
       "Freshness and health",
       "Findings and fixes",
       "Expected timezone and the UTC default",
@@ -3969,7 +3577,7 @@
       "Overview",
       "Connecting UniFi",
       "Deep telemetry (cloud connections)",
-      "What Breeze pulls from UniFi",
+      "What Colonyn pulls from UniFi",
       "Connection status and sync history",
       "Related"
     ],
@@ -4096,7 +3704,7 @@
   {
     "path": "/features/warranty-tracking/",
     "title": "Warranty Tracking",
-    "description": "Configure warning and critical warranty expiry thresholds on configuration policies so Breeze raises alerts before device manufacturer warranties lapse.",
+    "description": "Configure warning and critical warranty expiry thresholds on configuration policies so Colonyn raises alerts before device manufacturer warranties lapse.",
     "headings": [
       "Where warranty dates come from",
       "Configure in a policy",
@@ -4188,144 +3796,6 @@
       "Not yet available"
     ],
     "section": "features"
-  },
-  {
-    "path": "/getting-started/architecture/",
-    "title": "Architecture",
-    "description": "How Breeze RMM components fit together: API server, web dashboard, Go agent, PostgreSQL, BullMQ job queue, TURN server, and multi-tenant hierarchy.",
-    "headings": [
-      "Multi-Tenant Hierarchy",
-      "Component Overview",
-      "API Server (Hono)",
-      "Web Dashboard (Astro + React)",
-      "Agent (Go)",
-      "Database (PostgreSQL + Drizzle)",
-      "Job Queue (BullMQ + Redis)",
-      "TURN Server (coturn)",
-      "Reverse Proxy (Caddy)",
-      "Data Flow: Agent ↔ API",
-      "Security Layers"
-    ],
-    "section": "getting-started"
-  },
-  {
-    "path": "/getting-started/introduction/",
-    "title": "What is Breeze RMM?",
-    "description": "Overview of Breeze RMM, an open-source remote monitoring and management platform for MSPs and IT teams, with its architecture and technology stack.",
-    "headings": [
-      "Why Breeze?",
-      "Architecture at a Glance",
-      "Finding Settings",
-      "Next Steps"
-    ],
-    "section": "getting-started"
-  },
-  {
-    "path": "/getting-started/prerequisites/",
-    "title": "Prerequisites",
-    "description": "Server hardware requirements and software needed to run Breeze RMM, including CPU, RAM, disk, and OS minimums plus Docker and Docker Compose setup.",
-    "headings": [
-      "Server Requirements",
-      "Required Software",
-      "Docker & Docker Compose",
-      "Node.js & pnpm (Development Only)",
-      "Git",
-      "DNS Configuration",
-      "Optional: Go Toolchain",
-      "Firewall Rules"
-    ],
-    "section": "getting-started"
-  },
-  {
-    "path": "/getting-started/quickstart/",
-    "title": "Quickstart",
-    "description": "Get Breeze RMM running in minutes with guided or manual setup, then reach the dashboard and enroll your first agent with an enrollment token.",
-    "headings": [
-      "Guided setup (recommended)",
-      "Manual setup",
-      "Reaching the dashboard from another machine",
-      "Troubleshooting",
-      "The browser shows ERR_SSL_PROTOCOL_ERROR",
-      "What's Running",
-      "Next: Enroll Your First Agent"
-    ],
-    "section": "getting-started"
-  },
-  {
-    "path": "/monitoring/alerts/",
-    "title": "Infrastructure Alerts",
-    "description": "Prometheus and Alertmanager rules that monitor the Breeze platform itself, covering API health, PostgreSQL, Redis, disk usage, and agent heartbeats.",
-    "headings": [
-      "Pre-Configured Infrastructure Alert Rules",
-      "API Alerts",
-      "Infrastructure Alerts",
-      "Business Alerts",
-      "Anomaly Detection Alerts",
-      "Alertmanager Routing",
-      "Configuring Infrastructure Notification Channels",
-      "Custom Infrastructure Alert Rules"
-    ],
-    "section": "monitoring"
-  },
-  {
-    "path": "/monitoring/health/",
-    "title": "Health Endpoints",
-    "description": "Built-in health, readiness, and metrics endpoints for Breeze RMM, with load balancer, Docker, and Kubernetes probe setup and troubleshooting.",
-    "headings": [
-      "Available Endpoints",
-      "Response Formats",
-      "GET /health",
-      "GET /health/ready (alias: GET /ready)",
-      "GET /metrics/scrape",
-      "Using Health Checks with Load Balancers",
-      "Docker Health Checks",
-      "Kubernetes Probes",
-      "Key Metrics to Watch",
-      "Troubleshooting Health Check Failures",
-      "/health returns non-200",
-      "/health/ready returns 503",
-      "Containers showing (unhealthy)"
-    ],
-    "section": "monitoring"
-  },
-  {
-    "path": "/monitoring/stack/",
-    "title": "Observability Stack",
-    "description": "Set up the Breeze observability stack: Prometheus scraping, Grafana dashboards, Loki log aggregation, Alertmanager, and key metrics to watch.",
-    "headings": [
-      "Components",
-      "Accessing Grafana",
-      "Pre-Built Dashboards",
-      "Adding Custom Dashboards",
-      "Data Sources",
-      "Prometheus Configuration",
-      "Scrape Targets",
-      "Rule Files",
-      "Key Metrics",
-      "HTTP Metrics (from the API)",
-      "Business Metrics",
-      "Infrastructure Metrics",
-      "Event-Loop Metrics",
-      "Admission Metrics",
-      "Log Aggregation with Loki",
-      "Querying Logs in Grafana",
-      "Adding Custom Prometheus Alert Rules",
-      "Data Retention",
-      "Troubleshooting",
-      "Prometheus Is Not Scraping the API",
-      "Grafana Shows \"No Data\"",
-      "Loki Queries Are Slow",
-      "Alertmanager Is Not Sending Notifications",
-      "Containers Not Starting",
-      "Disk Space Growing",
-      "Hot-path cache",
-      "Agent capacity KPIs",
-      "New series",
-      "Requirements",
-      "Caveats",
-      "Perf regression gate"
-    ],
-    "section": "monitoring"
   },
   {
     "path": "/reference/access-reviews/",
@@ -4432,7 +3902,7 @@
   {
     "path": "/reference/api/",
     "title": "API Overview",
-    "description": "REST API reference for Breeze RMM: authentication, devices, organizations, alerts, scripts, automations, patching, and role-based permissions.",
+    "description": "REST API reference for Colonyn RMM: authentication, devices, organizations, alerts, scripts, automations, patching, and role-based permissions.",
     "headings": [
       "Base URL",
       "Authentication",
@@ -4515,7 +3985,7 @@
   {
     "path": "/reference/audit-logs/",
     "title": "Audit Logs",
-    "description": "Track every action across your Breeze environment with comprehensive audit trails, agent diagnostics, and event logs.",
+    "description": "Track every action across your Colonyn environment with comprehensive audit trails, agent diagnostics, and event logs.",
     "headings": [
       "Log Types Overview",
       "Platform Audit Logs",
@@ -4590,7 +4060,7 @@
   {
     "path": "/reference/organizations-and-sites/",
     "title": "Organizations & Sites",
-    "description": "Manage the multi-tenant hierarchy of partners, organisations, and sites that structures your Breeze deployment.",
+    "description": "Manage the multi-tenant hierarchy of partners, organisations, and sites that structures your Colonyn deployment.",
     "headings": [
       "Overview",
       "Partners",
@@ -4726,26 +4196,9 @@
     "section": "reference"
   },
   {
-    "path": "/reference/schema/",
-    "title": "Database Schema",
-    "description": "Key database tables and relationships in Breeze RMM, including the devices table, agent token hashes, watchdog state, and mTLS certificate columns.",
-    "headings": [
-      "Schema Location",
-      "Core Tables",
-      "Devices",
-      "Organizations",
-      "Users & RBAC",
-      "Other Core Tables",
-      "Default Roles",
-      "Schema Management",
-      "Inspecting the Database"
-    ],
-    "section": "reference"
-  },
-  {
     "path": "/reference/sso/",
     "title": "Single Sign-On (SSO)",
-    "description": "Configure OIDC and SAML identity providers for organization SSO in Breeze RMM: attribute mapping, provisioning, enforcement, and partner-wide login.",
+    "description": "Configure OIDC and SAML identity providers for organization SSO in Colonyn RMM: attribute mapping, provisioning, enforcement, and partner-wide login.",
     "headings": [
       "Key Concepts",
       "Supported Providers",
@@ -4773,7 +4226,7 @@
       "Identity-First Sign-In (No Auto-Provisioning)",
       "Enforcement on the Login Page",
       "Password Reset and SSO Enforcement",
-      "Satisfying Breeze MFA with your IdP",
+      "Satisfying Colonyn MFA with your IdP",
       "Login Page Branding",
       "Linking Your SSO Identity",
       "Database Schema",
@@ -4797,39 +4250,6 @@
       "\"no_org_access\" redirect",
       "\"Invalid or expired token exchange code\" (400)",
       "SSO callback redirects to `/login?error=sso_error`"
-    ],
-    "section": "reference"
-  },
-  {
-    "path": "/reference/troubleshooting/",
-    "title": "Troubleshooting",
-    "description": "Fixes for common Breeze RMM deployment issues, including missing env vars, release manifest trust anchor errors, TLS provisioning, and migrations.",
-    "headings": [
-      "Deployment Issues",
-      "Deploy script fails with \"Missing required env var\"",
-      "API refuses to boot: `RELEASE_ARTIFACT_MANIFEST_PUBLIC_KEYS must be set in production`",
-      "TLS certificate not provisioning",
-      "Database migration fails",
-      "Agent Issues",
-      "Agent not appearing in dashboard",
-      "Agent shows \"offline\" despite running",
-      "Terminal not connecting",
-      "Performance Issues",
-      "High API response times",
-      "Postgres `write CONNECT_TIMEOUT` while the database is healthy",
-      "Redis memory growing (and OOM errors that survive a restart)",
-      "Disk space running low",
-      "Container Issues",
-      "Container won't start",
-      "Health check failing",
-      "Windows MSI Installer",
-      "Always install with a log",
-      "Reading the Breeze agent log",
-      "MSI exits non-zero / device never appears",
-      "MSI install succeeds but agent shows offline",
-      "Server-Side Installer Issues",
-      "\"Generate Link\" fails with `Server URL not configured (set PUBLIC_API_URL or API_URL)`",
-      "Reporting an Issue"
     ],
     "section": "reference"
   },
@@ -4905,78 +4325,9 @@
     "section": "reference"
   },
   {
-    "path": "/security/backup/",
-    "title": "Backup & Restore",
-    "description": "Back up and restore Breeze RMM deployments: database dumps, object storage, encrypted configuration, cron scheduling, retention, and offsite copies.",
-    "headings": [
-      "What Persists, and What to Back Up",
-      "The `api_data` Volume",
-      "The `redis_data` Volume",
-      "The `binaries` Volume",
-      "Prerequisites",
-      "Environment Variables",
-      "Manual Backup",
-      "Automated Backups",
-      "Restore",
-      "Retention",
-      "Offsite Backups"
-    ],
-    "section": "security"
-  },
-  {
-    "path": "/security/error-tracking/",
-    "title": "Error Tracking & Privacy",
-    "description": "Optional Sentry integration for the Breeze API and web app: what data is sent, how to enable or disable it, and how to customize PII scrubbing.",
-    "headings": [
-      "What gets sent",
-      "API (`SENTRY_DSN`)",
-      "Web (`PUBLIC_SENTRY_DSN_WEB`)",
-      "Enabling",
-      "Optional: source maps upload",
-      "Disabling",
-      "Customizing scrubbing"
-    ],
-    "section": "security"
-  },
-  {
-    "path": "/security/hardening/",
-    "title": "Security Hardening",
-    "description": "Production security checklist for Breeze RMM covering secrets, TLS, firewall rules, container security, audit logging, and rate limiting.",
-    "headings": [
-      "Production Security Checklist",
-      "Secrets & Encryption",
-      "Network",
-      "TLS",
-      "Container Security",
-      "Authentication",
-      "Agent Security",
-      "Outbound Request Safety (SSRF)",
-      "Monitoring",
-      "Firewall Configuration",
-      "Audit Logging",
-      "Tamper evidence",
-      "Rate Limiting"
-    ],
-    "section": "security"
-  },
-  {
-    "path": "/security/mtls/",
-    "title": "Cloudflare mTLS",
-    "description": "Enable Cloudflare mutual TLS for zero-trust agent authentication: setup, edge assertion contract, certificate lifecycle, and device quarantine.",
-    "headings": [
-      "How It Works",
-      "Setup",
-      "Edge Assertion Contract",
-      "Certificate Lifecycle",
-      "Quarantine",
-      "Organization Settings"
-    ],
-    "section": "security"
-  },
-  {
     "path": "/security/overview/",
     "title": "Security Architecture",
-    "description": "Authentication, authorization, encryption, and defense-in-depth controls that protect the Breeze platform and every device it manages.",
+    "description": "Authentication, authorization, encryption, and defense-in-depth controls that protect the Colonyn platform and every device it manages.",
     "headings": [
       "Defense-in-Depth",
       "Authentication",
@@ -5029,7 +4380,6 @@
       "C1 — Confidentiality",
       "Vulnerability Disclosure",
       "Reporting a vulnerability to us",
-      "Staying informed (self-hosted operators)",
       "Security Controls Summary"
     ],
     "section": "security"
@@ -5037,7 +4387,7 @@
   {
     "path": "/security/pam/",
     "title": "Privileged Access Management Security Model",
-    "description": "Trust boundaries, elevation primitives, the dormant-admin pattern, and the audit guarantees behind Breeze just-in-time elevation, for security teams.",
+    "description": "Trust boundaries, elevation primitives, the dormant-admin pattern, and the audit guarantees behind Colonyn just-in-time elevation, for security teams.",
     "headings": [
       "What PAM is for",
       "Trust boundaries",
@@ -5058,29 +4408,17 @@
     "section": "security"
   },
   {
-    "path": "/security/secrets/",
-    "title": "Secret Rotation",
-    "description": "Rotation schedules and step-by-step procedures for Breeze RMM secrets, including the JWT secret, encryption keys, peppers, and database credentials.",
+    "path": "/security/trust-center/",
+    "title": "Trust Center",
+    "description": "Publish a public, telemetry-backed security page for each customer organization, with controls evaluated from live Colonyn data.",
     "headings": [
-      "Rotation Schedule",
-      "Rotating the JWT Signing Key",
-      "Rotating App Encryption Key",
-      "Rotating MFA Encryption Key",
-      "Rotating Enrollment Key Pepper",
-      "Rotating MFA Recovery Code Pepper",
-      "Rotating Agent Enrollment Secret",
-      "Rotating Session Secret",
-      "Rotating Database Password",
-      "Rotating Redis Credentials",
-      "Rotating S3 / Object Storage Credentials",
-      "Rotating Cloudflare API Token",
-      "Rotating TURN Secret",
-      "Rotating Metrics Token",
-      "Rotating Email Provider Credentials",
-      "Rotating SMS Provider Credentials (Twilio)",
-      "Rotating Anthropic API Key",
-      "User API Keys",
-      "Emergency Rotation"
+      "What the page shows",
+      "What it never shows",
+      "How controls are evaluated",
+      "Who can publish",
+      "Customer authorization",
+      "Framework references",
+      "Badge"
     ],
     "section": "security"
   }

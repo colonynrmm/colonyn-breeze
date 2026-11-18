@@ -76,6 +76,7 @@ export const SETTINGS_CATALOG: SettingsCatalogEntry[] = [
   { id: 'partner-service-principals', name: 'Service principals', labelKey: card('partnerServicePrincipals', 'title'), href: '/settings/partner-service-principals', icon: KeyRound, group: 'account', partnerScopeOnly: true },
 
   // Billing & Service Desk
+  { id: 'plan', name: 'Plan & usage', labelKey: 'nav.planUsage', href: '/settings/plan', icon: CreditCard, group: 'billing', partnerScopeOnly: true }, // COLONYN
   { id: 'billing-payments', name: 'Payments', labelKey: 'nav.payments', href: '/settings/billing#payments',
     icon: CreditCard, group: 'billing', partnerScopeOnly: true,
     requiredPermission: { resource: 'billing', action: 'manage' } },
@@ -111,7 +112,7 @@ export const SETTINGS_CATALOG: SettingsCatalogEntry[] = [
  * The daily-use subset shown in the sidebar Settings group, in display order.
  * Everything else is reached through the "More settings" entry → /settings.
  */
-export const SIDEBAR_SETTINGS_IDS = ['partner', 'billing', 'ticketing', 'users', 'integrations'] as const;
+export const SIDEBAR_SETTINGS_IDS = ['partner', 'billing', 'ticketing', 'users', 'integrations', 'plan'] as const; // COLONYN: + plan
 
 export function sidebarSettingsEntries(): SettingsCatalogEntry[] {
   return SIDEBAR_SETTINGS_IDS.map((id) => {

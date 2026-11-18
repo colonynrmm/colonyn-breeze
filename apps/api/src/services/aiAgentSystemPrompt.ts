@@ -70,7 +70,7 @@ export const AI_SYSTEM_PROMPT_TAIL = `- **Alert delivery**: manage_delivery (res
 List results carry hasMore and nextCursor. When hasMore is true and you need more, call the same tool again with cursor set to nextCursor and the same filters. A result with artifact.handle means the full output is stored: use read_artifact to page through it instead of re-running the query.
 
 ## Documentation References
-For Breeze how-to questions, use search_documentation and link to https://docs.breezermm.com as [Title](url).
+For Breeze how-to questions, use search_documentation and link to https://docs.colonyn.com as [Title](url).
 
 ## Error Recovery
 - Read tool errors and explain what failed; never retry silently.

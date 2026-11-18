@@ -28,7 +28,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'The remote viewer adds a keyboard mode (Type what I see, or Physical keys with this release’s agent) with IME and dead-key typing, plus view-only, block local input, screenshots, Fit or 100% scaling and a connection stats overlay.',
       'Dynamic groups now update when a device’s tags or custom fields change, and the group rule builder offers custom fields.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.122.0',
@@ -41,7 +40,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'The network topology page opens on summary cards and role sections, and each device page shows who is already connected to it remotely.',
       'Groundwork for customer-portal hardware and performance views: per-client toggles open read-only portal APIs for hardware health, hardware inventory and performance metrics. Portal pages come in a later release.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.121.0',
@@ -54,7 +52,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'Bill clients for AI usage: billing profiles carry AI coverage, markup and per-model prices, usage closes monthly into invoice lines, and a new AI usage by client report shows the totals.',
       'Windows Quick Support now starts for standard (non-admin) users and shows the user an indicator while a technician is viewing.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.120.0',
@@ -67,7 +64,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'AI chat now defaults to Claude Sonnet 5.5, each chat turn is billed for its own usage, and platform admins get a new AI models page.',
       'Built-in patch alert rules can be switched off, and the device Patches tab shows update-ring approvals.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.119.0',
@@ -80,7 +76,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'Compliance rules in configuration policies now raise an alert on the first failing check and keep it open until the device is compliant again.',
       'Live device inspection (processes, services, event logs, files and registry) now needs the Execute permission on devices, so viewer roles keep inventory but no longer run live reads.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.118.0',
@@ -92,7 +87,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'Device pages show memory modules per slot, flag stuck agent self-updates and missing Breeze Assist installs, and failed patch installs now show their reason.',
       'Security and reliability hardening across the agent, remote sessions, installers, AI tools and account management — upgrade your agents to 0.118.0.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.117.0',
@@ -105,7 +99,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'Device anomalies are grouped into episodes: one card per burst instead of one per metric blip, and resolving an episode auto-resolves its alert.',
       'Billing: organizations can override payment terms, and each invoice keeps the theme and page size it was issued with.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.116.0',
@@ -118,7 +111,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'Network topology is now a partner module you switch on from Settings ▸ Partner ▸ Modules, and the customer portal gets a Network overview page.',
       'Disk Cleanup: Windows Update Cleanup no longer hangs under the agent service, and space freed on btrfs hosts is reported correctly (needs agent 0.116.0).',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.115.0',
@@ -131,7 +123,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'Billing Profiles replace scattered legacy rate fields with one Rates screen, including minimums and rounding on billed time; existing rates convert automatically on upgrade.',
       'Moving a device to another organization now requires an interactive session, and a step-up MFA prompt when two-factor authentication is on.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.114.0',
@@ -144,7 +135,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'The org AI budget editor moved into Org settings, under a new AI tab.',
       "Variables' All Organizations view now lists only partner-wide variables, with each row showing its owning organization.",
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.113.0',
@@ -157,7 +147,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'Faster navigation: a Devices & Assets section, recent devices, a jump-back palette and keyboard shortcuts. Consecutive Tier-3 approvals need one step-up ceremony instead of one per decision.',
       'Fixes: AI credit calls reach billing again, the approval mode is kept on the first AI budget save, chat sessions bind to the device you are looking at, UniFi lowercase status values count as online, and decommissioned devices stop being reconciled for peripheral policy.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.112.0',
@@ -170,7 +159,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'Bare-metal recovery restores system state (packages, services, firewall, crontabs, /etc) with checksum verification, file backups keep symlinks and ownership, and each system-image snapshot shows whether it is bare-metal restorable.',
       'Lenovo warranty lookup works, approval headlines name the device, and on mobile you can acknowledge or dismiss findings, set a requester contact on new tickets, and land in the note composer when you stop a timer.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.111.0',
@@ -183,7 +171,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'Devices without an agent are first class. Add a manual asset by hand for anything you track but cannot install on, monitor a website or URL as a target, and open the new network device page for switches, firewalls, printers and NAS that discovery found.',
       'Configuration policies can inherit from a parent policy, and the AI agent builder is now a four-step guided flow with a capability picker that spells out exactly what each agent may do on its own before you create it.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.110.0',
@@ -196,7 +183,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'The customer portal grew Security, Backups, Devices, Tickets with SLA badges, and Reports pages, each behind a per-organization visibility toggle you control.',
       'Run a script again from its history, run scripts as the logged-in user, write device custom fields from script output, set AI budget alert thresholds, and see AI agent impact and graduation evidence before widening an agent\'s autonomy.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.109.0',
@@ -209,7 +195,6 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'Organizations can be archived (read-only, with restore) or merged; installer keys default to 30 days and 50 devices.',
       'Remote desktop: Paste Text arrives exactly as typed on any keyboard layout, the macOS helper reconnects after sleep instead of exiting, and the Terminal tab connects first time.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
   {
     version: '0.105.0',
@@ -219,6 +204,5 @@ export const WHATS_NEW_ENTRIES: WhatsNewEntry[] = [
       'Fleet lists load noticeably faster on large tenants.',
       'Device health cards surface reliability at a glance.',
     ],
-    learnMoreUrl: 'https://breezermm.com/release-notes',
   },
 ];

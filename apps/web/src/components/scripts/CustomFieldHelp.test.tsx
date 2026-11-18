@@ -23,7 +23,7 @@ describe('CustomFieldHelp (#5233)', () => {
     expect(body.textContent).toContain(CUSTOM_FIELD_MARKER);
     expect(body.textContent).toMatch(/never write a secret/i);
     const link = screen.getByTestId('custom-field-help-docs') as HTMLAnchorElement;
-    expect(link.href).toContain('docs.breezermm.com/features/custom-fields/');
+    expect(link.href).toContain('docs.colonyn.com/features/custom-fields/');
   });
 
   it('shows a snippet for the editor language and swaps it when the language changes', () => {

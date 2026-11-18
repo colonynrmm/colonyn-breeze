@@ -15,7 +15,7 @@ export default function HelpPanel() {
   const [iframeError, setIframeError] = useState(false);
   // Only mount the docs iframe once the panel has actually been opened. The
   // panel is always rendered (it slides in/out via CSS transform), but a
-  // mounted iframe loads docs.breezermm.com (+ its Cloudflare RUM beacon) on
+  // mounted iframe loads docs.colonyn.com (+ its Cloudflare RUM beacon) on
   // every page — those external requests trip the app CSP and spam
   // report-only violations into the console on every navigation. Latching on
   // first open means zero docs traffic until the user asks for help, and it

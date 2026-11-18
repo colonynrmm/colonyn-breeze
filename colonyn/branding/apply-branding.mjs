@@ -210,6 +210,112 @@ if (existsSync(logo)) {
 const favicon = join(here, 'favicon.svg');
 if (existsSync(favicon) && !checkOnly) copyFileSync(favicon, join(web, 'public', 'favicon.svg'));
 
+// 5. Links: nothing a user can open may point at breezermm.com. Docs go to the
+// Colonyn docs site (colonyn/docs), legal and contact pages to the Colonyn
+// website. Applies to every non-test source file of the web app, the API and the
+// shared package, then verifies that no breezermm.com reference is left.
+const DOCS_ORIGIN = (process.env.COLONYN_DOCS_URL?.trim() || 'https://docs.colonyn.com').replace(/\/$/, '');
+const SITE = (process.env.COLONYN_SITE_URL?.trim() || 'https://www.colonyn.com').replace(/\/$/, '');
+const LINK_RULES = [
+  // "What's new" entries describe upstream Breeze releases; drop the link rather than send users there.
+  [/^[ \t]*learnMoreUrl: 'https:\/\/breezermm\.com\/release-notes',\r?\n/gm, ''],
+  [/https:\/\/docs\.breezermm\.com/g, DOCS_ORIGIN],
+  [/https:\/\/breezermm\.com\/legal\/privacy-policy/g, `${SITE}/privacy`],
+  [/https:\/\/breezermm\.com\/legal\/terms-of-service/g, `${SITE}/terms-conditions`],
+  [/https:\/\/breezermm\.com\/contact/g, `${SITE}/contactus`],
+  [/https:\/\/breezermm\.com\/license/g, 'https://github.com/colonynrmm/colonyn-breeze/blob/colonyn/LICENSE'],
+  [/https:\/\/breezermm\.com\/deploy\//g, `${DOCS_ORIGIN}/deploy/`],
+  [/support@breezermm\.com/g, 'support@colonyn.com'],
+  // Org branding editor shows "<slug>.<domain>" when PUBLIC_API_URL is empty (our build).
+  [/return 'breezermm\.com';/g, "return 'my.colonyn.com';"],
+  // Help panel may embed the docs site when the app runs on a Colonyn host.
+  [/(const ALLOWED_HTTPS_HOSTS = new Set\(\[\n)(?!  'colonyn\.com',)/, "$1  'colonyn.com',\n"],
+  [/(const ALLOWED_HTTPS_SUFFIXES = \[\n)(?!  '\.colonyn\.com',)/, "$1  '.colonyn.com',\n"],
+  // Comments that merely name the upstream host.
+  [/docs\.breezermm\.com/g, DOCS_ORIGIN.replace(/^https?:\/\//, '')],
+];
+const isTestFile = (rel) => /(\.test\.|\.spec\.|__tests__|__fixtures__|\/test\/|\/tests\/)/.test(rel);
+function* sourceFiles(dir) {
+  for (const name of readdirSync(dir)) {
+    const full = join(dir, name);
+    if (statSync(full).isDirectory()) {
+      if (name === 'node_modules' || name === 'locales') continue;
+      yield* sourceFiles(full);
+    } else if (/\.(ts|tsx|astro|mjs|js)$/.test(name)) {
+      yield full;
+    }
+  }
+}
+const leftovers = [];
+// Allowed: a protocol namespace URI (an identifier, never opened), lookalike-host examples in security
+// comments, and security allowlists that only *recognise* upstream hosts (never rendered as links).
+const allowedLeftover = (line) =>
+  /breezermm\.com\/protocol\/|breezermm\.com(\.evil|@evil|evil)|PLATFORM_OWNED_DOMAINS|notbreezermm|^\s*'\.?breezermm\.com',$/.test(line);
+// Tests follow the same docs origin so the suite keeps describing what ships.
+const TEST_LINK_RULES = [
+  // Regex literals in tests that match the docs host (e.g. middleware.test.ts reads astro.config.mjs).
+  [/docs\\\.breezermm\\\.com/g, DOCS_ORIGIN.replace(/^https?:\/\//, '').replace(/\./g, '\\.')],
+  [/https:\/\/docs\.breezermm\.com/g, DOCS_ORIGIN],
+  [/docs\.breezermm\.com/g, DOCS_ORIGIN.replace(/^https?:\/\//, '')],
+];
+// Build-time config next to src/ (e.g. apps/web/astro.config.mjs sets the production frame-src CSP).
+function* configFiles(dir) {
+  for (const name of readdirSync(dir)) {
+    const full = join(dir, name);
+    if (statSync(full).isFile() && /\.config\.(ts|mjs|js|cjs)$/.test(name)) yield full;
+  }
+}
+function* scannedFiles() {
+  for (const dir of ['apps/web/src', 'apps/api/src', 'packages/shared/src']) yield* sourceFiles(join(root, dir));
+  for (const dir of ['apps/web', 'apps/api', 'packages/shared']) yield* configFiles(join(root, dir));
+}
+{
+  for (const full of scannedFiles()) {
+    const rel = relative(root, full);
+    if (isTestFile(rel)) {
+      const before = readFileSync(full, 'utf8');
+      if (!/docs\\?\.breezermm/.test(before)) continue;
+      let after = before;
+      for (const [pattern, to] of TEST_LINK_RULES) after = after.replace(pattern, to);
+      if (after !== before) {
+        if (checkOnly) pending++;
+        else {
+          writeFileSync(full, after);
+          changed++;
+        }
+      }
+      continue;
+    }
+    const before = readFileSync(full, 'utf8');
+    if (!before.includes('breezermm.com')) continue;
+    let after = before;
+    for (const [pattern, to] of LINK_RULES) after = after.replace(pattern, to);
+    if (after !== before) {
+      if (checkOnly) pending++;
+      else {
+        writeFileSync(full, after);
+        changed++;
+      }
+    }
+    after.split('\n').forEach((line, i) => {
+      if (line.includes('breezermm.com') && !allowedLeftover(line)) leftovers.push(`${rel}:${i + 1}: ${line.trim().slice(0, 120)}`);
+    });
+  }
+}
+// The allowlists are always patched (they may hold no breezermm.com literal after a rebase).
+{
+  const rel = 'apps/web/src/lib/docsEmbed.ts';
+  const full = join(root, rel);
+  const before = readFileSync(full, 'utf8');
+  let after = before;
+  for (const [pattern, to] of LINK_RULES.slice(-3, -1)) after = after.replace(pattern, to);
+  if (!after.includes("'.colonyn.com'")) problems.push(`${rel}: docs embed allowlist not found`);
+  if (after !== before && !checkOnly) writeFileSync(full, after);
+}
+if (!checkOnly && leftovers.length) {
+  problems.push(...leftovers.map((l) => `link to breezermm.com left: ${l}`));
+}
+
 if (problems.length) {
   console.error('[branding] Upstream files changed; update the rules before building:');
   for (const p of problems) console.error(`  - ${p}`);

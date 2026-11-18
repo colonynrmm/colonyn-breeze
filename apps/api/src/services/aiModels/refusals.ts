@@ -8,7 +8,7 @@ import { getEffectiveAssignment } from './assignments';
 import { listOfferings } from './offerings';
 import { resolveModel } from './resolveModel';
 
-export const REFUSAL_DOCS_URL = 'https://docs.breezermm.com/features/ai/#model-refusals';
+export const REFUSAL_DOCS_URL = 'https://docs.colonyn.com/features/ai/#model-refusals';
 
 export interface RefusalAlternative { offeringId: string; displayName: string }
 

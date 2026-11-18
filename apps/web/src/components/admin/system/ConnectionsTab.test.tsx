@@ -103,7 +103,7 @@ describe('ConnectionsTab', () => {
 
     const db = screen.getByTestId('connection-card-database');
     const link = within(db).getByTestId('connection-docs') as HTMLAnchorElement;
-    expect(link.href).toBe('https://docs.breezermm.com/deploy/environment/#database');
+    expect(link.href).toBe('https://docs.colonyn.com/deploy/environment/#database');
     expect(link.rel).toContain('noopener');
     expect(within(screen.getByTestId('connection-card-redis')).queryByTestId('connection-docs')).toBeNull();
   });

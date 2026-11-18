@@ -1,4 +1,4 @@
-export const DOCS_BASE_URL = 'https://docs.breezermm.com';
+export const DOCS_BASE_URL = 'https://docs.colonyn.com';
 
 /** A per-tab documentation target, keyed by the page's URL-hash tab id. */
 interface DocsTabEntry {

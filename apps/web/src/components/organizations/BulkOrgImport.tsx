@@ -56,7 +56,7 @@ export function buildOrgImportSampleCsv(): string {
 
 /** Migration Toolkit recipe documenting this importer's columns and API. */
 export const ORG_IMPORT_DOCS_URL =
-  'https://docs.breezermm.com/migration/toolkit/#recipe-1--bootstrap-the-tenancy-tree-from-csv';
+  'https://docs.colonyn.com/migration/toolkit/#recipe-1--bootstrap-the-tenancy-tree-from-csv';
 
 function downloadSampleCsv() {
   downloadBlob(

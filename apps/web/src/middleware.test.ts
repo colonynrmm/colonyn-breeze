@@ -82,7 +82,7 @@ describe('CSP directives drop the jsdelivr CDN (#1023)', () => {
   it('astro.config.mjs frameSrcDirective keeps blob: for the quote preview', () => {
     const source = readFileSync(join(process.cwd(), 'astro.config.mjs'), 'utf8');
 
-    const frameSrcSet = source.match(/new Set\(\[[^\]]*docs\.breezermm\.com[^\]]*\]\)/);
+    const frameSrcSet = source.match(/new Set\(\[[^\]]*docs\.colonyn\.com[^\]]*\]\)/);
     expect(frameSrcSet, 'frame-src source Set not found in astro.config.mjs').not.toBeNull();
     expect(frameSrcSet![0]).toContain("'blob:'");
   });

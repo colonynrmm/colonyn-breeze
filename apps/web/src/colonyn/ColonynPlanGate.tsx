@@ -8,10 +8,12 @@ import { FEATURE_LABELS, featureForPage, isFeatureAllowed, useColonynPlan } from
  */
 export default function ColonynPlanGate() {
   const plan = useColonynPlan((s) => s.plan);
-  const [path, setPath] = useState<string>(() => (typeof window === 'undefined' ? '/' : window.location.pathname + window.location.hash));
+  // Read the location after mount, so server and client render the same first frame.
+  const [path, setPath] = useState<string>('/');
 
   useEffect(() => {
     const update = () => setPath(window.location.pathname + window.location.hash);
+    update();
     document.addEventListener('astro:after-swap', update);
     window.addEventListener('hashchange', update);
     return () => {

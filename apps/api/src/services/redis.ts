@@ -48,7 +48,7 @@ function hasPasswordInRedisUrl(url: string): boolean {
 }
 
 const INSECURE_REDIS_GUIDANCE =
-  'Set REDIS_PASSWORD (openssl rand -hex 32) and ensure REDIS_URL is redis://:<password>@host:port. See https://breezermm.com/deploy/production#redis-authentication';
+  'Set REDIS_PASSWORD (openssl rand -hex 32) and ensure REDIS_URL is redis://:<password>@host:port. See https://docs.colonyn.com/deploy/production#redis-authentication';
 
 const SELF_HOSTED_OPT_OUT_GUIDANCE =
   'If your deployment intentionally runs Redis on a private network without auth, set BREEZE_ALLOW_UNAUTH_REDIS=true to acknowledge the risk.';

@@ -7,7 +7,7 @@ import { useFeaturesStore } from '../../stores/featuresStore';
 import { usePermissions } from '../../lib/permissions';
 import type { DeviceStats } from '../dashboard/types';
 
-const MIGRATION_DOCS_URL = 'https://docs.breezermm.com/agents/self-host-migration/';
+const MIGRATION_DOCS_URL = 'https://docs.colonyn.com/agents/self-host-migration/';
 
 /**
  * Persistent, non-dismissible notice for self-hosted admins: devices in scope

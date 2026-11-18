@@ -158,7 +158,7 @@ export function buildInstallCommands(opts: InstallCommandOptions): InstallComman
     `{throw "Breeze: this machine rejected the TLS certificate of ${apiUrl} ($($_.Exception.GetBaseException().Message)). ` +
     `If the server uses a self-signed or private-CA certificate, import its root CA into Cert:\\LocalMachine\\Root; ` +
     `otherwise check that the certificate matches the server name and has not expired. ` +
-    `See https://docs.breezermm.com/deploy/tls/#trusting-the-internal-ca-on-agents"}; throw}`;
+    `See https://docs.colonyn.com/deploy/tls/#trusting-the-internal-ca-on-agents"}; throw}`;
   const windows =
     `$ErrorActionPreference='Stop'; ` +
     `${winOsFloorCheck}; ` +

@@ -76,6 +76,7 @@ describe('settings catalogue (#6220)', () => {
       '/settings/ticketing',
       '/settings/users',
       '/integrations',
+      '/settings/plan', // COLONYN
       '/settings',
     ]);
     const more = settingsItems().at(-1)!;

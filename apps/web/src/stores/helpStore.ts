@@ -56,7 +56,7 @@ export const useHelpStore = create<HelpState>((set) => ({
     // Only a url whose ORIGIN exactly matches a trusted docs site may be written
     // into docsUrl, which is consumed as an <iframe src>. This is an origin check
     // (via isDocsUrl), not a string-prefix match, so docs-lookalike hosts such
-    // as docs.breezermm.com.evil.com are rejected. isDocsUrl trusts both the
+    // as docs.colonyn.com.evil.com are rejected. isDocsUrl trusts both the
     // canonical hosted origin and a self-hosted origin from PUBLIC_DOCS_URL, so
     // a caller-supplied self-hosted docs link is accepted as-is. Any untrusted
     // value falls back to the safe contextual docs page for the current path,

@@ -10,7 +10,7 @@ type EditorInstance = Parameters<NonNullable<EditorProps['onMount']>>[0];
 export const CUSTOM_FIELD_MARKER = '::breeze:custom-fields::';
 
 export const CUSTOM_FIELD_DOCS_URL =
-  'https://docs.breezermm.com/features/custom-fields/#writing-custom-fields-from-a-script';
+  'https://docs.colonyn.com/features/custom-fields/#writing-custom-fields-from-a-script';
 
 /**
  * A read-then-write example for the editor's current language. Code, not

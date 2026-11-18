@@ -256,7 +256,7 @@ export function securityMiddleware(options?: SecurityMiddlewareOptions): Middlew
           return c.json(
             {
               error: 'FORCE_HTTPS_NON_CANONICAL_HOST',
-              docs: 'https://docs.breezermm.com/deploy/tls/',
+              docs: 'https://docs.colonyn.com/deploy/tls/',
             },
             400,
           );

@@ -1,0 +1,15 @@
+---
+// COLONYN: plan limits and usage of the tenant (apps/web/src/colonyn/ColonynPlanPage.tsx).
+import DashboardLayout from '../../layouts/DashboardLayout.astro';
+import ColonynPlanPage from '../../colonyn/ColonynPlanPage';
+---
+
+<DashboardLayout title="Plan & usage">
+  <div class="space-y-6">
+    <div>
+      <h1 class="text-xl font-semibold tracking-tight">Plan &amp; usage</h1>
+      <p class="mt-1 text-sm text-muted-foreground">What your Colonyn subscription includes and how much of it is in use.</p>
+    </div>
+    <ColonynPlanPage client:load />
+  </div>
+</DashboardLayout>

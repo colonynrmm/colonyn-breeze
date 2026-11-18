@@ -102,7 +102,7 @@ export function registerDocsTools(aiTools: Map<string, AiTool>): void {
 
       return results.map(({ entry }) => [
         `Title: ${entry.title}`,
-        `URL: https://docs.breezermm.com${entry.path}`,
+        `URL: https://docs.colonyn.com${entry.path}`,
         `Description: ${entry.description}`,
         `Key Topics: ${entry.headings.join(', ')}`
       ].join('\n')).join('\n\n');

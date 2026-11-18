@@ -56,7 +56,7 @@ const portalDomain = (() => {
     const url = import.meta.env.PUBLIC_API_URL || '';
     return new URL(url).hostname;
   } catch {
-    return 'breezermm.com';
+    return 'my.colonyn.com';
   }
 })();
 

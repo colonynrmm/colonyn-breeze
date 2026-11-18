@@ -342,7 +342,7 @@ describe('BulkOrgImport sample CSV + docs link (#6051)', () => {
     render(<BulkOrgImport />);
     const link = screen.getByTestId('bulk-org-import-docs-link');
     expect(ORG_IMPORT_DOCS_URL).toBe(
-      'https://docs.breezermm.com/migration/toolkit/#recipe-1--bootstrap-the-tenancy-tree-from-csv',
+      'https://docs.colonyn.com/migration/toolkit/#recipe-1--bootstrap-the-tenancy-tree-from-csv',
     );
     expect(link).toHaveAttribute('href', ORG_IMPORT_DOCS_URL);
     expect(link).toHaveAttribute('target', '_blank');

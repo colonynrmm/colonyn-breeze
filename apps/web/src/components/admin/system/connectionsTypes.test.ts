@@ -74,13 +74,13 @@ describe('filterGroups', () => {
 
 describe('safeDocsUrl', () => {
   it('resolves W01 docs-site paths against the docs origin, keeping the anchor', () => {
-    expect(safeDocsUrl('/deploy/environment/#database')).toBe('https://docs.breezermm.com/deploy/environment/#database');
-    expect(safeDocsUrl('/deploy/turn-server/')).toBe('https://docs.breezermm.com/deploy/turn-server/');
+    expect(safeDocsUrl('/deploy/environment/#database')).toBe('https://docs.colonyn.com/deploy/environment/#database');
+    expect(safeDocsUrl('/deploy/turn-server/')).toBe('https://docs.colonyn.com/deploy/turn-server/');
   });
 
   it('accepts absolute https URLs on the docs origin only', () => {
-    expect(safeDocsUrl('https://docs.breezermm.com/deploy/environment/')).toBe(
-      'https://docs.breezermm.com/deploy/environment/',
+    expect(safeDocsUrl('https://docs.colonyn.com/deploy/environment/')).toBe(
+      'https://docs.colonyn.com/deploy/environment/',
     );
   });
 
@@ -91,9 +91,9 @@ describe('safeDocsUrl', () => {
     expect(safeDocsUrl('//evil.example/deploy/')).toBeNull();
     expect(safeDocsUrl('/\\evil.example/deploy/')).toBeNull();
     expect(safeDocsUrl('deploy/environment/')).toBeNull();
-    expect(safeDocsUrl('http://docs.breezermm.com/')).toBeNull();
+    expect(safeDocsUrl('http://docs.colonyn.com/')).toBeNull();
     expect(safeDocsUrl('https://evil.example/phish')).toBeNull();
-    expect(safeDocsUrl('https://docs.breezermm.com.evil.example/deploy/')).toBeNull();
+    expect(safeDocsUrl('https://docs.colonyn.com.evil.example/deploy/')).toBeNull();
     expect(safeDocsUrl('javascript:alert(1)')).toBeNull();
   });
 });

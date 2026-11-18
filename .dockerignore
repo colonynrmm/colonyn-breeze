@@ -9,6 +9,8 @@ node_modules
 **/node_modules
 
 # Build outputs (rebuilt in container)
+# COLONYN: docs generator work tree (copied sources + its own node_modules)
+colonyn/docs/.work
 dist
 **/dist
 .astro

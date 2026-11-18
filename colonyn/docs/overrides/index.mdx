@@ -1,0 +1,58 @@
+---
+title: Colonyn RMM Documentation
+description: How to use Colonyn RMM at my.colonyn.com — install the agent, manage devices, automate work, secure your fleet and connect your tools.
+template: splash
+hero:
+  tagline: Everything you need after signing up at www.colonyn.com — from installing the agent on your first device to automating your whole fleet.
+  actions:
+    - text: Install the agent
+      link: /agents/installation/
+      icon: right-arrow
+      variant: primary
+    - text: Open the dashboard
+      link: https://my.colonyn.com
+      icon: external
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Start here
+
+<CardGrid>
+  <LinkCard title="Install the agent" description="Add Windows, macOS and Linux devices with a one-line install or an installer." href="/agents/installation/" />
+  <LinkCard title="Enrollment keys" description="Create keys that enroll devices straight into the right organization and site." href="/agents/enrollment-keys/" />
+  <LinkCard title="Devices" description="Find, group, tag and act on every device you manage." href="/features/devices/" />
+  <LinkCard title="Users & roles" description="Invite your technicians and decide what each of them can do." href="/reference/users-and-roles/" />
+</CardGrid>
+
+## What you can do
+
+<CardGrid stagger>
+  <Card title="Remote management" icon="laptop">
+    Remote desktop, scripts, automations, patching and software deployment across all your devices.
+  </Card>
+  <Card title="Monitoring & alerts" icon="pulse">
+    Live performance data, monitors, network discovery and alert rules with notifications.
+  </Card>
+  <Card title="Security" icon="shield">
+    Security posture, vulnerabilities, hardening baselines and privileged access, with a full audit trail.
+  </Card>
+  <Card title="Service desk & billing" icon="document">
+    Tickets, contracts, quotes and invoices for your own clients (PSA module).
+  </Card>
+</CardGrid>
+
+## Popular topics
+
+<CardGrid>
+  <LinkCard title="Remote access" description="Connect to a device's screen or terminal." href="/features/remote-access/" />
+  <LinkCard title="Scripts" description="Run PowerShell, Bash and Python across your fleet." href="/features/scripts/" />
+  <LinkCard title="Patch management" description="Update rings, approvals and compliance." href="/features/patch-management/" />
+  <LinkCard title="Alerts" description="Alert rules, severities and notifications." href="/features/alerts/" />
+  <LinkCard title="Backup & recovery" description="Back up devices to your own storage (Backup module)." href="/backup/overview/" />
+  <LinkCard title="Migrating from another RMM" description="Move your devices and scripts to Colonyn." href="/migration/overview/" />
+</CardGrid>
+
+## Need help?
+
+Plans, invoices and quotas are managed under **My RMM services** at [www.colonyn.com](https://www.colonyn.com/my/rmm). For anything else, [contact us](https://www.colonyn.com/contactus).

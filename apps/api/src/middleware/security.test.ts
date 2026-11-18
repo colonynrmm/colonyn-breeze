@@ -420,7 +420,7 @@ describe('FORCE_HTTPS redirect warning (#3047)', () => {
     const raw = await res.text();
     expect(JSON.parse(raw)).toEqual({
       error: 'FORCE_HTTPS_NON_CANONICAL_HOST',
-      docs: 'https://docs.breezermm.com/deploy/tls/',
+      docs: 'https://docs.colonyn.com/deploy/tls/',
     });
     expect(raw).not.toContain('wrong-host.example.net');
     expect(raw).not.toContain('api.example.com');

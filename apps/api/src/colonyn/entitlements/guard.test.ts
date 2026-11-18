@@ -16,6 +16,7 @@ function database(opts: {
   entitlements?: Record<string, unknown> | null | Error;
   technicians?: number;
   seatHolders?: string[];
+  usage?: { organizations: number; devices: number };
 }) {
   execute.mockImplementation(async (query: { queryChunks?: unknown[] }) => {
     const text = JSON.stringify(query?.queryChunks ?? query);
@@ -28,6 +29,7 @@ function database(opts: {
       const email = (query.queryChunks ?? []).find((c) => typeof c === 'string' && c.includes('@'));
       return opts.seatHolders?.includes(String(email)) ? [{ '?column?': 1 }] : [];
     }
+    if (text.includes('is_ephemeral')) return [opts.usage ?? { organizations: 0, devices: 0 }];
     if (text.includes('FROM organizations')) return [{ partner_id: 'p-org' }];
     return [];
   });
@@ -143,8 +145,14 @@ describe('kill switch', () => {
 
 describe('colonynPlanInfo', () => {
   it('lists modules in a stable order with seat usage', async () => {
-    database({ entitlements: { features: ['backup', 'psa'], max_technicians: 3 }, technicians: 2 });
-    expect(await colonynPlanInfo('p1')).toEqual({ features: ['psa', 'backup'], maxTechnicians: 3, technicians: 2, upgradeUrl: null });
+    database({ entitlements: { features: ['backup', 'psa'], max_technicians: 3 }, technicians: 2, usage: { organizations: 4, devices: 17 } });
+    expect(await colonynPlanInfo('p1')).toEqual({
+      features: ['psa', 'backup'],
+      maxTechnicians: 3,
+      technicians: 2,
+      upgradeUrl: null,
+      usage: { organizations: 4, devices: 17, technicians: 2 },
+    });
   });
   it('reports unrestricted partners and swallows errors', async () => {
     database({ entitlements: null });

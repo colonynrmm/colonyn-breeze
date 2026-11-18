@@ -11,7 +11,8 @@
 #   api, worker     -> Colonyn build of the API (authenticator label, account emails,
 #                      plan modules and technician limit); api also knows the bridge's
 #                      hook secret (PARTNER_HOOKS_URL is set in .env)
-#   caddy           -> also serves COLONYN_BRIDGE_DOMAIN, only for COLONYN_BRIDGE_ALLOWED_IPS
+#   caddy           -> also serves COLONYN_BRIDGE_DOMAIN, only for COLONYN_BRIDGE_ALLOWED_IPS,
+#                      and the Colonyn docs site on COLONYN_DOCS_DOMAIN (./colonyn/docs)
 #
 # Images are built on this server from the Colonyn source tree (COLONYN_SRC,
 # default /opt/colonyn-breeze): see colonyn/build.sh.
@@ -84,5 +85,8 @@ services:
     environment:
       COLONYN_BRIDGE_DOMAIN: ${COLONYN_BRIDGE_DOMAIN:?Set COLONYN_BRIDGE_DOMAIN in .env}
       COLONYN_BRIDGE_ALLOWED_IPS: ${COLONYN_BRIDGE_ALLOWED_IPS:?Set COLONYN_BRIDGE_ALLOWED_IPS in .env}
+      COLONYN_DOCS_DOMAIN: ${COLONYN_DOCS_DOMAIN:-docs.colonyn.com}
+      COLONYN_APP_DOMAIN: ${COLONYN_APP_DOMAIN:-my.colonyn.com}
     volumes:
       - ./colonyn/Caddyfile.colonyn:/etc/caddy/Caddyfile.colonyn:ro
+      - ./colonyn/docs:/srv/colonyn-docs:ro

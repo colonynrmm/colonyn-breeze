@@ -13,7 +13,12 @@ export const systemRoutes = new Hono();
 systemRoutes.use('*', authMiddleware);
 
 systemRoutes.get('/version', async (c) => {
-  const { latest, fetchedAt, source } = await getLatestVersion();
+  const { latest: upstreamLatest, fetchedAt, source } = await getLatestVersion();
+  // COLONYN: the newest upstream Breeze release is operator information. Tenants
+  // would read it as "Colonyn is out of date", so only platform admins get it.
+  const auth = c.get('auth');
+  const seesUpstream = auth?.scope === 'system' || auth?.user?.isPlatformAdmin === true;
+  const latest = seesUpstream ? upstreamLatest : null;
   const cmp = latest ? semverCompare(API_VERSION, latest) : null;
   const isStale = cmp !== null && cmp < 0;
   return c.json({

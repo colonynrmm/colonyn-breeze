@@ -633,7 +633,7 @@ describe("IntegrationsPage — writing & syncing the URL hash", () => {
     expect(screen.getByTestId("stub-google")).toBeTruthy();
     fireEvent.click(screen.getByTestId("integrations-docs-link"));
     expect(openMock).toHaveBeenLastCalledWith(
-      "https://docs.breezermm.com/features/identity-integrations/",
+      "https://docs.colonyn.com/features/identity-integrations/",
     );
   });
 
@@ -673,20 +673,20 @@ describe("IntegrationsPage — per-tab documentation link", () => {
     // Default tab is Webhooks.
     fireEvent.click(screen.getByTestId("integrations-docs-link"));
     expect(openMock).toHaveBeenLastCalledWith(
-      "https://docs.breezermm.com/features/webhooks/",
+      "https://docs.colonyn.com/features/webhooks/",
     );
 
     // Switching tabs points the link at that tab's doc.
     fireEvent.click(screen.getByRole("button", { name: /Security/i }));
     fireEvent.click(screen.getByTestId("integrations-docs-link"));
     expect(openMock).toHaveBeenLastCalledWith(
-      "https://docs.breezermm.com/features/edr-integrations/",
+      "https://docs.colonyn.com/features/edr-integrations/",
     );
 
     fireEvent.click(screen.getByRole("button", { name: /UniFi/i }));
     fireEvent.click(screen.getByTestId("integrations-docs-link"));
     expect(openMock).toHaveBeenLastCalledWith(
-      "https://docs.breezermm.com/features/unifi-integration/",
+      "https://docs.colonyn.com/features/unifi-integration/",
     );
   });
 

@@ -309,7 +309,7 @@ describe('InboundEmailCard', () => {
     expect(hint.textContent).toContain('Microsoft 365');
     const link = screen.getByTestId('inbound-address-unconfigured-docs') as HTMLAnchorElement;
     expect(link.getAttribute('href')).toBe(
-      'https://docs.breezermm.com/deploy/environment/#inbound-email-to-ticket-mailgun',
+      'https://docs.colonyn.com/deploy/environment/#inbound-email-to-ticket-mailgun',
     );
     expect(link.getAttribute('rel')).toContain('noopener');
   });

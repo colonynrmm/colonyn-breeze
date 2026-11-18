@@ -95,6 +95,8 @@ describe('system routes', () => {
     });
 
     it('includes version, latest, isStale, latestFetchedAt fields', async () => {
+      setAuth({ user: { id: 'user-1', email: 'admin@test.com', name: 'Admin', isPlatformAdmin: true } }); // COLONYN
+      app = makeApp();
       vi.mocked(getLatestVersion).mockResolvedValueOnce({
         latest: '99.99.99',
         fetchedAt: new Date('2026-05-25T00:00:00Z'),
@@ -108,6 +110,36 @@ describe('system routes', () => {
       expect(body).toHaveProperty('isStale', true);
       expect(body).toHaveProperty('latestFetchedAt', '2026-05-25T00:00:00.000Z');
       expect(body).toHaveProperty('latestSource', 'github');
+    });
+
+    // COLONYN: tenants never see the newest upstream release.
+    it('hides the upstream latest version from partner and organization users', async () => {
+      for (const scope of ['partner', 'organization']) {
+        setAuth({ scope });
+        const tenantApp = makeApp();
+        vi.mocked(getLatestVersion).mockResolvedValueOnce({
+          latest: '99.99.99',
+          fetchedAt: new Date('2026-05-25T00:00:00Z'),
+          source: 'github',
+        });
+        const body = await (await tenantApp.request('/system/version')).json();
+        expect(body.latest).toBeNull();
+        expect(body.isStale).toBe(false);
+        expect(body).toHaveProperty('version');
+      }
+    });
+
+    it('shows the upstream latest version to system-scope users', async () => {
+      setAuth({ scope: 'system' });
+      const sysApp = makeApp();
+      vi.mocked(getLatestVersion).mockResolvedValueOnce({
+        latest: '99.99.99',
+        fetchedAt: new Date('2026-05-25T00:00:00Z'),
+        source: 'github',
+      });
+      const body = await (await sysApp.request('/system/version')).json();
+      expect(body.latest).toBe('99.99.99');
+      expect(body.isStale).toBe(true);
     });
 
     it('returns isStale=false when running version >= latest', async () => {

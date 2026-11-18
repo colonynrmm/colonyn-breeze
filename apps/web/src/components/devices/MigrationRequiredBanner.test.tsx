@@ -91,7 +91,7 @@ describe('MigrationRequiredBanner', () => {
     expect(fetchWithAuthMock).toHaveBeenCalledWith('/devices/stats');
     expect(screen.getByRole('link', { name: 'migrationBanner.cta' })).toHaveAttribute(
       'href',
-      'https://docs.breezermm.com/agents/self-host-migration/',
+      'https://docs.colonyn.com/agents/self-host-migration/',
     );
   });
 

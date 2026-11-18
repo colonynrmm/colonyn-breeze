@@ -1,0 +1,40 @@
+/* Colonyn RMM docs: Colonyn palette (blue #2F55C8, light blue #8EA6F2, navy #0E1A33) and Plus Jakarta Sans. */
+
+:root {
+  --sl-font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --sl-font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+}
+
+/* Light theme */
+:root[data-theme='light'] {
+  --sl-color-accent-low: #e3e9fa;
+  --sl-color-accent: #2f55c8;
+  --sl-color-accent-high: #1e3c99;
+}
+
+/* Dark theme: navy surfaces */
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #16233f;
+  --sl-color-accent: #7c98f0;
+  --sl-color-accent-high: #c3d0fa;
+  --sl-color-bg: #0b1428;
+  --sl-color-bg-nav: #0e1a33;
+  --sl-color-bg-sidebar: #0d1730;
+  --sl-color-hairline-light: rgba(195, 208, 250, 0.06);
+  --sl-color-hairline: rgba(195, 208, 250, 0.1);
+  --sl-color-text-accent: #a9bcf5;
+}
+
+:root[data-theme='dark'] .expressive-code {
+  --ec-codeBg: #0e1a33;
+  --ec-codeBrdCol: rgba(124, 152, 240, 0.16);
+}
+
+nav[aria-label='Main'] a[aria-current='page'] {
+  border-color: var(--sl-color-accent);
+}
+
+.site-title img {
+  height: 1.9rem;
+  width: auto;
+}

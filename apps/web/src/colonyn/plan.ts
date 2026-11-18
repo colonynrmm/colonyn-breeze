@@ -21,6 +21,8 @@ export interface ColonynPlan {
   maxTechnicians: number | null;
   technicians: number | null;
   upgradeUrl: string | null;
+  /** Current use; null when the API did not send it (older API build). */
+  usage: { organizations: number | null; devices: number | null; technicians: number | null };
 }
 
 interface PlanState {
@@ -48,6 +50,11 @@ export function normalizePlan(raw: unknown): ColonynPlan | null {
     maxTechnicians: num(value.maxTechnicians),
     technicians: num(value.technicians),
     upgradeUrl: typeof value.upgradeUrl === 'string' ? value.upgradeUrl : null,
+    usage: {
+      organizations: num((value.usage as Record<string, unknown> | undefined)?.organizations),
+      devices: num((value.usage as Record<string, unknown> | undefined)?.devices),
+      technicians: num((value.usage as Record<string, unknown> | undefined)?.technicians) ?? num(value.technicians),
+    },
   };
 }
 

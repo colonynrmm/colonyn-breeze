@@ -2437,7 +2437,7 @@ export default function DevicesPage() {
                   setShowAddNetworkAsset(true);
                 }}
               />
-              <a href="https://docs.breezermm.com/agents/installation/" target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 rounded-md border px-4 py-2 text-sm font-medium text-foreground hover:bg-muted transition-colors">
+              <a href="https://docs.colonyn.com/agents/installation/" target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 rounded-md border px-4 py-2 text-sm font-medium text-foreground hover:bg-muted transition-colors">
                 {t('devicesPage.viewInstallationGuide')}
               </a>
             </div>

@@ -179,3 +179,21 @@ export const __test = {
     missingTableLogged = false;
   },
 };
+
+/**
+ * Organizations and licensed devices of a partner, counted like the Bridge
+ * reports them to Odoo (bridge/tenants.ts countUsage). For the "Plan & usage" page.
+ */
+export async function countPlanUsage(partnerId: string): Promise<{ organizations: number; devices: number }> {
+  const result = await systemRead(() => db.execute(sql`
+    SELECT
+      (SELECT count(*)::int FROM organizations o
+        WHERE o.partner_id = ${partnerId} AND o.deleted_at IS NULL
+          AND o.type NOT IN ('quick_support', 'unassigned_pool')) AS organizations,
+      (SELECT count(*)::int FROM devices d JOIN organizations o ON o.id = d.org_id
+        WHERE o.partner_id = ${partnerId} AND o.deleted_at IS NULL AND o.type <> 'unassigned_pool'
+          AND d.is_ephemeral = false AND d.status <> 'decommissioned') AS devices
+  `));
+  const row = rowsOf(result)[0];
+  return { organizations: Number(row?.organizations ?? 0), devices: Number(row?.devices ?? 0) };
+}

@@ -88,9 +88,10 @@ describe('search_documentation handler', () => {
       expect(result).toContain('Key Topics:');
     });
 
-    it('URL format is https://docs.breezermm.com{path}', async () => {
-      const result = await handler({ query: 'quickstart' }, mockAuth);
-      expect(result).toMatch(/URL: https:\/\/docs\.breezermm\.com\//);
+    it('URL format is https://docs.colonyn.com{path}', async () => {
+      // COLONYN: the index is built from the Colonyn docs (colonyn/docs/build-docs.mjs).
+      const result = await handler({ query: 'agent installation' }, mockAuth);
+      expect(result).toMatch(/URL: https:\/\/docs\.colonyn\.com\//);
     });
 
     it('returns at most 5 results', async () => {

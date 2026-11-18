@@ -48,11 +48,11 @@ API requests are rate-limited to ensure fair usage. Rate limit headers are inclu
     version: '1.0.0',
     contact: {
       name: 'Breeze RMM Support',
-      email: 'support@breezermm.com'
+      email: 'support@colonyn.com'
     },
     license: {
       name: 'Proprietary',
-      url: 'https://breezermm.com/license'
+      url: 'https://github.com/colonynrmm/colonyn-breeze/blob/colonyn/LICENSE'
     }
   },
   servers: [

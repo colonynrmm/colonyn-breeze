@@ -93,7 +93,7 @@ export function isConsumerEmailDomain(email: string): boolean {
  * scheduling link can change without a deploy.
  */
 export function businessEmailContactUrl(): string {
-  return process.env.SIGNUP_BUSINESS_EMAIL_CONTACT_URL?.trim() || 'https://breezermm.com/contact';
+  return process.env.SIGNUP_BUSINESS_EMAIL_CONTACT_URL?.trim() || 'https://www.colonyn.com/contactus';
 }
 
 /**

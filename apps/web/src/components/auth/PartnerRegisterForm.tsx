@@ -208,7 +208,7 @@ export default function PartnerRegisterForm({
         <label htmlFor="acceptTerms" className="text-sm leading-snug text-muted-foreground">
           {t('partnerRegister.terms.prefix', { defaultValue: 'I agree to the' })}{' '}
           <a
-            href="https://breezermm.com/legal/terms-of-service"
+            href="https://www.colonyn.com/terms-conditions"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline"
@@ -217,7 +217,7 @@ export default function PartnerRegisterForm({
           </a>{' '}
           {t('partnerRegister.terms.and', { defaultValue: 'and' })}{' '}
           <a
-            href="https://breezermm.com/legal/privacy-policy"
+            href="https://www.colonyn.com/privacy"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline"

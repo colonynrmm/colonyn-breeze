@@ -86,7 +86,7 @@ export function filterGroups(groups: ConnectionGroupView[], problemsOnly: boolea
 }
 
 /** Public docs site that W01's registry paths are relative to. */
-export const DOCS_ORIGIN = 'https://docs.breezermm.com';
+export const DOCS_ORIGIN = 'https://docs.colonyn.com';
 
 /**
  * W01 sends docs-site paths (`/deploy/environment/#database`); they resolve

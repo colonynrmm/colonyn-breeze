@@ -6,8 +6,8 @@ const SAFE_LINK_PROTOCOLS = new Set(['http:', 'https:']);
 /**
  * True only when `url` parses as an absolute URL whose origin (scheme + host +
  * port) strictly equals a trusted docs origin. This is an ORIGIN check, not a
- * string prefix check: lookalikes such as `https://docs.breezermm.com.evil.com/x`,
- * `https://docs.breezermm.com@evil.com/x`, or `https://docs.breezermm.comevil.com`
+ * string prefix check: lookalikes such as `https://docs.colonyn.com.evil.com/x`,
+ * `https://docs.colonyn.com@evil.com/x`, or `https://docs.colonyn.comevil.com`
  * are rejected even though they share the `DOCS_BASE_URL` string prefix.
  *
  * The canonical hosted docs origin (`DOCS_BASE_URL`) is always trusted. A

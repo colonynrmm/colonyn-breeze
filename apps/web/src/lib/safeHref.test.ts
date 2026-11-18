@@ -74,12 +74,12 @@ describe('isDocsUrl', () => {
 
   it.each([
     // Prefix-bypass lookalikes the old startsWith() check let through:
-    'https://docs.breezermm.com.evil.com/phish',
-    'https://docs.breezermm.com@evil.com/x',
-    'https://docs.breezermm.comevil.com',
+    'https://docs.colonyn.com.evil.com/phish',
+    'https://docs.colonyn.com@evil.com/x',
+    'https://docs.colonyn.comevil.com',
     // Other unsafe / non-matching values:
     'javascript:alert(1)',
-    '//docs.breezermm.com',
+    '//docs.colonyn.com',
     'https://evil.example/x',
     '',
     '   ',
@@ -94,7 +94,7 @@ describe('isDocsUrl', () => {
 
   it('rejects an http:// docs URL because origin includes the scheme', () => {
     // DOCS_BASE_URL is https; the http variant is a different origin.
-    expect(isDocsUrl('http://docs.breezermm.com/agents/install')).toBe(false);
+    expect(isDocsUrl('http://docs.colonyn.com/agents/install')).toBe(false);
   });
 
   it('trusts a self-hosted docs origin supplied via PUBLIC_DOCS_URL', () => {
