@@ -247,6 +247,7 @@ export async function provisionTenant(config: BridgeConfig, input: ProvisionInpu
         passwordHash: null,
         origin: { mcp: false, userAgent: 'colonyn-bridge' },
         status: 'active',
+        currencyCode: config.defaultCurrency,
       });
 
       const templates = await loadTemplateBag(config.templatePartnerId);

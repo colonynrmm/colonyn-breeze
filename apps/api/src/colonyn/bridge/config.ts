@@ -7,6 +7,8 @@
  * bridge-specific.
  */
 
+import { isKnownCurrency } from '@breeze/shared';
+
 export interface BridgeConfig {
   port: number;
   /** Bearer token Odoo sends on every call. */
@@ -23,6 +25,8 @@ export interface BridgeConfig {
   partnerHooksSecret: string | null;
   /** Partner whose saved e-mail templates are copied to every new tenant. */
   templatePartnerId: string | null;
+  /** Billing currency for new tenants (partner, first organization, default rate profile). */
+  defaultCurrency: string;
   /** Shown as the inviter in the activation e-mail. */
   inviterName: string;
   /** Returned to Breeze on the device-limit hook (upgrade page in Odoo). */
@@ -58,6 +62,11 @@ export function loadBridgeConfig(): BridgeConfig {
     throw new Error('[colonyn-bridge] COLONYN_TEMPLATE_PARTNER_ID must be a partner UUID');
   }
 
+  const defaultCurrency = (optional('COLONYN_DEFAULT_CURRENCY') ?? 'IDR').toUpperCase();
+  if (!isKnownCurrency(defaultCurrency)) {
+    throw new Error(`[colonyn-bridge] COLONYN_DEFAULT_CURRENCY "${defaultCurrency}" is not a supported currency code`);
+  }
+
   const appUrl = (process.env.DASHBOARD_URL || process.env.PUBLIC_APP_URL || 'http://localhost:4321').replace(/\/$/, '');
 
   return {
@@ -69,6 +78,7 @@ export function loadBridgeConfig(): BridgeConfig {
     odooWebhookSecret: optional('COLONYN_ODOO_WEBHOOK_SECRET'),
     partnerHooksSecret: optional('PARTNER_HOOKS_SECRET'),
     templatePartnerId,
+    defaultCurrency,
     inviterName: optional('COLONYN_INVITER_NAME') ?? 'Tim Colonyn',
     upgradeUrl: optional('COLONYN_UPGRADE_URL'),
     appUrl,

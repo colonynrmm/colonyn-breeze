@@ -8,7 +8,7 @@ set -euo pipefail
 
 SRC="${COLONYN_SRC:-/opt/colonyn-breeze}"
 STACK="${BREEZE_STACK:-/opt/breeze}"
-TAG="${COLONYN_IMAGE_TAG:-0.123.0-colonyn.7}"
+TAG="${COLONYN_IMAGE_TAG:-0.123.0-colonyn.8}"
 
 cd "$SRC"
 echo "[colonyn] source: $SRC ($(git describe --tags --always 2>/dev/null || echo 'no git'))"

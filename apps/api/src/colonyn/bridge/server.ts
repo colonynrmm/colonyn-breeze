@@ -13,9 +13,18 @@ import { serve } from '@hono/node-server';
 import { loadBridgeConfig } from './config';
 import { createBridgeApp } from './app';
 import { ensureBridgeSchema } from './store';
+import { formatBackfillReport, runCurrencyBackfill } from './currencyBackfill';
 
 async function main(): Promise<void> {
   const config = loadBridgeConfig();
+
+  // One-shot maintenance: `node dist/colonyn-bridge.cjs currency-backfill [--apply]`
+  if (process.argv[2] === 'currency-backfill') {
+    const report = await runCurrencyBackfill(config.defaultCurrency, process.argv.includes('--apply'));
+    console.log(formatBackfillReport(report));
+    process.exit(0);
+  }
+
   await ensureBridgeSchema(config.adminDatabaseUrl);
 
   const app = createBridgeApp(config);

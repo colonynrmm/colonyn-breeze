@@ -32,6 +32,11 @@ export interface CreatePartnerInput {
    * features until breeze-billing activates post-payment + email verify).
    */
   status: PartnerStatus;
+  /**
+   * COLONYN: billing currency for the partner, its first organization and its
+   * default rate profile. Omitted = the column default (USD), as upstream.
+   */
+  currencyCode?: string;
 }
 
 export interface CreatePartnerResult {
@@ -97,6 +102,7 @@ export async function createPartner(
         // services/partnerDefaultSettings.ts — shared with the platform-admin
         // POST /orgs/partners route and the dev seed so no creation path drifts.
         settings: applyNewPartnerDefaultSettings(),
+        ...(input.currencyCode ? { currencyCode: input.currencyCode } : {}), // COLONYN
       })
       .returning();
 
